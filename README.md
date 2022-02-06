@@ -7,8 +7,7 @@ being published to Heroku.
 For a live demo of the code, see https://learning-log-kbowen.herokuapp.com/
 
 ---
-[![License](https://img.shields.io/badge/license-MIT-green)](https://github.com/kevinbowen777/learning_log/-/blob/master/LICENSE)
----
+[![License](https://img.shields.io/badge/license-MIT-green)](https://github.com/kevinbowen777/learning_log/blob/master/LICENSE) ---
 ### Reporting Bugs                                                              
                                                                                  
    Visit the [Issues page](https://github.com/kevinbowen777/learning_log/issues)

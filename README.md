@@ -13,8 +13,11 @@ and edit existing entries.</p>
 
 ---
 ### Screenshots
-![Poll list](https://github.com/kevinbowen777/learning_log/blob/master/images/learning_log_home.png)
+Home Page
+![Home Page](https://github.com/kevinbowen777/learning_log/blob/master/images/learning_log_home.png)
 
+Topic List
+![Topic List](https://github.com/kevinbowen777/learning_log/blob/master/images/learning_log_topics.png)
 
 
 [![License](https://img.shields.io/badge/license-MIT-green)](https://github.com/kevinbowen777/learning_log/blob/master/LICENSE)

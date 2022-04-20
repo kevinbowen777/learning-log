@@ -8,7 +8,7 @@ they learn about each topic. Once logged in, a user can create new topics, add n
 and edit existing entries.</p>
 
 ---
-### Live Demo on Heroku: 
+### Live Demo on Heroku:
 - https://learning-log-kbowen.herokuapp.com/
 
 ---
@@ -17,10 +17,10 @@ and edit existing entries.</p>
 
 
 
-[![License](https://img.shields.io/badge/license-MIT-green)](https://github.com/kevinbowen777/learning_log/blob/master/LICENSE) 
+[![License](https://img.shields.io/badge/license-MIT-green)](https://github.com/kevinbowen777/learning_log/blob/master/LICENSE)
 
 
-### Reporting Bugs                                                              
-                                                                                 
+### Reporting Bugs
+
    Visit the [Issues page](https://github.com/kevinbowen777/learning_log/issues)
       to view currently open bug reports or open a new issue.

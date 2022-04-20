@@ -1,7 +1,34 @@
+[tool.black]
+line-length = 119
+# include =
+exclude = '''
+/(
+    \.git
+  | __pycache__
+  | .pytest_cache
+  | .venv
+  | alembic
+  | staticfiles
+  | build
+  | dist
+  | learning_log/migrations/0001_initial.py
+  | learning_log/migrations/0002_entry.py
+  | learning_log/migrations/0003_topic_owner.py
+  | ^.*\b(migrations)\b.*$
+)/
+'''
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+skip = ["*.gitignore"]
+extend_skip = ["*.md", "*.json"]
+line_length = 119
+
 [tool.poetry]
 name = "learning_log"
 version = "0.1.0"
-description = "An Django web application for creating learning lists"
+description = "A Django web application for creating learning lists"
 authors = ["Kevin Bowen <kevin.bowen@gmail.com>"]
 license = "MIT"
 

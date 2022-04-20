@@ -1,10 +1,31 @@
 asgiref==3.5.0
-beautifulsoup4==4.10.0
+beautifulsoup4 @ file:///home/kbowen/.cache/pypoetry/artifacts/e0/aa/39/7b168d115afeea9a7de54a24de624233f50f1b5a3f67d2e650da99a476/beautifulsoup4-4.11.1-py3-none-any.whl
+black @ file:///home/kbowen/.cache/pypoetry/artifacts/e8/de/2c/19944b95ee77b4d14c8cdea53bd5c02ef045630fa091357baa5f8b6af8/black-22.3.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
+cfgv @ file:///home/kbowen/.cache/pypoetry/artifacts/35/10/a3/f57b5e70e8b5d5f31bccdd15df3781efda09dc1b44b473591e360c20e5/cfgv-3.3.1-py2.py3-none-any.whl
+click @ file:///home/kbowen/.cache/pypoetry/artifacts/91/49/3a/c7bac12b8fd30b018827acf9fe1779fbf8ac4b25bdaab4fc03663b2852/click-8.1.2-py3-none-any.whl
+distlib @ file:///home/kbowen/.cache/pypoetry/artifacts/c6/c9/9e/cc7bc0747799b29bba3f47bcb03116150430ae8e40a7477a11ff4fdc11/distlib-0.3.4-py2.py3-none-any.whl
 dj-database-url==0.5.0
-Django==4.0.2
+Django @ file:///home/kbowen/.cache/pypoetry/artifacts/bc/eb/c7/9de0e5ba3f75f2216e177fb6788e183cf501da3c89b082ff913a5b3176/Django-4.0.4-py3-none-any.whl
 django-bootstrap4==21.2
 django-heroku==0.3.1
+filelock @ file:///home/kbowen/.cache/pypoetry/artifacts/a8/20/28/a68f0cd5cc8d74df3bcbc2b43dca88911b9f17ee0bba631433c2610696/filelock-3.6.0-py3-none-any.whl
+flake8 @ file:///home/kbowen/.cache/pypoetry/artifacts/6b/d8/67/6516837c645c57af9cad7b290e1e6cbe92a126641fa84a5dde6495f3c3/flake8-4.0.1-py2.py3-none-any.whl
+identify @ file:///home/kbowen/.cache/pypoetry/artifacts/19/ec/38/d3fe58e1b7676a1e464d80ce8a745b7abd54b46c78eccc37a02dd88a0d/identify-2.4.12-py2.py3-none-any.whl
+isort @ file:///home/kbowen/.cache/pypoetry/artifacts/12/e3/f1/e8e484225dcc659de6e4ac34a4ad996cb71f36119e54e71462cc7ad7e8/isort-5.10.1-py3-none-any.whl
+mccabe @ file:///home/kbowen/.cache/pypoetry/artifacts/a3/d3/68/f7f7115194f6fe8c487def3afa3b089a428f90650cf1b7be71afa83d12/mccabe-0.6.1-py2.py3-none-any.whl
+mypy-extensions @ file:///home/kbowen/.cache/pypoetry/artifacts/2f/c6/09/3e1afdcb75322c65b786e63cd7e879b6be3db36dea78ca376db5483ae4/mypy_extensions-0.4.3-py2.py3-none-any.whl
+nodeenv @ file:///home/kbowen/.cache/pypoetry/artifacts/41/0a/a7/9f3b1a3b2b48691106e0b8583dc2e38ccb0543a3106bcc508d3b96d5a6/nodeenv-1.6.0-py2.py3-none-any.whl
+pathspec @ file:///home/kbowen/.cache/pypoetry/artifacts/48/a0/9f/f5128d9e11d591bca7a942dd80ec44f9b2de8294775c68e0b99beeef93/pathspec-0.9.0-py2.py3-none-any.whl
+platformdirs @ file:///home/kbowen/.cache/pypoetry/artifacts/ea/8e/52/e5ac2f14474cef8f0fd44b4aa7d6968bfa89442d1b88ab567c446eae70/platformdirs-2.5.2-py3-none-any.whl
+pre-commit @ file:///home/kbowen/.cache/pypoetry/artifacts/a9/08/5f/365312191b96b84c14ebf979dbd7b8ffe8895b8671f1d6c8c6898d4cf1/pre_commit-2.18.1-py2.py3-none-any.whl
 psycopg2==2.9.3
-soupsieve==2.3.1
+pycodestyle @ file:///home/kbowen/.cache/pypoetry/artifacts/67/1d/0b/aa6ec86495f3fc57e748e006fb36d7b4e65ddaf6de336617166ccad96d/pycodestyle-2.8.0-py2.py3-none-any.whl
+pyflakes @ file:///home/kbowen/.cache/pypoetry/artifacts/ce/06/1e/5fd69e017a941ae783a7e4d3fb29abc5238f0026d7745b4dc26d7e3379/pyflakes-2.4.0-py2.py3-none-any.whl
+PyYAML @ file:///home/kbowen/.cache/pypoetry/artifacts/72/40/79/b7f82de66d678bc8de004df69ca112b99a38e71beff3aef6c4e2349303/PyYAML-6.0-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_12_x86_64.manylinux2010_x86_64.whl
+six @ file:///home/kbowen/.cache/pypoetry/artifacts/89/b2/f8/fd92b6d5daa0f8889429b2fc67ec21eedc5cae5d531ee2853828ced6c7/six-1.16.0-py2.py3-none-any.whl
+soupsieve @ file:///home/kbowen/.cache/pypoetry/artifacts/9b/5a/a8/0949b7240493f355f5d574cbe0389102ac50a52583ec465be6d377cac7/soupsieve-2.3.2.post1-py3-none-any.whl
 sqlparse==0.4.2
+toml @ file:///home/kbowen/.cache/pypoetry/artifacts/51/ac/24/674da558495229c57c3d2333cb23e24aac7aadf723ced29e2cc41a9e6e/toml-0.10.2-py2.py3-none-any.whl
+tomli @ file:///home/kbowen/.cache/pypoetry/artifacts/62/12/b6/6db9ebb9c8e1a6c5aa8a92ae73098d8119816b5e8507490916621bc305/tomli-2.0.1-py3-none-any.whl
+virtualenv @ file:///home/kbowen/.cache/pypoetry/artifacts/3f/58/e0/9b3dd7536acdbfaa9970eba1de68906a2c2338fbe9b051567b9505fe39/virtualenv-20.14.1-py2.py3-none-any.whl
 whitenoise==5.3.0

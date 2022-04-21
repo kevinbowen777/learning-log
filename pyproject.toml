@@ -44,6 +44,7 @@ psycopg2 = "2.9.3"
 soupsieve = "^2.3.1"
 sqlparse = "0.4.2"
 whitenoise = "^5.3.0"
+environs = {extras = ["django"], version = "^9.5.0"}
 
 [tool.poetry.dev-dependencies]
 pre-commit = "^2.18.1"

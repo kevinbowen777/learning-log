@@ -19,6 +19,9 @@ Home Page
 Topic List
 ![Topic List](https://github.com/kevinbowen777/learning_log/blob/master/images/learning_log_topics.png)
 
+Topic Details
+![Topic List](https://github.com/kevinbowen777/learning_log/blob/master/images/learning_log_topic_details.png)
+
 
 [![License](https://img.shields.io/badge/license-MIT-green)](https://github.com/kevinbowen777/learning_log/blob/master/LICENSE)
 

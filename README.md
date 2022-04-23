@@ -10,10 +10,10 @@ and edit existing entries.</p>
 ## Installation
  - `git clone https://github.com/kevinbowen777/learning_log.git`
  - `cd learning_log`
- - Create virtualenv `mkvirtualenv learning_log` or `workon learnin_log`
+ - Create virtualenv `mkvirtualenv learning_log` or `workon learning_log`
  - `poetry install`
  - `poetry run python manage.py runserver`
- - Open browser to http://localhost:8001/
+ - Open browser to http://localhost:8000/
 
 ---
 ### Live Demo on Heroku:

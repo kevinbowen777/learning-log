@@ -7,6 +7,14 @@ It allows users to log the topics they’re interested in and to make journal en
 they learn about each topic. Once logged in, a user can create new topics, add new entries, and read
 and edit existing entries.</p>
 
+## Installation
+ - `git clone https://github.com/kevinbowen777/learning_log.git`
+ - `cd learning_log`
+ - Create virtualenv `mkvirtualenv learning_log` or `workon learnin_log`
+ - `poetry install`
+ - `poetry run python manage.py runserver`
+ - Open browser to http://localhost:8001/
+
 ---
 ### Live Demo on Heroku:
 - https://learning-log-kbowen.herokuapp.com/

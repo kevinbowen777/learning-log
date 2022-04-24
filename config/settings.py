@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     # Third party apps.
     "bootstrap4",
+    "debug_toolbar",
     # My apps
     "learning_logs",
     "users",
@@ -36,6 +37,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
+    "debug_toolbar.middleware.DebugToolbarMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
@@ -127,3 +129,12 @@ import os  # noqa: F401, F811
 import django_heroku
 
 django_heroku.settings(locals())
+
+# django-debug-toolbar
+import socket
+
+hostname, _, ips = socket.gethostbyname_ex(socket.gethostname())
+# Use the following for use in Docker only:
+# INTERNAL_IPS = [ip[:-1] + "1" for ip in ips]
+# The following is for use locally:
+INTERNAL_IPS = ["127.0.0.1"]

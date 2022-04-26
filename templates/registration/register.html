@@ -7,7 +7,7 @@
 
 {% block content %}
 
-  <form method="post" action="{% url 'users:register' %}">
+  <form method="post" class="col-md-6" action="{% url 'users:register' %}">
     {% csrf_token %}
     {% bootstrap_form form %}
     {% buttons %}

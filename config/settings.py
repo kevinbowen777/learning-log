@@ -29,7 +29,7 @@ INSTALLED_APPS = [
     # Third party apps.
     "bootstrap4",
     "debug_toolbar",
-    # My apps
+    # Local apps
     "learning_logs",
     "users",
 ]
@@ -134,7 +134,7 @@ django_heroku.settings(locals())
 import socket
 
 hostname, _, ips = socket.gethostbyname_ex(socket.gethostname())
-# Use the following for use in Docker only:
+# Use the following in Docker only:
 # INTERNAL_IPS = [ip[:-1] + "1" for ip in ips]
-# The following is for use locally:
+# Use locally:
 INTERNAL_IPS = ["127.0.0.1"]

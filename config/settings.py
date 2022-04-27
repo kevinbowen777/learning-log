@@ -1,4 +1,3 @@
-import os
 from pathlib import Path
 
 from environs import Env
@@ -42,7 +41,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
-     "debug_toolbar.middleware.DebugToolbarMiddleware",
+    "debug_toolbar.middleware.DebugToolbarMiddleware",
 ]
 
 ROOT_URLCONF = "config.urls"
@@ -124,11 +123,11 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 LOGIN_URL = "users:login"
 
 # Heroku settings
-#import os  # noqa: F401, F811
-
-#import django_heroku
-
-#django_heroku.settings(locals())
+"""
+import os  # noqa: F401, F811
+import django_heroku
+django_heroku.settings(locals())
+"""
 
 # django-debug-toolbar
 import socket

@@ -10,9 +10,8 @@ and edit existing entries.</p>
 ## Installation
  - `git clone https://github.com/kevinbowen777/learning_log.git`
  - `cd learning_log`
- - Create virtualenv `mkvirtualenv learning_log` or `workon learning_log`
- - `poetry install`
- - `poetry run python manage.py runserver`
+ - `docker-compose up --build`
+ - `docker-compose exec web python manage.py migrate`
  - Open browser to http://localhost:8000/
 
 ---

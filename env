@@ -1,0 +1,59 @@
+#
+# .env template for django projects
+#
+#
+# Remember to rename this file to .env
+# and uncomment the appropriate CONFIG statements
+# depending upon the deployment environment
+# Documentation: https://github.com/sloria/environs#usage-with-django
+# Installation: `pip install environs[django]`
+
+# config/settings.py
+from environs import Env
+#
+env = Env()
+env.read_env()
+
+# Override in .env for local development
+DEBUG = env.bool("DEBUG", default=False)
+# .env
+DEBUG=True
+
+# SECRET_KEY is required
+# python -c "import uuid; print(uuid.uuid4().hex)" to generate secret key
+# config/settings.py
+SECRET_KEY = env.str("SECRET_KEY")
+# .env
+SECRET_KEY=<secret_key>
+
+# Parse database URLs, e.g. "postgres://localhost:5432/mydb"
+# DATABASES = {"default": env.dj_db_url("DATABASE_URL")}
+# config/settings.py
+DATABASES = {
+    "default": env.dj_db_url(
+        "DATABASE_URL", default="postgres://postgres@db/postgres"
+    )
+}
+# .env
+# DATABASE_URL= <database_url>
+DATABASE_URL=sqlite:///djangdo.sqlite3
+
+# Parse email URLs, e.g. "smtp://"
+# email = env.dj_email_url("EMAIL_URL", default="smtp://")
+# EMAIL_HOST = email["EMAIL_HOST"]
+# EMAIL_PORT = email["EMAIL_PORT"]
+# EMAIL_HOST_PASSWORD = email["EMAIL_HOST_PASSWORD"]
+# EMAIL_HOST_USER = email["EMAIL_HOST_USER"]
+# EMAIL_USE_TLS = email["EMAIL_USE_TLS"]
+# MAIL_USERNAME=<email_username>
+# MAIL_PASSWORD=<email_password>
+
+# EMAIL_HOST_PASSWORD='<mailhost_password>
+
+# Used in production deployment
+# SECURE_SSL_REDIRECT=False
+# SECURE_HSTS_SECONDS=0
+# SECURE_HSTS_INCLUDE_SUBDOMAINS=False
+# SECURE_HSTS_PRELOAD=False
+# SESSION_COOKIE_SECURE=False
+# CSRF_COOKIE_SECURE=False

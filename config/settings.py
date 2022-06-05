@@ -30,7 +30,7 @@ INSTALLED_APPS = [
     "debug_toolbar",
     # Local apps
     "learning_logs",
-    "users",
+    "accounts",
 ]
 
 MIDDLEWARE = [
@@ -117,7 +117,7 @@ STATIC_URL = "/static/"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 # My settings
-LOGIN_URL = "users:login"
+LOGIN_URL = "accounts:login"
 
 # Heroku settings
 """

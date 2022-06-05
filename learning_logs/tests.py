@@ -11,13 +11,13 @@ class LearninLogsTests(SimpleTestCase):
         self.assertEqual(response.status_code, 302)
 
     def test_login_page_status(self):
-        response = self.client.get("/users/login/")
+        response = self.client.get("/accounts/login/")
         self.assertEqual(response.status_code, 200)
 
     def test_logout_page_status(self):
-        response = self.client.get("/users/logout/")
+        response = self.client.get("/accounts/logout/")
         self.assertEqual(response.status_code, 200)
 
     def test_register_page_status(self):
-        response = self.client.get("/users/register/")
+        response = self.client.get("/accounts/register/")
         self.assertEqual(response.status_code, 200)

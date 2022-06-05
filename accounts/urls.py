@@ -1,10 +1,8 @@
-"""Defines URL patterns for users."""
-
 from django.urls import include, path
 
 from . import views
 
-app_name = "users"
+app_name = "accounts"
 urlpatterns = [
     # Include default urls.
     path("", include("django.contrib.auth.urls")),

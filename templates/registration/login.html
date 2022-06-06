@@ -6,7 +6,7 @@
 {% endblock page_header %}
 
 {% block content %}
-  <form method="post" action="{% url 'accounts:login' %}" class="col-md-6 form">
+  <form method="post" action="{% url 'login' %}" class="col-md-6 form">
     {% csrf_token %}
     {% bootstrap_form form %}
     {% buttons %}

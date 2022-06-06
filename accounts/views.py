@@ -1,23 +1,10 @@
-from django.contrib.auth import login
-from django.contrib.auth.forms import UserCreationForm
-from django.shortcuts import redirect, render
+from django.urls import reverse_lazy
+from django.views import generic
+
+from .forms import CustomUserCreationForm
 
 
-def register(request):
-    """Register a new user."""
-    if request.method != "POST":
-        # Display blank registration form.
-        form = UserCreationForm()
-    else:
-        # Process completed form.
-        form = UserCreationForm(data=request.POST)
-
-        if form.is_valid():
-            new_user = form.save()
-            # Log the user in and then redirect to home page.
-            login(request, new_user)
-            return redirect("learning_logs:index")
-
-    # Display a blank or invalid form.
-    context = {"form": form}
-    return render(request, "registration/register.html", context)
+class SignupPageView(generic.CreateView):
+    form_class = CustomUserCreationForm
+    success_url = reverse_lazy("login")
+    template_name = "registration/signup.html"

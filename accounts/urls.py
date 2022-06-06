@@ -1,10 +1,8 @@
-from django.urls import include, path
+from django.urls import path
 
-from . import views
+from .views import SignupPageView
 
-app_name = "accounts"
+# app_name = "accounts"
 urlpatterns = [
-    # Include default urls.
-    path("", include("django.contrib.auth.urls")),
-    path("register/", views.register, name="register"),
+    path("signup/", SignupPageView.as_view(), name="signup"),
 ]

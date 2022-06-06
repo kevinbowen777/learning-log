@@ -11,10 +11,7 @@ exclude = '''
   | staticfiles
   | build
   | dist
-  | learning_log/migrations/0001_initial.py
-  | learning_log/migrations/0002_entry.py
-  | learning_log/migrations/0003_topic_owner.py
-  | ^.*\b(migrations)\b.*$
+  | learning_logs/migrations/*
 )/
 '''
 

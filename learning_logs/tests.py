@@ -19,5 +19,5 @@ class LearninLogsTests(SimpleTestCase):
         self.assertEqual(response.status_code, 200)
 
     def test_register_page_status(self):
-        response = self.client.get("/accounts/register/")
+        response = self.client.get("/accounts/signup/")
         self.assertEqual(response.status_code, 200)

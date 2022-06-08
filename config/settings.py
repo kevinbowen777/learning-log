@@ -25,7 +25,12 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "django.contrib.sites",
     # Third party apps.
+    "allauth",
+    "allauth.account",
+    "allauth.socialaccount",
+    "allauth.socialaccount.providers.github",
     "bootstrap4",
     "debug_toolbar",
     # Local apps
@@ -120,6 +125,9 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 AUTH_USER_MODEL = "accounts.CustomUser"
 
 LOGIN_URL = "login"
+
+# django-allauth config
+SITE_ID = 1
 
 # Heroku settings
 """

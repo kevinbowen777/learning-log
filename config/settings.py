@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     # Local apps
     "learning_logs",
     "accounts",
+    "pages",
 ]
 
 MIDDLEWARE = [
@@ -135,7 +136,7 @@ AUTH_USER_MODEL = "accounts.CustomUser"
 CRISPY_TEMPLATE_PACK = "bootstrap4"
 
 # django-allauth config
-LOGIN_REDIRECT_URL = "learning_logs:index"
+LOGIN_REDIRECT_URL = "topics"
 ACCOUNT_LOGOUT_REDIRECT = "home"
 SITE_ID = 1
 AUTHENTICATION_BACKENDS = (

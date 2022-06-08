@@ -43,6 +43,10 @@ class SignupPageTests(TestCase):
         url = reverse("account_signup")
         self.response = self.client.get(url)
 
+    def test_signup_page_status(self):
+        response = self.client.get("/accounts/signup/")
+        self.assertEqual(response.status_code, 200)
+
     def test_signup_template(self):
         self.assertEqual(self.response.status_code, 200)
         self.assertTemplateUsed(self.response, "account/signup.html")
@@ -67,3 +71,19 @@ class SignupPageTests(TestCase):
             view.func.__name__,
             SignupPageView.as_view().__name__,
         )
+
+
+class AccountPagesTest(TestCase):
+    def test_login_page_status(self):
+        response = self.client.get("/accounts/login/")
+        self.assertEqual(response.status_code, 200)
+
+    def test_logout_page_status(self):
+        response = self.client.get("/accounts/logout/")
+        self.assertEqual(response.status_code, 302)
+
+
+class AdminPageTests(TestCase):
+    def test_admin_page_status(self):
+        response = self.client.get("/admin/login/")
+        self.assertEqual(response.status_code, 200)

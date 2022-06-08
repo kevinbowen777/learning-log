@@ -124,6 +124,11 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # My settings
 AUTH_USER_MODEL = "accounts.CustomUser"
 
+AUTHENTICATION_BACKENDS = (
+    "django.contrib.auth.backends.ModelBackend",
+    "allauth.account.auth_backends.AuthenticationBackend",
+)
+
 LOGIN_URL = "login"
 
 # django-allauth config

@@ -1,11 +1,13 @@
 {% extends "base.html" %}
+{% load crispy_forms_tags %}
 
 {% block page_header %}
-  <h1>Topics</h1>
+  <h2>Topics</h2>
 {% endblock page_header %}
 
 {% block content %}
-
+<div class="container">
+  <p>
   <ul>
     {% for topic in topics %}
       <li><h3>
@@ -17,4 +19,6 @@
   </ul>
 
   <h3><a class="btn btn-primary btn-success" href="{% url 'learning_logs:new_topic' %}">Add a new topic</a></h3>
+  <p>
+</div>
 {% endblock content %}

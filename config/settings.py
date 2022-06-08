@@ -124,15 +124,18 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # My settings
 AUTH_USER_MODEL = "accounts.CustomUser"
 
+# django-allauth config
+LOGIN_REDIRECT_URL = "index"
+ACCOUNT_LOGOUT_REDIRECT = "home"
+SITE_ID = 1
 AUTHENTICATION_BACKENDS = (
     "django.contrib.auth.backends.ModelBackend",
     "allauth.account.auth_backends.AuthenticationBackend",
 )
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
 LOGIN_URL = "login"
 
-# django-allauth config
-SITE_ID = 1
 
 # Heroku settings
 """

@@ -13,43 +13,62 @@
 
 </head>
 <body>
-
-  <nav class="navbar navbar-expand-md navbar-light bg-light mb-4 border">
-
-    <a class="navbar-brand" href="{% url 'learning_logs:index'%}">
-      Learning Log
-    </a>
-
-    <button class="navbar-toggler" type="button" data-toggle="collapse"
-        data-target="#navbarCollapse" aria-controls="navbarCollapse"
-        aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span></button>
-    <div class="collapse navbar-collapse" id="navbarCollapse">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'learning_logs:topics'%}">
-              Topics</a></li>
-      </ul>
-      <ul class="navbar-nav ml-auto">
-        {% if user.is_authenticated %}
+   <header>
+   <!-- Fixed navbar -->
+   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+   <a class="navbar-brand" href="{% url 'learning_logs:index' %}">Learning Log</a>
+   {% if user.is_authenticated %}
+     <ul class="navbar-nav mr-auto">
+       <li class="nav-item">
+         <a href="{% url 'learning_logs:new_topic' %}">New Topic</a>
+       </li>
+     </ul>
+   {% endif %}
+   <button class="navbar-toggler" type="button" data-toggle="collapse"
+   data-target="#navbarSupportedContent"
+   aria-controls="navbarSupportedContent" aria-expanded="false"
+   aria-label="Toggle navigation">
+     <span class="navbar-toggler-icon"></span>
+   </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      {% if user.is_authenticated %}
+        <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <span class="navbar-text"}">Hello, {{ user.username }}.</span>
+            <a class="nav-link dropdown-toggle" href="#"
+            id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+              {{ user.username }}
+            </a>
+            <div class="dropdown-menu dropdown-menu-lg-right"
+            aria-labelledby="navbarDropdown">
+              <a class="dropdown-item"
+              href="{% url 'account_set_password' %}">Change password</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item"
+              href="{% url 'account_reset_password' %}">Forgot password?</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item"
+              href="{% url 'account_email' %}">Change email</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="{% url 'account_logout' %}"> Log Out</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="{% url 'learning_logs:about' %}">About</a>
+            </div>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'account_logout' %}">Log out</a>
-          </li>
-        {% else %}
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'account_login' %}">Log in</a></li>
-        {% endif %}
-      </ul>
+        </ul>
+      {% else %}
+        <form class="form-inline ml-auto">
+          <a href="{% url 'account_login' %}" class="btn btn-outline-secondary">
+          Log In</a>
+          <a href="{% url 'account_signup' %}" class="btn btn-primary ml-2">
+         Sign up</a>
+          <a href="{% url 'about' %}" class="btn btn-outline-secondary ml-2">
+          About</a>
+        </form>
+      {% endif %}
     </div>
-
-  </nav>
-
+    </nav>
+  </header>
   <main role="main" class="container">
     <div class="pb-2 mb-2 border-bottom">
       {% block page_header %}{% endblock page_header %}

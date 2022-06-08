@@ -6,6 +6,11 @@ from .forms import EntryForm, TopicForm
 from .models import Entry, Topic
 
 
+def about(request):
+    """The about page for Learning Log."""
+    return render(request, "about.html")
+
+
 def index(request):
     """The home page for Learning Log."""
     return render(request, "learning_logs/index.html")

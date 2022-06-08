@@ -2,7 +2,7 @@ from django.contrib.auth import get_user_model
 from django.test import TestCase
 from django.urls import resolve, reverse
 
-from .forms import CustomUserCreationForm
+from .forms import CustomUserCreationForm  # noqa:F401
 from .views import SignupPageView
 
 
@@ -35,22 +35,31 @@ class CustomUserTests(TestCase):
 
 
 class SignupPageTests(TestCase):
+
+    username = "newuser"
+    email = "newuser@example.com"
+
     def setUp(self):
-        url = reverse("signup")
+        url = reverse("account_signup")
         self.response = self.client.get(url)
 
     def test_signup_template(self):
         self.assertEqual(self.response.status_code, 200)
-        self.assertTemplateUsed(self.response, "registration/signup.html")
+        self.assertTemplateUsed(self.response, "account/signup.html")
         self.assertContains(self.response, "Sign Up")
         self.assertNotContains(
             self.response, "Hi there! I should not be on the page."
         )
 
     def test_signup_form(self):
-        form = self.response.context.get("form")
-        self.assertIsInstance(form, CustomUserCreationForm)
-        self.assertContains(self.response, "csrfmiddlewaretoken")
+        new_user = get_user_model().objects.create_user(  # noqa: F841
+            self.username, self.email
+        )
+        self.assertEqual(get_user_model().objects.all().count(), 1)
+        self.assertEqual(
+            get_user_model().objects.all()[0].username, self.username
+        )
+        self.assertEqual(get_user_model().objects.all()[0].email, self.email)
 
     def test_signup_view(self):
         view = resolve("/accounts/signup/")

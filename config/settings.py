@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     # Local apps
     "learning_logs",
     "accounts",
+    "pages",
 ]
 
 MIDDLEWARE = [

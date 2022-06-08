@@ -10,6 +10,7 @@ urlpatterns = [
     # Local apps
     path("accounts/", include("accounts.urls")),
     path("", include("learning_logs.urls")),
+    path("", include("pages.urls")),
 ]
 
 if settings.DEBUG:

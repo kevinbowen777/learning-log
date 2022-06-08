@@ -1,7 +1,7 @@
-from django.test import SimpleTestCase
+from django.test import TestCase
 
 
-class LearninLogsTests(SimpleTestCase):
+class LearningLogsTests(TestCase):
     def test_homepage_status_code(self):
         response = self.client.get("/")
         self.assertEqual(response.status_code, 200)
@@ -16,7 +16,7 @@ class LearninLogsTests(SimpleTestCase):
 
     def test_logout_page_status(self):
         response = self.client.get("/accounts/logout/")
-        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.status_code, 302)
 
     def test_register_page_status(self):
         response = self.client.get("/accounts/signup/")

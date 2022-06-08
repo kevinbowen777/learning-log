@@ -25,7 +25,12 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "django.contrib.sites",
     # Third party apps.
+    "allauth",
+    "allauth.account",
+    "allauth.socialaccount",
+    "allauth.socialaccount.providers.github",
     "bootstrap4",
     "debug_toolbar",
     # Local apps
@@ -119,7 +124,18 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # My settings
 AUTH_USER_MODEL = "accounts.CustomUser"
 
-LOGIN_URL = "login"
+# django-allauth config
+LOGIN_REDIRECT_URL = "index"
+ACCOUNT_LOGOUT_REDIRECT = "home"
+SITE_ID = 1
+AUTHENTICATION_BACKENDS = (
+    "django.contrib.auth.backends.ModelBackend",
+    "allauth.account.auth_backends.AuthenticationBackend",
+)
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+
+LOGIN_URL = "accounts/login"
+
 
 # Heroku settings
 """

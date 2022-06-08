@@ -116,6 +116,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = "/static/"
+STATICFILES_DIRS = (str(BASE_DIR.joinpath("static")),)
+STATIC_ROOT = str(BASE_DIR.joinpath("staticfiles"))
+STATICFILES_FINDERS = [
+    "django.contrib.staticfiles.finders.FileSystemFinder",
+    "django.contrib.staticfiles.finders.AppDirectoriesFinder",
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
@@ -149,10 +155,10 @@ django_heroku.settings(locals())
 """
 
 # django-debug-toolbar
-import socket
+# import socket
 
-hostname, _, ips = socket.gethostbyname_ex(socket.gethostname())
+# hostname, _, ips = socket.gethostbyname_ex(socket.gethostname())
 # Use the following in Docker only:
-INTERNAL_IPS = [ip[:-1] + "1" for ip in ips]
+# INTERNAL_IPS = [ip[:-1] + "1" for ip in ips]
 # Use locally:
 # INTERNAL_IPS = ["127.0.0.1"]

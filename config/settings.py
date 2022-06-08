@@ -134,7 +134,7 @@ AUTHENTICATION_BACKENDS = (
 )
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
-LOGIN_URL = "login"
+LOGIN_URL = "accounts/login"
 
 
 # Heroku settings

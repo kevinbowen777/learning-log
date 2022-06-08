@@ -32,6 +32,7 @@ INSTALLED_APPS = [
     "allauth.socialaccount",
     "allauth.socialaccount.providers.github",
     "bootstrap4",
+    "crispy_forms",
     "debug_toolbar",
     # Local apps
     "learning_logs",
@@ -124,8 +125,11 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # My settings
 AUTH_USER_MODEL = "accounts.CustomUser"
 
+# django-crispy-forms
+CRISPY_TEMPLATE_PACK = "bootstrap4"
+
 # django-allauth config
-LOGIN_REDIRECT_URL = "index"
+LOGIN_REDIRECT_URL = "learning_logs:index"
 ACCOUNT_LOGOUT_REDIRECT = "home"
 SITE_ID = 1
 AUTHENTICATION_BACKENDS = (

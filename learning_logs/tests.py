@@ -17,7 +17,3 @@ class LearningLogsTests(TestCase):
     def test_logout_page_status(self):
         response = self.client.get("/accounts/logout/")
         self.assertEqual(response.status_code, 302)
-
-    def test_signup_page_status(self):
-        response = self.client.get("/accounts/signup/")
-        self.assertEqual(response.status_code, 200)

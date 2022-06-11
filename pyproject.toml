@@ -79,6 +79,8 @@ django-debug-toolbar = "^3.2.4"
 coverage = {extras = ["toml"], version = "^6.4.1"}
 pytest-cov = "^3.0.0"
 pytest-django = "^4.5.2"
+django-test-plus = "^2.2.0"
+pytest-sugar = "^0.9.4"
 
 [tool.pytest.ini_options]
 DJANGO_SETTINGS_MODULE = "config.settings"

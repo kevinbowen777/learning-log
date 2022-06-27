@@ -1,4 +1,7 @@
+"""Settings for the learning_log project."""
 from pathlib import Path
+
+# import socket  # noqa: E402 # Comment out if not using debug_toolbar
 
 from environs import Env
 
@@ -33,7 +36,7 @@ INSTALLED_APPS = [
     "allauth.socialaccount.providers.github",
     "bootstrap4",
     "crispy_forms",
-    "debug_toolbar",
+    # "debug_toolbar",
     "django_extensions",
     # Local apps
     "learning_logs",
@@ -49,7 +52,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
-    "debug_toolbar.middleware.DebugToolbarMiddleware",
+    # "debug_toolbar.middleware.DebugToolbarMiddleware",
 ]
 
 ROOT_URLCONF = "config.urls"
@@ -86,16 +89,16 @@ DATABASES = {
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",  # noqa:#E501
+        "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",  # noqa:#E501,B950
     },
     {
-        "NAME": "django.contrib.auth.password_validation.MinimumLengthValidator",  # noqa:#E501
+        "NAME": "django.contrib.auth.password_validation.MinimumLengthValidator",  # noqa:#E501,B950
     },
     {
-        "NAME": "django.contrib.auth.password_validation.CommonPasswordValidator",  # noqa:#E501
+        "NAME": "django.contrib.auth.password_validation.CommonPasswordValidator",  # noqa:#E501,B950
     },
     {
-        "NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",  # noqa:#E501
+        "NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",  # noqa:#E501,B950
     },
 ]
 
@@ -158,9 +161,9 @@ django_heroku.settings(locals())
 
 # django-debug-toolbar
 # import socket
-
-# hostname, _, ips = socket.gethostbyname_ex(socket.gethostname())
+# Note: disable when running Nox tests
 # Use the following in Docker only:
+# hostname, _, ips = socket.gethostbyname_ex(socket.gethostname())
 # INTERNAL_IPS = [ip[:-1] + "1" for ip in ips]
 # Use locally:
 # INTERNAL_IPS = ["127.0.0.1"]

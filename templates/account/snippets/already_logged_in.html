@@ -1,0 +1,5 @@
+<!-- templates/account/snippets/already_logged_in.html -->
+{% load account %}
+
+{% user_display user as user_display %}
+<p><strong>Note:</strong> You are already logged in as {{ user_display }}.</p>

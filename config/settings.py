@@ -133,6 +133,7 @@ CRISPY_TEMPLATE_PACK = "bootstrap4"
 # django-allauth config
 LOGIN_REDIRECT_URL = "topics"
 ACCOUNT_LOGOUT_REDIRECT = "home"
+LOGIN_URL = "accounts/login"
 SITE_ID = 1
 AUTHENTICATION_BACKENDS = (
     "django.contrib.auth.backends.ModelBackend",
@@ -140,8 +141,8 @@ AUTHENTICATION_BACKENDS = (
 )
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
-LOGIN_URL = "accounts/login"
-
+MEDIA_URL = "/media/"
+MEDIA_ROOT = str(BASE_DIR.joinpath("media"))
 
 # Heroku settings
 """

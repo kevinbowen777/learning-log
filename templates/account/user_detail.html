@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Polls Profile: {{ object.username }}{% endblock title %}
+
+{% block content %}
+<div class="container">
+  <p>
+  <div class="row">
+    <div class="col-sm-12">
+
+      <h2>{{ object.username }}</h2>
+      {% if object.name %}
+        <p><strong>Full name:</strong> {{ object.name }}</p>
+      {% endif %}
+      {% if user.country %}
+        <p><strong>Country:</strong> {{ user.country.name }}
+        <img src="{{ user.country.flag }}" />
+        </p>
+      {% endif %}
+      {% if object.profile_pic %}
+        <p>
+        <img class="profile_pic" src="{{ object.profile_pic.url }}" alt="{{ object.name }}">
+        </p>
+      {% endif %}
+      {% if object.bio %}
+        <p><strong>About me:</strong></p>
+        <p>{{ object.bio|linebreaksbr }}</p>
+      {% endif %}
+    </div>
+  </div>
+
+{% if object == request.user %}
+<!-- Action buttons -->
+<div class="row">
+
+  <div class="col-sm-12">
+    <a class="btn btn-primary" href="{% url 'user_update' %}" role="button">My Info</a>
+    <a class="btn btn-primary" href="{% url 'account_email' %}" role="button">E-Mail</a>
+    <!-- Your Stuff: Custom user template urls -->
+  </div>
+
+</div>
+<!-- End Action buttons -->
+{% endif %}
+  </p>
+</div>
+{% endblock content %}

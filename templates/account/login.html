@@ -1,20 +1,22 @@
+<!-- templates/account/login.html -->
 {% extends "base.html" %}
-{% load bootstrap4 %}
+{% load crispy_forms_tags %}
+{% load socialaccount %}
 
-{% block page_header %}
-  <h2>Log in to your account.</h2>
-{% endblock page_header %}
+{% block title %}Sign In{% endblock title %}
 
 {% block content %}
-  <form method="post" action="{% url 'account_login' %}" class="col-md-6 form">
+<div class="container">
+  <p>
+  <h2>Sign In</h2>
+  <form class="col-md-4" method="post">
     {% csrf_token %}
-    {% bootstrap_form form %}
-    {% buttons %}
-      <button name="submit" class="btn btn-primary">Log in</button>
-    {% endbuttons %}
-
-    <input type="hidden" name="next"
-      value="{% url 'learning_logs:topics' %}" />
+    {{ form|crispy }}
+    <a class="button secondaryAction mr-2" href="{% url 'account_reset_password' %}">Forgot Password?</a>
+    <button class="primaryAction btn btn-primary" type="submit">Sign In</button>
   </form>
-
+  <p class="text-left text-muted">OR</p>
+  <a class="btn btn-dark" href="{% provider_login_url 'github' %}">Continue with GitHub</a>
+  </p>
+</div>
 {% endblock content %}

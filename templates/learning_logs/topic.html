@@ -1,31 +1,28 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 {% load crispy_forms_tags %}
 
-{% block page_header %}
-{% endblock page_header %}
+{% block title %}Learning Topic - {{ topic }}{% endblock title %}
 
 {% block content %}
 <div class="container">
   <p>
   <h3>{{ topic }}</h3>
   </p>
-
-
   {% for entry in entries %}
     <div class="card mb-3">
       <h4 class="card-header">
         {{ entry.date_added|date:'M d, Y H:i' }}
-        <small><a href="{% url 'learning_logs:edit_entry' entry.id %}">
+        <small><a href="{% url 'edit_entry' entry.id %}">
             edit entry</a></small>
       </h4>
       <div class="card-body">
-        {{ entry.text|linebreaks }}
+        {{ entry.text|linebreaksbr }}
       </div>
     </div>
   {% empty %}
       <p>There are no entries for this topic yet.</p>
   {% endfor %}
   </ul>
-    <a class="btn btn-primary" href="{% url 'learning_logs:new_entry' topic.id %}">Add new entry</a>
+    <a class="btn btn-primary" href="{% url 'new_entry' topic.id %}">Add new entry</a>
 </div>
 {% endblock content %}

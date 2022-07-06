@@ -2,16 +2,15 @@
 {% load bootstrap4 %}
 {% load crispy_forms_tags %}
 
-{% block page_header %}
-{% endblock page_header %}
+{% block title %}{{ topic }} - Add a new entry {% endblock title %}
+
 {% block content %}
 <div class="container">
   <p>
   <h2>New Entry</h2>
-  <p><a href="{% url 'learning_logs:topic' topic.id %}">{{ topic }}</a></p>
-
+  <p><a href="{% url 'topic' topic.id %}">{{ topic }}</a></p>
   <p>Add a new entry:</p>
-  <form class="col-md-6" action="{% url 'learning_logs:new_entry' topic.id %}" method='post'>
+  <form class="col-md-6" action="{% url 'new_entry' topic.id %}" method='post'>
     {% csrf_token %}
     {% bootstrap_form form %}
     {% buttons %}

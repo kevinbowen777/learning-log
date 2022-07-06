@@ -2,15 +2,14 @@
 {% load bootstrap4 %}
 {% load crispy_forms_tags %}
 
-{% block page_header %}
-{% endblock page_header %}
+{% block title %}{{ topic }} - {{ entry }}{% endblock title %}
+
 {% block content %}
 <div class="container">
   <p>
   <h2>Edit entry</h2>
-  <p><a href="{% url 'learning_logs:topic' topic.id %}">{{ topic }}</a></p>
-
-  <form class="col-md-6" action="{% url 'learning_logs:edit_entry' entry.id %}" method='post'>
+  <p><a href="{% url 'topic' topic.id %}">{{ topic }}</a></p>
+  <form class="col-md-6" action="{% url 'edit_entry' entry.id %}" method='post'>
     {% csrf_token %}
     {% bootstrap_form form %}
     {% buttons %}

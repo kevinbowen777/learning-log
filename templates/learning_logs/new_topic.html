@@ -2,19 +2,18 @@
 {% load bootstrap4 %}
 {% load crispy_forms_tags }%
 
-{% block page_header %}
-{% endblock page_header %}
+{% block title %}Learning Log - Add a new topic{% endblock title %}
 
 {% block content %}
 <div class="container">
   <p>
   <h2>Add a new topic</h2>
-  <form class="col-md-6" action="{% url 'learning_logs:new_topic' %}" method='post'>
+  <form class="col-md-6" action="{% url 'new_topic' %}" method='post'>
     {% csrf_token %}
     {% bootstrap_form form %}
     {% buttons %}
-    <button name="submit" class="btn btn-primary">Add topic</button>
-        {% endbuttons %}
+      <button name="submit" class="btn btn-primary">Add topic</button>
+    {% endbuttons %}
   </form>
   </p>
 </div>

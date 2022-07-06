@@ -1,5 +1,13 @@
+<!-- templates/404.html -->
 {% extends "base.html" %}
 
-{% block page_header %}
-  <h2>The item you requested is not available. (404)</h2>
-{% endblock page_header %}
+{% block title %}Page not found{% endblock title %}
+
+{% block content %}
+<div class="container">
+  <p>
+  <h2>Page not found</h2>
+    <p>This is not the page you were looking for.</p>
+  </p>
+</div>
+{% endblock content %}

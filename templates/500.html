@@ -1,5 +1,14 @@
+<!-- templates/500.html -->
 {% extends "base.html" %}
 
-{% block page_header %}
-  <h2>There has been an internal error. (500)</h2>
-{% endblock page_header %}
+{% block title %}Server Error{% endblock title %}
+
+{% block content %}
+<div class="container">
+  <p>
+  <h1>Server Error!!! 500</h1>
+    <h3>Looks like something went wrong!</h3>
+    <p>We track these errors automatically, but if the problem persists feel free to contact us. In the meantime, try refreshing.</p>
+  </p>
+</div>
+{% endblock content %}

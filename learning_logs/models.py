@@ -1,6 +1,6 @@
-# from django.contrib.auth.models import User
 from django.contrib.auth import get_user_model
 from django.db import models
+from django.urls import reverse
 
 
 class Topic(models.Model):
@@ -13,6 +13,9 @@ class Topic(models.Model):
     def __str__(self):
         """Return a string representation of the model."""
         return self.text
+
+    def get_absolute_url(self):
+        return reverse("topic", args=[str(self.id)])
 
 
 class Entry(models.Model):

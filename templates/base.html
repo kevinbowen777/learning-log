@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1,
       shrink-to-fit=no">
-    <title>Learning Log</title>
+    <title>{% block title %}Learning Log{% endblock title %}</title>
     <link rel="shortcut icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}"/>
     <!-- CSS -->
     {% bootstrap_css %}
@@ -23,7 +23,7 @@
    {% if user.is_authenticated %}
      <ul class="navbar-nav mr-auto">
        <li class="nav-item">
-         <a href="{% url 'learning_logs:topics' %}">Topics</a>
+         <a href="{% url 'topics' %}">Topics</a>
        </li>
      </ul>
    {% endif %}

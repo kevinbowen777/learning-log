@@ -1,13 +1,13 @@
 """URLs for the django-start template project."""
 from django.conf import settings
 from django.conf.urls.static import static
+from django.contrib import admin
 from django.urls import include, path
 
-# from django.contrib import admin
 
 urlpatterns = [
     # Django admin
-    # path("admin/", admin.site.urls),
+    path("admin/", admin.site.urls),
     # User management
     path("accounts/", include("allauth.urls")),
     # Local apps

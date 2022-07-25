@@ -16,7 +16,7 @@ and edit existing entries.</p>
 
 ---
 ### Live Demo on Heroku:
-- https://learning-log-kbowen.herokuapp.com/
+- https://kbowen-django-learning-log.herokuapp.com/
 
 ---
 ### Screenshots

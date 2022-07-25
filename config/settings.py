@@ -1,4 +1,4 @@
-"""Settings for the learning_log project."""
+"""Settings for the message_board project."""
 from pathlib import Path
 
 # import socket  # noqa: E402 # Comment out if not using debug_toolbar

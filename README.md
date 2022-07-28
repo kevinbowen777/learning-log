@@ -10,9 +10,17 @@ and edit existing entries.</p>
 ## Installation
  - `git clone https://github.com/kevinbowen777/learning_log.git`
  - `cd learning_log`
- - `docker-compose up --build`
- - `docker-compose exec web python manage.py migrate`
- - Open browser to http://localhost:8000/
+ - Local installation:
+     - `poetry shell`
+     - `poetry install`
+     - `python manage.py migrate`
+     - `python manage.py createsuperuser`
+     - `python manage.py runserver`
+ - Docker installation:
+     - `docker-compose up --build`
+     - `docker-compose python manage.py migrate`
+     - `docker-compose python manage.py createsuperuser`
+ - Browse to http://127.0.0.1:8000 or http://127.0.0.1:8000/admin/
 
 ---
 ### Live Demo on Heroku:

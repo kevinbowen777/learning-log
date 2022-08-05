@@ -20,7 +20,8 @@ DEBUG = env.bool("DEBUG", default=False)
 DEBUG=True
 
 # SECRET_KEY is required
-# python -c "import uuid; print(uuid.uuid4().hex)" to generate secret key
+# python -c "import secrets; print(secrets.token_urlsafe())" to generate secret key
+# See https://docs.python.org/3/library/secrets.html for details
 # config/settings.py
 SECRET_KEY = env.str("SECRET_KEY")
 # .env

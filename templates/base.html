@@ -4,16 +4,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1,
-      shrink-to-fit=no">
-    <title>{% block title %}Learning Log{% endblock title %}</title>
-    <link rel="shortcut icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}"/>
-    <!-- CSS -->
-    {% bootstrap_css %}
-    {% bootstrap_javascript jquery='full' %}
-    <link rel="stylesheet" href="{% static 'css/base.css' %}">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Learning Log | {% block title %}{% endblock title %}</title>
+  <link rel="shortcut icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}"/>
+  <!-- CSS -->
+  {% bootstrap_css %}
+  {% bootstrap_javascript jquery='full' %}
+  <link rel="stylesheet" href="{% static 'css/base.css' %}">
 </head>
 <body>
    <header>

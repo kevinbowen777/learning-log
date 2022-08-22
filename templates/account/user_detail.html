@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block title %}Polls Profile: {{ object.username }}{% endblock title %}
+{% block title %}User Profile ({{ object.username }}){% endblock title %}
 
 {% block content %}
 <div class="container">
@@ -9,9 +9,12 @@
   <div class="row">
     <div class="col-sm-12">
 
-      <h2>{{ object.username }}</h2>
+      <h2>My Profile: {{ object.username }}</h2>
       {% if object.name %}
         <p><strong>Full name:</strong> {{ object.name }}</p>
+      {% endif %}
+      {% if object.age %}
+        <p><strong>Age:</strong> {{ object.age }}</p>
       {% endif %}
       {% if user.country %}
         <p><strong>Country:</strong> {{ user.country.name }}
@@ -35,8 +38,9 @@
 <div class="row">
 
   <div class="col-sm-12">
-    <a class="btn btn-primary" href="{% url 'user_update' %}" role="button">My Info</a>
-    <a class="btn btn-primary" href="{% url 'account_email' %}" role="button">E-Mail</a>
+    <a class="btn btn-primary" href="{% url 'user_update' %}" role="button">Update My Profile</a>
+    <a class="btn btn-primary" href="{% url 'account_email' %}" role="button">Update My E-Mail</a>
+    <a class="btn btn-info" href="javascript:window.history.back()">Cancel</a>
     <!-- Your Stuff: Custom user template urls -->
   </div>
 

@@ -1,20 +1,21 @@
+<!-- templates/account/logout.html -->
 {% extends "base.html" %}
+{% load crispy_forms_tags %}
 
-{% block head_title %}Sign Out{% endblock %}
+{% block title %}Log Out{% endblock title %}
 
 {% block content %}
 <div class="container">
   <p>
-  <h2>Sign Out</h2>
-    <p>Are you sure you want to sign out?</p>
-    <form method="post" action="{% url 'account_logout' %}">
+  <h2>Log Out</h2>
+    <p>Are you sure you want to log out?</p>
+    <form class="col-md-4" method="post" action="{% url 'account_logout' %}">
       {% csrf_token %}
-      {% if redirect_field_value %}
-      <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
-      {% endif %}
-      <button class="btn btn-danger" type="submit">Sign Out</button>
+      {{ form|crispy }}
+      <button class="btn btn-danger" type="submit">Log Out</button>
       <a class="btn btn-info" href="javascript:window.history.back()">Cancel</a>
     </form>
+    </p>
   </p>
 </div>
 {% endblock content %}

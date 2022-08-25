@@ -95,6 +95,8 @@ flake8-docstrings = "^1.6.0"
 flake8-import-order = "^0.18.1"
 safety = "^2.1.0"
 factory-boy = "3.0.1"
+pip-check = "^2.7"
+pip-audit = "^2.4.3"
 
 [tool.pytest.ini_options]
 DJANGO_SETTINGS_MODULE = "config.settings"

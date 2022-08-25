@@ -6,13 +6,13 @@
 {% block content %}
 <div class="container">
   <p>
-  <h3>{{ topic }}</h3>
+  <h2>{{ topic }}</h2>
   </p>
   {% for entry in entries %}
     <div class="card mb-3">
       <h4 class="card-header">
-        {{ entry.date_added|date:'M d, Y H:i' }}
-        <small><a href="{% url 'edit_entry' entry.id %}">
+        <small>{{ entry.date_added|date:'M d, Y H:i' }}
+        <a href="{% url 'edit_entry' entry.id %}">
             edit entry</a></small>
       </h4>
       <div class="card-body">
@@ -23,6 +23,27 @@
       <p>There are no entries for this topic yet.</p>
   {% endfor %}
   </ul>
+    {% if entries.has_other_pages %}
+  <ul class="pagination">
+    {% if entries.has_previous %}
+      <li><a class="btn btn-info mr-2" href="?page={{ topics.previous_page_number }}">&laquo; Previous</a></li>
+    {% else %}
+      <li class="btn btn-info disabled mr-2"><span>&laquo; Previous</span></li>
+    {% endif %}
+    {% for i in entries.paginator.page_range %}
+      {% if entries.number == i %}
+        <li class="btn btn-info active"><span> {{ i }} <span class="sr-only">(current)</span></span></li>
+      {% else %}
+        <li><a class="btn btn-info" href="?page={{ i }}">{{ i }}</a></li>
+      {% endif %}
+    {% endfor %}
+    {% if entries.has_next %}
+      <li><a class="btn btn-info ml-2" href="?page={{ topics.next_page_number }}">Next &raquo;</a></li>
+    {% else %}
+      <li class="btn btn-info disabled ml-2"><span>Next &raquo;</span></li>
+    {% endif %}
+  </ul>
+  {% endif %}
     <a class="btn btn-primary" href="{% url 'new_entry' topic.id %}">Add new entry</a>
 </div>
 {% endblock content %}

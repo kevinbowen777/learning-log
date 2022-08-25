@@ -29,10 +29,19 @@ def topics(request):
 def topic(request, topic_id):
     """Show a single topic and all its entries."""
     topic = get_object_or_404(Topic, id=topic_id)
+    page = request.GET.get("page", 1)
     # Make sure the topic belongs to the current user.
     if topic.owner != request.user:
         raise Http404
     entries = topic.entry_set.order_by("-date_added")
+    paginator = Paginator(entries, 3)
+    try:
+        entries = paginator.page(page)
+    except PageNotAnInteger:
+        entries = paginator.page(1)
+    except EmptyPage:
+        entries = paginator.page(paginator.num_pages)
+
     context = {"topic": topic, "entries": entries}
     return render(request, "learning_logs/topic.html", context)
 

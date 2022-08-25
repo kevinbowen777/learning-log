@@ -6,7 +6,7 @@ from .forms import EntryForm, TopicForm
 from .models import Entry, Topic
 
 
-@login_required
+@login_required()
 def topics(request):
     """Show all topics."""
     topics = Topic.objects.filter(owner=request.user).order_by("date_added")

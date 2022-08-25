@@ -81,13 +81,13 @@
           <div class="pagination">
             <span class="page-links">
               {% if page_obj.has_previous %}
-                <a class="btn btn-info" href="{{ request.path }}?page={{ page_obj.previous_page_number }}">previous</a>
+                <a class="btn btn-info" href="{{ request.path }}?page={{ page_obj.previous_page_number }}">&laquo; previous</a>
               {% endif %}
               <span class="page-current">
                 Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
               </span>
               {% if page_obj.has_next %}
-                <a class="btn btn-info" href="{{ request.path }}?page={{ page_obj.next_page_number }}">next</a>
+                <a class="btn btn-info" href="{{ request.path }}?page={{ page_obj.next_page_number }}">next &raquo;</a>
               {% endif %}
             </span>
           </div>

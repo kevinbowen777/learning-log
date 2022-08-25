@@ -1,4 +1,5 @@
 from django.contrib.auth.decorators import login_required
+from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
 from django.http import Http404
 from django.shortcuts import get_object_or_404, redirect, render
 
@@ -10,6 +11,16 @@ from .models import Entry, Topic
 def topics(request):
     """Show all topics."""
     topics = Topic.objects.filter(owner=request.user).order_by("date_added")
+    page = request.GET.get("page", 1)
+
+    paginator = Paginator(topics, 5)
+    try:
+        topics = paginator.page(page)
+    except PageNotAnInteger:
+        topics = paginator.page(1)
+    except EmptyPage:
+        topics = paginator.page(paginator.num_pages)
+
     context = {"topics": topics}
     return render(request, "learning_logs/topics.html", context)
 

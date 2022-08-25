@@ -13,9 +13,30 @@
           <a class="btn btn-primary" href="{% url 'topic' topic.id %}">{{ topic  }}</a>
       </h3></li>
       {% empty %}
-        <li><h3>No topics have been added yet.</h3></li>
+      <li><h3 class="text-muted"><em>No topics have been added yet.</em></h3></li>
       {% endfor %}
   </ul>
+  {% if topics.has_other_pages %}
+  <ul class="pagination">
+    {% if topics.has_previous %}
+      <li><a class="btn btn-info mr-2" href="?page={{ topics.previous_page_number }}">&laquo; Previous</a></li>
+    {% else %}
+      <li class="btn btn-info disabled mr-2"><span>&laquo; Previous</span></li>
+    {% endif %}
+    {% for i in topics.paginator.page_range %}
+      {% if topics.number == i %}
+        <li class="btn btn-info active"><span> {{ i }} <span class="sr-only">(current)</span></span></li>
+      {% else %}
+        <li><a class="btn btn-info" href="?page={{ i }}">{{ i }}</a></li>
+      {% endif %}
+    {% endfor %}
+    {% if topics.has_next %}
+      <li><a class="btn btn-info ml-2" href="?page={{ topics.next_page_number }}">Next &raquo;</a></li>
+    {% else %}
+      <li class="btn btn-info disabled ml-2"><span>Next &raquo;</span></li>
+    {% endif %}
+  </ul>
+{% endif %}
   <h3><a class="btn btn-primary btn-success" href="{% url 'new_topic' %}">Add a new topic</a></h3>
   <p>
 </div>

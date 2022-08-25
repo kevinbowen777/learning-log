@@ -1,14 +1,14 @@
 <!-- templates/account/signup.html -->
-{% extends "base.html" %}
+{% extends "account/base.html" %}
 {% load crispy_forms_tags %}
 
 {% block title %}Sign Up{% endblock title %}
 
-{% block content %}
+{% block inner %}
 <div class="container">
   <p>
   <h2>Sign Up</h2>
-  <form class="col-md-4" method="post">
+  <form method="post">
     {% csrf_token %}
     {{ form|crispy }}
     <button class="btn btn-success" type="submit">Sign Up</button>
@@ -16,4 +16,4 @@
   </form>
   </p>
 </div>
-{% endblock content %}
+{% endblock inner %}

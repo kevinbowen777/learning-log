@@ -1,9 +1,9 @@
-{% extends "base.html" %}
+{% extends "account/base.html" %}
 {% load crispy_forms_tags %}
 
 {% block title %}Learning Topic - {{ topic }}{% endblock title %}
 
-{% block content %}
+{% block inner %}
 <div class="container">
   <p>
   <h2>{{ topic }}</h2>
@@ -46,4 +46,4 @@
   {% endif %}
     <a class="btn btn-primary" href="{% url 'new_entry' topic.id %}">Add new entry</a>
 </div>
-{% endblock content %}
+{% endblock inner %}

@@ -1,10 +1,10 @@
-{% extends 'base.html' %}
+{% extends "account/base.html" %}
 {% load i18n %}
 {% load account %}
 
 {% block title %}{% trans "Confirm E-mail Address" %}{% endblock title %}
 
-{% block content %}
+{% block inner %}
 <div class="container">
   <p>
   <h2>{% trans "Confirm E-mail Address" %}</h2>
@@ -23,4 +23,4 @@
     {% endif %}
   </p>
 </div>
-{% endblock content %}
+{% endblock inner %}

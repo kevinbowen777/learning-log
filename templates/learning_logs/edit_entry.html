@@ -1,15 +1,15 @@
-{% extends "base.html" %}
+{% extends "account/base.html" %}
 {% load bootstrap4 %}
 {% load crispy_forms_tags %}
 
 {% block title %}{{ topic }} - {{ entry }}{% endblock title %}
 
-{% block content %}
+{% block inner %}
 <div class="container">
   <p>
   <h2>Edit entry</h2>
   <p><a href="{% url 'topic' topic.id %}">{{ topic }}</a></p>
-  <form class="col-md-6" action="{% url 'edit_entry' entry.id %}" method='post'>
+  <form action="{% url 'edit_entry' entry.id %}" method='post'>
     {% csrf_token %}
     {% bootstrap_form form %}
     {% buttons %}
@@ -19,4 +19,4 @@
   </form>
   </p>
 </div>
-{% endblock content %}
+{% endblock inner %}

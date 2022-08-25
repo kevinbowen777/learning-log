@@ -1,11 +1,11 @@
-{% extends "base.html" %}
+{% extends "account/base.html" %}
 
 {% block title %}Welcome{% endblock title %}
 
-{% block content %}
+{% block inner %}
   <div class="jumbotron">
     <p>
-    <h2 class="display-4">Track your learning.</h2>
+    <h2 class="display-5">Track your learning.</h2>
     <p class="lead">Make your own Learning Log, and keep a list of the
         topics you're learning about. Whenever you learn something new
         about a topic, make an entry summarizing what you've learned.</p>
@@ -19,4 +19,4 @@
     {% endif %}
     </p>
   </div>
-{% endblock content %}
+{% endblock inner %}

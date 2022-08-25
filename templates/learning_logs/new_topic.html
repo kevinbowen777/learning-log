@@ -1,14 +1,14 @@
-{% extends "base.html" %}
+{% extends "account/base.html" %}
 {% load bootstrap4 %}
-{% load crispy_forms_tags }%
+{% load crispy_forms_tags %}
 
 {% block title %}Add a new topic{% endblock title %}
 
-{% block content %}
+{% block inner %}
 <div class="container">
   <p>
   <h2>Add a new topic</h2>
-  <form class="col-md-6" action="{% url 'new_topic' %}" method='post'>
+  <form action="{% url 'new_topic' %}" method='post'>
     {% csrf_token %}
     {% bootstrap_form form %}
     {% buttons %}
@@ -18,4 +18,4 @@
   </form>
   </p>
 </div>
-{% endblock content %}
+{% endblock inner %}

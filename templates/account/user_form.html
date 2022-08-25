@@ -1,13 +1,13 @@
-{% extends "base.html" %}
+{% extends "account/base.html" %}
 {% load crispy_forms_tags %}
 
 {% block title %}Update Profile: {{ user.username }}{% endblock %}
 
-{% block content %}
+{% block inner %}
 <div class="container">
   <p>
     <h2>{{ user.username }}</h2>
-    <form class="form-horizontal col-md-6" method="post" enctype="multipart/form-data" action="{% url 'user_update' %}">
+    <form class="form-horizontal" method="post" enctype="multipart/form-data" action="{% url 'user_update' %}">
       {% csrf_token %}
       {{ form|crispy }}
       <div class="control-group">
@@ -19,4 +19,4 @@
     </form>
   </p>
 </div>
-{% endblock %}
+{% endblock inner %}

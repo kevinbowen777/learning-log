@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}Welcome{% endblock title %}
+
+{% block content %}
+  <div class="jumbotron">
+    <p>
+    <h2 class="display-4">Track your learning.</h2>
+    <p class="lead">Make your own Learning Log, and keep a list of the
+        topics you're learning about. Whenever you learn something new
+        about a topic, make an entry summarizing what you've learned.</p>
+    {% if user.is_authenticated %}
+      <a class="btn btn-primary btn-lg" href="{% url 'topics' %}"
+                                        role="button">View All Topics
+                                        &raquo;</a>
+    {% else %}
+    <a class="btn btn-lg btn-primary" href="{% url 'account_signup' %}"
+        role="button">Register &raquo;</a>
+    {% endif %}
+    </p>
+  </div>
+{% endblock content %}

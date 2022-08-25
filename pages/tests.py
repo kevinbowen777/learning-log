@@ -13,7 +13,7 @@ class HomePageTests(SimpleTestCase):
         self.assertEqual(self.response.status_code, 200)
 
     def test_homepage_template(self):
-        self.assertTemplateUsed(self.response, "home.html")
+        self.assertTemplateUsed(self.response, "pages/home.html")
 
     def test_homepage_contains_correct_html(self):
         self.assertContains(self.response, "Learning Log")
@@ -40,7 +40,7 @@ class AboutPageTests(SimpleTestCase):
         self.assertEqual(self.response.status_code, 200)
 
     def test_aboutpage_template(self):
-        self.assertTemplateUsed(self.response, "about.html")
+        self.assertTemplateUsed(self.response, "pages/about.html")
 
     def test_aboutpage_homepage_contains_correct_html(self):
         self.assertContains(self.response, "About page")

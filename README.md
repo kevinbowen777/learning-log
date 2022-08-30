@@ -1,5 +1,13 @@
 ## Learning Log
 
+<div align="center">
+
+  [![Status](https://img.shields.io/badge/status-active-success.svg)]() 
+  [![GitHub Issues](https://img.shields.io/github/issues/kevinbowen777/learning_log.svg)](https://github.com/kevinbowen777/learning_log/issues)
+  [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
+
+</div>
+
 Learning Log is a demo application taken from the book _Python Crash Course_.
 It is written in Python using the Django web framework. It is an  online journal system that lets you keep track of information you’ve learned about particular topics.
 <p>

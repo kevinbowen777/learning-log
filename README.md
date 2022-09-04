@@ -8,13 +8,20 @@
 
 </div>
 
-Learning Log is a demo application taken from the book _Python Crash Course_.
-It is written in Python using the Django web framework. It is an  online journal system that lets you keep track of information you’ve learned about particular topics.
+Learning Log is an online journal system that lets you keep track of information you’ve learned about particular topics.
 <p>
 It allows users to log the topics they’re interested in and to make journal entries as
-they learn about each topic. Once logged in, a user can create new topics, add new entries, and read
-and edit existing entries.</p>
+they learn about each topic. Once logged in, a user can create new topics, add new entries, and read and edit existing entries.</p>
 
+---
+## Features
+
+ - User registration with email verification & social(GitHub) login
+ - Bootstrap4 & crispy-forms decorations
+ - Customizable user profiles with bio, profile picture & country flags
+ - Nox testing sessions (black, linting, pytest, coverage, Sphinx doc generation)
+
+---
 ## Installation
  - `git clone https://github.com/kevinbowen777/learning_log.git`
  - `cd learning_log`

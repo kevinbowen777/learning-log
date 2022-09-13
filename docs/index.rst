@@ -1,5 +1,5 @@
-learning_log - A Django poll application
-========================================
+learning_log
+============
 
 .. toctree::
    :hidden:
@@ -7,7 +7,7 @@ learning_log - A Django poll application
 
    license
 
-This repository runs a Django 4.1 polling application.
+An online journal application built with the Django 4.1 web framework.
 
 Learning Log is an online journal system that lets you keep track of information you’ve learned about particular topics.
 
@@ -17,10 +17,33 @@ they learn about each topic. Once logged in, a user can create new topics, add n
 Features
 --------
 
- * User registration with email verification & social(GitHub) login
- * Bootstrap4 & crispy-forms decorations
- * Customizable user profiles with bio, profile picture & country flags
- * Nox testing sessions (black, linting, pytest, coverage, Sphinx doc generation)
+ * Application
+
+   * Create & edit new tops and entries
+   * User registration with email verification & social(GitHub) login
+   * Bootstrap4 & crispy-forms decorations
+   * Customizable user profile pages with bio, profile pic, & country flags
+   * image carousel
+   * pagination template
+ * Dev/testing
+
+   * basic module testing templates
+   * Coverage reports
+   * Debug-toolbar available
+   * Examples of using Factories & pytest fixtures in account app testing
+   * `shell_plus` with IPython via `django-extensions` package
+   * Nox testing sessions for latest Python 3.9, 3.10, and 3.11
+
+     * black
+     * Sphinx documentaion generations
+     * linting
+       
+       * flake8
+       * flake8-bugbear
+       * flake8-docstrings
+       * flake8-import-order
+       * safety(python package vulnerability testing)
+       * pytest sessions with coverage
 
 Installation
 ------------

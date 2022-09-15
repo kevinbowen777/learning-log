@@ -1,4 +1,4 @@
-"""Nox sessions."""
+"""Nox sessions - learning_log."""
 import tempfile
 
 import nox
@@ -83,7 +83,17 @@ def safety(session):
 def tests(session):
     """Run the test suite."""
     args = session.posargs or ["--cov"]
-    session.run("poetry", "install", "--no-dev", external=True)
+    with tempfile.NamedTemporaryFile() as requirements:
+        session.run(
+            "poetry",
+            "export",
+            "--format=requirements.txt",
+            "--without-hashes",
+            f"--output={requirements.name}",
+            external=True,
+        )
+        session.install("-r", f"{requirements.name}")
+    # session.run("poetry", "install", "--no-dev", external=True)
     install_with_constraints(
         session,
         "coverage[toml]",

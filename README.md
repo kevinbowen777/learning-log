@@ -13,16 +13,23 @@ Learning Log is an online journal system that lets you keep track of information
 It allows users to log the topics they’re interested in and to make journal entries as
 they learn about each topic. Once logged in, a user can create new topics, add new entries, and read and edit existing entries.</p>
 
+##### Table of Contents
+ - [Features](#features)
+ - [Installation](#installation)
+ - [Testing](#testing)
+ - [Application Demo](#application-demo)
+ - [Screenshots](#screenshots)
+ - [Reporting Bugs](#reporting-bugs)
+
 ---
-## Features
+
+### Features
 
  - Application
      - Create & edit new tops and entries
      - User registration with email verification & social(GitHub) login
      - Bootstrap4 & crispy-forms decorations
      - Customizable user profile pages with bio, profile pic, & country flags
-     - image carousel
-     - pagination template
  - Dev/testing
      - basic module testing templates
      - Coverage reports
@@ -31,7 +38,7 @@ they learn about each topic. Once logged in, a user can create new topics, add n
      - `shell_plus` with IPython via `django-extensions` package
      - Nox testing sessions for latest Python 3.9, 3.10, and 3.11
          - black
-         - Sphinx documentaion generations
+         - Sphinx documentaion generation
          - linting
              - flake8
              - flake8-bugbear
@@ -41,7 +48,8 @@ they learn about each topic. Once logged in, a user can create new topics, add n
          - pytest sessions with coverage
 
 ---
-## Installation
+
+### Installation
  - `git clone https://github.com/kevinbowen777/learning_log.git`
  - `cd learning_log`
  - Local installation:
@@ -57,6 +65,7 @@ they learn about each topic. Once logged in, a user can create new topics, add n
  - Browse to http://127.0.0.1:8000 or http://127.0.0.1:8000/admin/
 
 ---
+
 ### Testing
  - `docker-compose exec web python manage.py test`
  - `coverage run -m pytest`
@@ -65,10 +74,12 @@ they learn about each topic. Once logged in, a user can create new topics, add n
      - e.g. `nox`, `nox -rs lint-3.11`, `nox -s tests`
 
 ---
-### Live Demo on Heroku:
+### Application Demo
+A live application demonstration hosted at Heroku
 - https://kbowen-django-learning-log.herokuapp.com/
 
 ---
+
 ### Screenshots
 Home Page
 ![Home Page](https://github.com/kevinbowen777/learning_log/blob/master/images/learning_log_home.png)
@@ -79,9 +90,7 @@ Topic List
 Topic Details
 ![Topic List](https://github.com/kevinbowen777/learning_log/blob/master/images/learning_log_topic_details.png)
 
-
-[![License](https://img.shields.io/badge/license-MIT-green)](https://github.com/kevinbowen777/learning_log/blob/master/LICENSE)
-
+---
 
 ### Reporting Bugs
 

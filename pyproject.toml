@@ -47,7 +47,7 @@ extend_skip = ["*.md", "*.json"]
 line_length = 79
 
 [tool.poetry]
-name = "learning_log"
+name = "learning-log"
 version = "0.1.0"
 description = "A Django web application for creating learning lists"
 authors = ["Kevin Bowen <kevin.bowen@gmail.com>"]

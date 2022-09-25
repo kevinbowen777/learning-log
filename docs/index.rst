@@ -1,4 +1,4 @@
-learning_log
+learning-log
 ============
 
 .. toctree::
@@ -112,4 +112,4 @@ Live demonstration of application running on Heroku:
 Reporting Bugs
 --------------
 
-Visit the learning_log `Issues page <https://github.com/kevinbowen777/learning_log/issues>`_ on GitHub.
+Visit the learning_log `Issues page <https://github.com/kevinbowen777/learning-log/issues>`_ on GitHub.

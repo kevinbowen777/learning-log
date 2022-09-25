@@ -3,7 +3,7 @@
 <div align="center">
 
   [![Status](https://img.shields.io/badge/status-active-success.svg)]() 
-  [![GitHub Issues](https://img.shields.io/github/issues/kevinbowen777/learning_log.svg)](https://github.com/kevinbowen777/learning_log/issues)
+  [![GitHub Issues](https://img.shields.io/github/issues/kevinbowen777/learning-log.svg)](https://github.com/kevinbowen777/learning-log/issues)
   [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
 
 </div>
@@ -82,17 +82,17 @@ A live application demonstration hosted at Heroku
 
 ### Screenshots
 Home Page
-![Home Page](https://github.com/kevinbowen777/learning_log/blob/master/images/learning_log_home.png)
+![Home Page](https://github.com/kevinbowen777/learning-log/blob/master/images/learning_log_home.png)
 
 Topic List
-![Topic List](https://github.com/kevinbowen777/learning_log/blob/master/images/learning_log_topics.png)
+![Topic List](https://github.com/kevinbowen777/learning-log/blob/master/images/learning_log_topics.png)
 
 Topic Details
-![Topic List](https://github.com/kevinbowen777/learning_log/blob/master/images/learning_log_topic_details.png)
+![Topic List](https://github.com/kevinbowen777/learning-log/blob/master/images/learning_log_topic_details.png)
 
 ---
 
 ### Reporting Bugs
 
-   Visit the [Issues page](https://github.com/kevinbowen777/learning_log/issues)
+   Visit the [Issues page](https://github.com/kevinbowen777/learning-log/issues)
       to view currently open bug reports or open a new issue.

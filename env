@@ -1,3 +1,7 @@
+DEBUG=True
+SECRET_KEY=<secret_key>
+DATABASE_URL=sqlite:///learning-log.sqlite3
+EMAIL_HOST_PASSWORD=<mailhost_password>
 #
 # .env template for django projects
 #
@@ -8,36 +12,36 @@
 # Documentation: https://github.com/sloria/environs#usage-with-django
 # Installation: `pip install environs[django]`
 
-# config/settings.py
-from environs import Env
+## config/settings.py
+# from environs import Env
 #
-env = Env()
-env.read_env()
-
-# Override in .env for local development
-DEBUG = env.bool("DEBUG", default=False)
+# env = Env()
+# env.read_env()
+#
+## Override in .env for local development
+# DEBUG = env.bool("DEBUG", default=False)
 # .env
-DEBUG=True
+# DEBUG=True
 
 # SECRET_KEY is required
 # python -c "import secrets; print(secrets.token_urlsafe())" to generate secret key
 # See https://docs.python.org/3/library/secrets.html for details
-# config/settings.py
-SECRET_KEY = env.str("SECRET_KEY")
+# 
+# SECRET_KEY = env.str("SECRET_KEY")
 # .env
-SECRET_KEY=<secret_key>
+# SECRET_KEY=<secret_key>
 
 # Parse database URLs, e.g. "postgres://localhost:5432/mydb"
 # DATABASES = {"default": env.dj_db_url("DATABASE_URL")}
-# config/settings.py
-DATABASES = {
-    "default": env.dj_db_url(
-        "DATABASE_URL", default="postgres://postgres@db/postgres"
-    )
-}
+## config/settings.py
+# DATABASES = {
+#     "default": env.dj_db_url(
+#         "DATABASE_URL", default="postgres://postgres@db/postgres"
+#     )
+# }
 # .env
 # DATABASE_URL= <database_url>
-DATABASE_URL=sqlite:///djangdo.sqlite3
+# DATABASE_URL=sqlite:///learning-log.sqlite3
 
 # Parse email URLs, e.g. "smtp://"
 # email = env.dj_email_url("EMAIL_URL", default="smtp://")
@@ -49,7 +53,7 @@ DATABASE_URL=sqlite:///djangdo.sqlite3
 # MAIL_USERNAME=<email_username>
 # MAIL_PASSWORD=<email_password>
 
-# EMAIL_HOST_PASSWORD='<mailhost_password>
+# EMAIL_HOST_PASSWORD=<mailhost_password>
 
 # Used in production deployment
 # SECURE_SSL_REDIRECT=False

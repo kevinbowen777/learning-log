@@ -1,4 +1,4 @@
-name: django_start-lint_multi-arch
+name: nox-lint_multi-arch
 on: push
 jobs:
   tests:

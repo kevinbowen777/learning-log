@@ -1,0 +1,23 @@
+name: nox-safety_multi-arch
+on: push
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['3.9', '3.10']
+    name: Python ${{ matrix.python-version }} django_start
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+          architecture: x64
+      - run: pip install nox==2022.8.7
+      - run: pip install poetry==1.1.15
+      - run: |
+          export SECRET_KEY=${{secrets.SECRET_KEY}}
+          export EMAIL_HOST_PASSWORD=${{secrets.EMAIL_HOST_PASSWORD}}
+          export DATABASE_URL=${{secrets.DATABASE_URL}}
+          nox -s safety-${{ matrix.python-version }}

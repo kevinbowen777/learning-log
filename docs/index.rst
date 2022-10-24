@@ -76,8 +76,9 @@ Docker installation
 .. code-block:: console
 
    $ docker-compose up --build
-   $ docker-compose python manage.py migrate
-   $ docker-compose python manage.py createsuperuser
+   $ docker-compose exec web python manage.py migrate
+   $ docker-compose exec web python manage.py createsuperuser
+   $ docker-compose exec web python manage.py shell_plus
 
 
 Usage

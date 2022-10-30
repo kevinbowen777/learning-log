@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: ['3.9', '3.10']
+        python-version: ['3.9', '3.10', '3.11']
     name: Python ${{ matrix.python-version }} django_start
     steps:
       - uses: actions/checkout@v3
@@ -15,7 +15,7 @@ jobs:
           python-version: ${{ matrix.python-version }}
           architecture: x64
       - run: pip install nox==2022.8.7
-      - run: pip install poetry==1.1.15
+      - run: pip install poetry==1.2.2
       - run: |
           export SECRET_KEY=${{secrets.SECRET_KEY}}
           export EMAIL_HOST_PASSWORD=${{secrets.EMAIL_HOST_PASSWORD}}

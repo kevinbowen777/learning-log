@@ -1,7 +1,52 @@
-DEBUG=True
-SECRET_KEY=<secret_key>
-DATABASE_URL=sqlite:///learning-log.sqlite3
-EMAIL_HOST_PASSWORD=<mailhost_password>
+# This should never be set to true in production but it should be enabled in dev.
+#export DEBUG=false
+export DEBUG=True
+
+export EMAIL_HOST_PASSWORD=<email_host_password>
+
+# Enable BuildKit by default:
+#   https://docs.docker.com/develop/develop-images/build_enhancements
+export DOCKER_BUILDKIT=1
+
+# In development we want all services to start but in production you don't
+# need the asset watchers to run since assets get built into the image.
+#
+# You can even choose not to run postgres and redis in prod if you plan to use
+# managed cloud services. Everything "just works", even optional depends_on!
+#export COMPOSE_PROFILES=postgres,redis,web,worker
+export COMPOSE_PROFILES=postgres,web
+
+# Rather than use the directory name, let's control the name of the project.
+export COMPOSE_PROJECT_NAME=learning-log
+
+# How many workers and threads should your app use? WEB_CONCURRENCY defaults
+# to the server's CPU count * 2. That is a good starting point. In development
+# it's a good idea to use 1 to avoid race conditions when debugging.
+#export WEB_CONCURRENCY=
+export WEB_CONCURRENCY=1
+#export PYTHON_MAX_THREADS=1
+
+export SECRET_KEY=<secret_key>
+# Uncomment the following three lines to run a sqlite3 db locally.
+# ENGINE_DB=django.db.backends.sqlite3
+# DATABASE_URL=sqlite:///learning-log.sqlite3
+# export POSTGRES_DB=learning-log.sqlite3
+export POSTGRES_USER=dummy
+export POSTGRES_PASSWORD=<postgres_password>
+#export POSTGRES_DB=postgres
+#export POSTGRES_HOST=db
+#export POSTGRES_PORT=5432
+
+# Should Docker restart your containers if they go down in unexpected ways?
+#export DOCKER_RESTART_POLICY=unless-stopped
+export DOCKER_RESTART_POLICY=no
+
+# What CPU and memory constraints will be added to your services? When left at
+# 0, they will happily use as much as needed.
+#export DOCKER_POSTGRES_CPUS=0
+#export DOCKER_POSTGRES_MEMORY=0
+#export DOCKER_WEB_CPUS=0
+#export DOCKER_WEB_MEMORY=0
 #
 # .env template for django projects
 #
@@ -26,7 +71,7 @@ EMAIL_HOST_PASSWORD=<mailhost_password>
 # SECRET_KEY is required
 # python -c "import secrets; print(secrets.token_urlsafe())" to generate secret key
 # See https://docs.python.org/3/library/secrets.html for details
-# 
+#
 # SECRET_KEY = env.str("SECRET_KEY")
 # .env
 # SECRET_KEY=<secret_key>
@@ -34,11 +79,21 @@ EMAIL_HOST_PASSWORD=<mailhost_password>
 # Parse database URLs, e.g. "postgres://localhost:5432/mydb"
 # DATABASES = {"default": env.dj_db_url("DATABASE_URL")}
 ## config/settings.py
-# DATABASES = {
-#     "default": env.dj_db_url(
-#         "DATABASE_URL", default="postgres://postgres@db/postgres"
-#     )
-# }
+# Note: Set sqlite/dev URI in .env file
+#DATABASES = {
+#    "default": {
+#        "ENGINE": env.str("ENGINE_DB", "django.db.backends.postgresql"),
+#        "DATABASE_URL": env.dj_db_url(
+#            "DATABASE_URL", default="postgres://postgres@db/postgres"
+#        ),
+#        "NAME": env.str("POSTGRES_DB", "postgres"),
+#        "USER": env.str("POSTGRES_USER", "fakeuser"),
+#        "PASSWORD": env.str("POSTGRES_PASSWORD", "password"),
+#        "HOST": env.str("POSTGRES_HOST", "db"),
+#        "PORT": env.int("POSTGRES_PORT", "5432"),
+#    }
+#}
+#
 # .env
 # DATABASE_URL= <database_url>
 # DATABASE_URL=sqlite:///learning-log.sqlite3

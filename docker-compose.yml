@@ -1,8 +1,11 @@
-version: "3.7"
-
 services:
   web:
     container_name: learning_log-web
+    deploy:
+      resources:
+        limits:
+          cpus: "${DOCKER_WEB_CPUS:-0}"
+          memory: "${DOCKER_WEB_MEMORY:-0}"
     build: .
     command: python /code/manage.py runserver 0.0.0.0:8000
     volumes:
@@ -11,15 +14,22 @@ services:
       - 8000:8000
     depends_on:
       - db
-    environment:
-      - "DEBUG=True"
+    env_file:
+      - ".env"
+    restart: "${DOCKER_RESTART_POLICY:-unless-stopped}"
+    stop_grace_period: "3s"
+    profiles: ["web"]
   db:
     container_name: learning_log-db
-    image: postgres:11
+    environment:
+      POSTGRES_USER: "${POSTGRES_USER}"
+      POSTGRES_PASSWORD: "${POSTGRES_PASSWORD}"
+    image: postgres:13.8
+    profiles: ["postgres"]
+    restart: "${DOCKER_RESTART_POLICY:-unless-stopped}"
+    stop_grace_period: "3s"
     volumes:
       - postgres_data:/var/lib/postgresql/data/
-    environment:
-      - "POSTGRES_HOST_AUTH_METHOD=trust"
 
 volumes:
   postgres_data:

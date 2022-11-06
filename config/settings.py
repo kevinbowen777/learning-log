@@ -81,10 +81,19 @@ WSGI_APPLICATION = "config.wsgi.application"
 
 
 # Database
+# Note: Set sqlite/dev URI in .env file
 DATABASES = {
-    "default": env.dj_db_url(
-        "DATABASE_URL", default="postgres://postgres@db/postgres"
-    )
+    "default": {
+        "ENGINE": env.str("ENGINE_DB", "django.db.backends.postgresql"),
+        "DATABASE_URL": env.dj_db_url(
+            "DATABASE_URL", default="postgres://postgres@db/postgres"
+        ),
+        "NAME": env.str("POSTGRES_DB", "postgres"),
+        "USER": env.str("POSTGRES_USER", "fakeuser"),
+        "PASSWORD": env.str("POSTGRES_PASSWORD", "password"),
+        "HOST": env.str("POSTGRES_HOST", "db"),
+        "PORT": env.int("POSTGRES_PORT", "5432"),
+    }
 }
 
 # Password validation

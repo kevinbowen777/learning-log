@@ -1,3 +1,5 @@
+# Path needed to run poetry in nox tests
+export PATH="/root/.local/bin:$PATH"
 # This should never be set to true in production but it should be enabled in dev.
 #export DEBUG=false
 export DEBUG=True
@@ -33,13 +35,36 @@ export SECRET_KEY=<secret_key>
 # export POSTGRES_DB=learning-log.sqlite3
 export POSTGRES_USER=dummy
 export POSTGRES_PASSWORD=<postgres_password>
-#export POSTGRES_DB=postgres
-#export POSTGRES_HOST=db
-#export POSTGRES_PORT=5432
+export POSTGRES_DB=postgres
+export POSTGRES_HOST=db
+export POSTGRES_PORT=5432
 
 # Should Docker restart your containers if they go down in unexpected ways?
 #export DOCKER_RESTART_POLICY=unless-stopped
 export DOCKER_RESTART_POLICY=no
+
+# What health check test command do you want to run? In development, having it
+# curl your web server will result in a lot of log spam, so setting it to
+# /bin/true is an easy way to make the health check do basically nothing.
+# export DOCKER_WEB_HEALTHCHECK_TEST=curl localhost:8000/healthcheck
+export DOCKER_WEB_HEALTHCHECK_TEST=/bin/true
+
+# What ip:port should be published back to the Docker host for the app server?
+# If you're using Docker Toolbox or a custom VM you can't use 127.0.0.1. This
+# is being overwritten in dev to be compatible with more dev environments.
+#
+# If you have a port conflict because something else is using 8000 then you
+# can either stop that process or change 8000 to be something else.
+#
+# Use the default in production to avoid having gunicorn directly accessible to
+# the internet without assistance from a cloud based firewall.
+#export DOCKER_WEB_PORT_FORWARD=127.0.0.1:8000
+export DOCKER_WEB_PORT_FORWARD=8000
+
+# What volume path should be used? In dev we want to volume mount everything
+# so that we can develop our code without rebuilding our Docker images.
+#export DOCKER_WEB_VOLUME=./public_collected:/code/public_collected
+export DOCKER_WEB_VOLUME=.:/code
 
 # What CPU and memory constraints will be added to your services? When left at
 # 0, they will happily use as much as needed.
@@ -47,68 +72,6 @@ export DOCKER_RESTART_POLICY=no
 #export DOCKER_POSTGRES_MEMORY=0
 #export DOCKER_WEB_CPUS=0
 #export DOCKER_WEB_MEMORY=0
-#
-# .env template for django projects
-#
-#
-# Remember to rename this file to .env
-# and uncomment the appropriate CONFIG statements
-# depending upon the deployment environment
-# Documentation: https://github.com/sloria/environs#usage-with-django
-# Installation: `pip install environs[django]`
-
-## config/settings.py
-# from environs import Env
-#
-# env = Env()
-# env.read_env()
-#
-## Override in .env for local development
-# DEBUG = env.bool("DEBUG", default=False)
-# .env
-# DEBUG=True
-
-# SECRET_KEY is required
-# python -c "import secrets; print(secrets.token_urlsafe())" to generate secret key
-# See https://docs.python.org/3/library/secrets.html for details
-#
-# SECRET_KEY = env.str("SECRET_KEY")
-# .env
-# SECRET_KEY=<secret_key>
-
-# Parse database URLs, e.g. "postgres://localhost:5432/mydb"
-# DATABASES = {"default": env.dj_db_url("DATABASE_URL")}
-## config/settings.py
-# Note: Set sqlite/dev URI in .env file
-#DATABASES = {
-#    "default": {
-#        "ENGINE": env.str("ENGINE_DB", "django.db.backends.postgresql"),
-#        "DATABASE_URL": env.dj_db_url(
-#            "DATABASE_URL", default="postgres://postgres@db/postgres"
-#        ),
-#        "NAME": env.str("POSTGRES_DB", "postgres"),
-#        "USER": env.str("POSTGRES_USER", "fakeuser"),
-#        "PASSWORD": env.str("POSTGRES_PASSWORD", "password"),
-#        "HOST": env.str("POSTGRES_HOST", "db"),
-#        "PORT": env.int("POSTGRES_PORT", "5432"),
-#    }
-#}
-#
-# .env
-# DATABASE_URL= <database_url>
-# DATABASE_URL=sqlite:///learning-log.sqlite3
-
-# Parse email URLs, e.g. "smtp://"
-# email = env.dj_email_url("EMAIL_URL", default="smtp://")
-# EMAIL_HOST = email["EMAIL_HOST"]
-# EMAIL_PORT = email["EMAIL_PORT"]
-# EMAIL_HOST_PASSWORD = email["EMAIL_HOST_PASSWORD"]
-# EMAIL_HOST_USER = email["EMAIL_HOST_USER"]
-# EMAIL_USE_TLS = email["EMAIL_USE_TLS"]
-# MAIL_USERNAME=<email_username>
-# MAIL_PASSWORD=<email_password>
-
-# EMAIL_HOST_PASSWORD=<mailhost_password>
 
 # Used in production deployment
 # SECURE_SSL_REDIRECT=False

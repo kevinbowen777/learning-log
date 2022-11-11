@@ -60,16 +60,20 @@ they learn about each topic. Once logged in, a user can create new topics, add n
      - `python manage.py createsuperuser`
      - `python manage.py runserver`
  - Docker installation:
-     - `docker-compose up --build`
-     - `docker-compose exec web python manage.py migrate`
-     - `docker-compose exec web python manage.py createsuperuser`
-     - `docker-compose exec web python manage.py shell_plus`
+     - `docker compose up --build`
+     - `docker compose exec web python manage.py migrate`
+     - `docker compose exec web python manage.py createsuperuser`
+     Additional commands:
+       - `docker compose exec web python manage.py shell_plus`
+         (loads Django shell autoloading project models & classes)
+       - `docker run -it django-start-web bash`
+         (CLI access to container)
  - Browse to http://127.0.0.1:8000 or http://127.0.0.1:8000/admin/
 
 ---
 
 ### Testing
- - `docker-compose exec web python manage.py test`
+ - `docker compose exec web python manage.py test`
  - `coverage run -m pytest`
  - Nox (includes sessions for black, lint, safety, tests)
      - testing supported for Python 3.9, 3.10, 3.11

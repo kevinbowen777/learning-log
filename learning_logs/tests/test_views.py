@@ -28,3 +28,7 @@ class TopicsPageViewTest(TestCase):
     def test_topic_content(self):
         self.assertEqual(f"{self.topic.text}", "A Topic title")
         self.assertEqual(f"{self.topic.owner}", "kevin")
+
+    def test___str__(self):
+        assert self.topic.__str__() == self.topic.text
+        assert str(self.topic) == self.topic.text

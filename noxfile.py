@@ -43,7 +43,7 @@ def install_with_constraints(session, *args, **kwargs):
         session.install(f"--requirement={requirements.name}", *args, **kwargs)
 
 
-@nox.session(python=["3.11", "3.10", "3.9"])
+@nox.session(python=["3.12", "3.11", "3.10", "3.9"])
 def black(session):
     """Run black code formatter."""
     args = session.posargs or locations
@@ -51,14 +51,14 @@ def black(session):
     session.run("black", *args)
 
 
-@nox.session(python=["3.11", "3.10", "3.9"])
+@nox.session(python=["3.12", "3.11", "3.10", "3.9"])
 def docs(session):
     """Build the documentation."""
     install_with_constraints(session, "sphinx")
     session.run("sphinx-build", "docs", "docs/_build")
 
 
-@nox.session(python=["3.11", "3.10", "3.9"])
+@nox.session(python=["3.12", "3.11", "3.10", "3.9"])
 def lint(session):
     """Lint using flake8."""
     args = session.posargs or locations
@@ -74,7 +74,7 @@ def lint(session):
     session.run("flake8", *args)
 
 
-@nox.session(python=["3.11", "3.10", "3.9"])
+@nox.session(python=["3.12", "3.11", "3.10", "3.9"])
 def safety(session):
     """Scan dependencies for insecure packages."""
     with tempfile.NamedTemporaryFile() as requirements:
@@ -94,7 +94,7 @@ def safety(session):
         )
 
 
-@nox.session(python=["3.11", "3.10", "3.9"])
+@nox.session(python=["3.12", "3.11", "3.10", "3.9"])
 def tests(session):
     """Run the test suite."""
     args = session.posargs or ["--cov"]

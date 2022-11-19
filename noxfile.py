@@ -90,11 +90,15 @@ def safety(session):
         )
         install_with_constraints(session, "safety")
         session.run(
-            "safety", "check", f"--file={requirements.name}", "--full-report"
+            "safety",
+            "check",
+            f"--file={requirements.name}",
+            "--ignore=51457",
+            "--full-report",
         )
 
 
-@nox.session(python=["3.12", "3.11", "3.10", "3.9"])
+@nox.session(python=["3.12", "3.11", "3.10"])
 def tests(session):
     """Run the test suite."""
     args = session.posargs or ["--cov"]

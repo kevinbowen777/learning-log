@@ -28,6 +28,7 @@ export COMPOSE_PROJECT_NAME=learning-log
 export WEB_CONCURRENCY=1
 #export PYTHON_MAX_THREADS=1
 
+# python -c 'import secrets; print(secrets.token_urlsafe(38))'
 export SECRET_KEY=<secret_key>
 # Uncomment the following three lines to run a sqlite3 db locally.
 # ENGINE_DB=django.db.backends.sqlite3

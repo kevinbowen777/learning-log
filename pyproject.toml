@@ -88,6 +88,7 @@ factory-boy = "3.0.1"
 pip-check = "^2.7"
 pip-audit = "^2.4.3"
 Sphinx = "^5.1.1"
+flake8-import-order = "^0.18.2"
 
 [tool.pytest.ini_options]
 DJANGO_SETTINGS_MODULE = "config.settings"

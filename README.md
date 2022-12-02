@@ -36,16 +36,16 @@ they learn about each topic. Once logged in, a user can create new topics, add n
      - Debug-toolbar available
      - Examples of using Factories & pytest fixtures in account app testing
      - `shell_plus` with IPython via `django-extensions` package
-     - Nox testing sessions for latest Python 3.9, 3.10, and 3.11
-         - black
-         - Sphinx documentaion generation
-         - linting
+     - Nox testing sessions for latest Python 3.9, 3.10, 3.11, and 3.12
+         - black (`nox -s black`)
+         - Sphinx documentation generation (`nox -s docs`)
+         - linting (`nox -s lint`)
              - flake8
              - flake8-bugbear
              - flake8-docstrings
              - flake8-import-order
-         - safety(python package vulnerability testing)
-         - pytest sessions with coverage
+         - safety(python package vulnerability testing) (`nox -s safety`)
+         - pytest sessions with coverage (`coverage run -m pytest`)
      - For additional links to package resources used in this repository, see the [Package Index](docs/package_index.md)
 
 ---
@@ -76,13 +76,14 @@ they learn about each topic. Once logged in, a user can create new topics, add n
  - `docker compose exec web python manage.py test`
  - `coverage run -m pytest`
  - Nox (includes sessions for black, lint, safety, tests)
-     - testing supported for Python 3.9, 3.10, 3.11
+     - testing supported for Python 3.9, 3.10, 3.11, 3.12
      - e.g. `nox`, `nox -rs lint-3.11`, `nox -s tests`
 
 ---
 ### Application Demo
-A live application demonstration hosted at Heroku
-- https://kbowen-django-learning-log.herokuapp.com/
+A live application demonstration:
+
+TBD
 
 ---
 

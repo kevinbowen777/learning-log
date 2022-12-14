@@ -97,13 +97,13 @@ TBD
 
 ### Screenshots
 Home Page
-![Home Page](https://github.com/kevinbowen777/learning-log/blob/master/images/learning_log_home.png)
+![Home Page](images/learning_log_home.png)
 
 Topic List
-![Topic List](https://github.com/kevinbowen777/learning-log/blob/master/images/learning_log_topics.png)
+![Topic List](images/learning_log_topics.png)
 
 Topic Details
-![Topic List](https://github.com/kevinbowen777/learning-log/blob/master/images/learning_log_topic_details.png)
+![Topic List](images/learning_log_topic_details.png)
 
 ---
 

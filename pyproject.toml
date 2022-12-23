@@ -95,7 +95,7 @@ django-coverage-plugin = "^3.0.0"
 DJANGO_SETTINGS_MODULE = "config.settings"
 python_files = ["tests.py", "test_*.py", "*_tests.py"]
 filterwarnings = [
-    "ignore::django.utils.deprecation.RemovedInDjango50Warning",
+    # "ignore::django.utils.deprecation.RemovedInDjango50Warning",
 ]
 
 [build-system]

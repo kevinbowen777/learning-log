@@ -1,0 +1,54 @@
+# Docker compose template for use in production
+# Generate a new SECRET_KEY and replace setting below prior to deployment
+services:
+  web:
+    container_name: learning_log-web
+    deploy:
+      resources:
+        limits:
+          cpus: "${DOCKER_WEB_CPUS:-0}"
+          memory: "${DOCKER_WEB_MEMORY:-0}"
+    build: .
+    command: python /code/manage.py runserver 0.0.0.0:8000
+    # command: gunicorn config.wsgi -b 0.0.0.0:8000
+    healthcheck:
+      test: "${DOCKER_WEB_HEALTHCHECK_TEST:-curl localhost:8000/healthcheck}"
+      interval: "60s"
+      timeout: "3s"
+      start_period: "5s"
+      retries: 3
+    volumes:
+      - .:/code
+    ports:
+      - "${DOCKER_WEB_PORT_FORWARD:-127.0.0.1:8000}:${PORT:-8000}"
+    depends_on:
+      - db
+    environment:
+    # SECRET_KEY needs to have at least 50 characters. With Base64 encoding,
+    # each byte has ~1.3 characters. The following will suffice to pass the
+    # Django deploy checklist.
+    # Note: if key includes a dollar sign, $, you will need to add an
+    # additional dollar sign, $$. This is due to how docker compose handles
+    # variable subsitution.
+    # python -c 'import secrets; print(secrets.token_urlsafe(38))'
+      - "SECRET_KEY=<insert_your_generated_key_here>"
+    env_file:
+      - ".env"
+    restart: "${DOCKER_RESTART_POLICY:-unless-stopped}"
+    stop_grace_period: "3s"
+    profiles: ["web"]
+  db:
+    container_name: learning_log-db
+    environment:
+      POSTGRES_DB:  "${POSTGRES_DB}" 
+      POSTGRES_USER: "${POSTGRES_USER}"
+      POSTGRES_PASSWORD: "${POSTGRES_PASSWORD}"
+    image: postgres:13.8
+    profiles: ["postgres"]
+    restart: "${DOCKER_RESTART_POLICY:-unless-stopped}"
+    stop_grace_period: "3s"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+
+volumes:
+  postgres_data:

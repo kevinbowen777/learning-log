@@ -8,6 +8,7 @@ services:
           memory: "${DOCKER_WEB_MEMORY:-0}"
     build: .
     command: python /code/manage.py runserver 0.0.0.0:8000
+    # command: gunicorn config.wsgi -b 0.0.0.0:8000
     healthcheck:
       test: "${DOCKER_WEB_HEALTHCHECK_TEST:-curl localhost:8000/healthcheck}"
       interval: "60s"

@@ -174,6 +174,8 @@ EMAIL_USE_TLS = True
 
 # Used in production deployment
 SECURE_SSL_REDIRECT = env.bool("DJANGO_SECURE_SSL_REDIRECT", default=True)
+# Use the following line for testing docker-compose-prod.yml locally:
+# SECURE_SSL_REDIRECT = env.bool("DJANGO_SECURE_SSL_REDIRECT", default=False)
 SECURE_HSTS_SECONDS = env.int(
     "DJANGO_SECURE_HSTS_SECONDS",
     default=2592000,

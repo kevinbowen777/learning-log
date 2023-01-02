@@ -1,0 +1,20 @@
+{% extends "account/base.html" %}
+{% load crispy_forms_tags %}
+
+{% block title %}Contact Us{% endblock %}
+
+{% block inner %}
+<div class="container">
+  <p>
+    <h2>Contact Us</h2>
+      <form class="col-md-6" method="post">
+        {% csrf_token %}
+        {{ form|crispy }}
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Send</button>
+            <a class="btn btn-info" href="javascript:window.history.back()">Cancel</a>
+          </div>
+      </form>
+  </p>
+</div>
+{% endblock inner %}

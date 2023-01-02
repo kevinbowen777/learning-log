@@ -7,7 +7,7 @@
 <div class="container">
   <p>
     <h2>Contact Us</h2>
-      <form class="col-md-6" method="post">
+      <form method="post">
         {% csrf_token %}
         {{ form|crispy }}
           <div class="form-actions">

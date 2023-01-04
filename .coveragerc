@@ -1,12 +1,12 @@
 [run]
 omit =
-    */__init__.py,
+    *conftest.py,
     *manage.py,
     *settings*.py,
-    *migrations/*,
-    *tests/*,
-    *test_*.py,
-    *tests.py,
+    *test.py,
     *wsgi.py,
-    *conftest.py,
-    */extra*
+    */__init__.py,
+    */migrations/*,
+    */factories.py,
+    */tests/*,
+plugins = django_coverage_plugin

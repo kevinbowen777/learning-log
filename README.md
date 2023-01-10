@@ -70,7 +70,7 @@ they learn about each topic. Once logged in, a user can create new topics, add n
          (loads Django shell autoloading project models & classes)
        - `docker run -it django-start-web bash`
          (CLI access to container)
- - Browse to http://127.0.0.1:8000 or http://127.0.0.1:8000/admin/
+ - Browse to http://127.0.0.1:8000 or http://127.0.0.1:8000/resources/
 
 ---
 

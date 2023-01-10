@@ -95,7 +95,7 @@ To run learning_log, locally, enter the following on the command line:
 
    $ python manage.py runserver
 
-For both local, or Docker installations, browse to `<http://127.0.0.1:8000>`_ or `<http://127.0.0.1:8000/admin/>`_
+For both local, or Docker installations, browse to `<http://127.0.0.1:8000>`_ or `<http://127.0.0.1:8000/resources/>`_
 
 Testing
 -------

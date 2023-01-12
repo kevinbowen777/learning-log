@@ -57,5 +57,5 @@ class AccountPagesTest(TestCase):
 
 class AdminPageTests(TestCase):
     def test_admin_page_status(self):
-        response = self.client.get("/admin/login/")
+        response = self.client.get("/resources/login/")
         self.assertEqual(response.status_code, 200)

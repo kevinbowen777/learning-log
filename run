@@ -1,0 +1,165 @@
+#!/usr/bin/env bash
+
+set -o errexit
+set -o pipefail
+
+DC="${DC:-exec}"
+
+# If we're running in CI we need to disable TTY allocation for docker compose
+# commands that enable it by default, such as exec and run.
+TTY=""
+if [[ ! -t 1 ]]; then
+  TTY="-T"
+fi
+
+# -----------------------------------------------------------------------------
+# Helper functions start with _ and aren't listed in this script's help menu.
+# -----------------------------------------------------------------------------
+
+function _dc {
+  docker compose "${DC}" ${TTY} "${@}"
+}
+
+function _build_run_down {
+  docker compose build
+  docker compose run ${TTY} "${@}"
+  docker compose down
+}
+
+# -----------------------------------------------------------------------------
+
+function build:dev {
+  # Build & run container with dev/testing dependencies
+  docker compose build --build-arg "ENV=DEV" && docker compose up
+}
+
+function build:prod {
+  # Build & run container with no dev/testing dependencies
+  docker compose build --build-arg "ENV=PROD" && docker compose up
+}
+
+function cmd {
+  # Run any command you want in the web container
+  _dc web "${@}"
+}
+
+function coverage:pytest {
+  # Run pytest
+  cmd coverage run -m pytest "${@}"
+}
+
+function coverage:report {
+  # Generate coverage report to terminal
+  cmd coverage report "${@}"
+}
+
+function coverage:html {
+  # Output coverage report to ./htmlcov
+  cmd coverage html "${@}"
+}
+
+function down {
+  # Shut down container
+  docker compose down
+}
+
+function manage {
+  # Run any manage.py commands
+
+  # We need to collectstatic before we run our tests.
+  if [ "${1-''}" == "test" ]; then
+    cmd python3 manage.py collectstatic --no-input
+  fi
+
+  cmd python3 manage.py "${@}"
+}
+
+function nox:black {
+  # Check code for formatting violations
+  cmd nox -s black-3.11 "${@}"
+}
+
+function nox:docs {
+  # Create Sphinx documentation in ./docs/_build directory
+  cmd nox -s docs-3.11 "${@}"
+}
+
+function nox:lint {
+  # Run a number of flake8 linting tests
+  cmd nox -s lint-3.11 "${@}"
+}
+
+function nox:safety {
+  # Check code/packages for vulnerabilites against Safety db
+  cmd nox -s safety-3.11 "${@}"
+}
+
+function nox:tests {
+  # Run several pytest and coverage checks
+  cmd nox -s tests-3.11 "${@}"
+  # cmd black . "${@}"
+}
+
+function nox:all {
+  # Perform all nox code quality tests together(except black)
+  # cmd nox -s black-3.11 "${@}"
+  cmd nox -s lint-3.11 "${@}"
+  cmd nox -s safety-3.11 "${@}"
+  cmd nox -s tests-3.11 "${@}"
+}
+
+function poetry:outdated {
+  # List any installed packages that are outdated
+  poetry show -ol
+  # The following command runs twice as fast; but, requires the container
+  # to be running:
+  # cmd poetry show -ol
+}
+
+function poetry:update {
+  # Update any outdated packages
+  poetry update
+}
+
+function reqs:dev {
+  # Export all package requirements
+  poetry export --with=dev --output requirements-dev.txt
+}
+
+function reqs:prod {
+  # Export production package requirements
+  poetry export --output requirements.txt
+}
+
+function secret {
+  # Generate a random secret that can be used for your SECRET_KEY and more
+  cmd python3 -c 'import secrets; print(secrets.token_urlsafe(38))'
+}
+
+function shell {
+  # Start a shell session in the web container
+  cmd bash "${@}"
+}
+
+function shell_plus {
+  # Start a shell_plus IPython session in the web container
+  # auto-import all models, and the datetime module
+  cmd python manage.py shell_plus "${@}"
+}
+
+function up {
+  # Start docker container
+  docker compose up
+}
+
+function help {
+  printf "%s <task> [args]\n\nTasks:\n" "${0}"
+
+  compgen -A function | grep -v "^_" | cat -n
+
+  printf "\nExtended help:\n  Each task has comments for general usage\n"
+}
+
+# This idea is heavily inspired by: https://github.com/adriancooney/Taskfile
+TIMEFORMAT=$'\nTask completed in %3lR'
+time "${@:-help}"

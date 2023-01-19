@@ -1,9 +1,34 @@
-.git
-.github
-.nox
-.pytest_cache
-**/__pycache__*
-docs
-dist
-htmlcov
+# .dockerignore for Django projects
+# created: 20230118
+#
+# testing if .dockerignore works:
+# rsync -avn . /dev/shm --exclude-from .dockerignore
+# 
+# This will try to sync your current directory with the empty in-memory folder
+# `/dev/shm` verbosely and dry-run ( it doesn't actually copy anything) the
+# `--exclude-from option` reads glob patterns in the same format as
+# `.gitignore` and `.dockerignore`
+
+Dockerfile
+Dockerfile-pip
+LICENSE
+Procfile
+.dockerignore
+.gitignore
+.pre-commit-config.yaml
+.python-version
+docker-compose*
+env
+requirements*.txt
+run
+runtime.txt
+*.md
 *.sqlite3
+**/.git
+**/.github
+**/.nox
+**/docs
+**/dist
+**/htmlcov
+**/__pycache__
+**/.pytest_cache

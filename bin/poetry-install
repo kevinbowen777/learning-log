@@ -1,0 +1,9 @@
+#/usr/bin/env bash
+
+set -e
+
+if [ ${ENV} = "PROD" ]; then
+    poetry install --without=dev --no-interaction --no-ansi
+else
+    poetry install --no-interaction --no-ansi
+fi

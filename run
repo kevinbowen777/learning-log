@@ -43,17 +43,17 @@ function cmd {
   _dc web "${@}"
 }
 
-function coverage:pytest {
+function cov:pytest {
   # Run pytest
   cmd coverage run -m pytest "${@}"
 }
 
-function coverage:report {
+function cov:report {
   # Generate coverage report to terminal
   cmd coverage report "${@}"
 }
 
-function coverage:html {
+function cov:html {
   # Output coverage report to ./htmlcov
   cmd coverage html "${@}"
 }
@@ -108,7 +108,7 @@ function nox:all {
   cmd nox -s tests-3.11 "${@}"
 }
 
-function poetry:outdated {
+function poe:old {
   # List any installed packages that are outdated
   poetry show -ol
   # The following command runs twice as fast; but, requires the container
@@ -116,7 +116,7 @@ function poetry:outdated {
   # cmd poetry show -ol
 }
 
-function poetry:update {
+function poe:up {
   # Update any outdated packages
   poetry update
 }

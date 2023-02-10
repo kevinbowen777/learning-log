@@ -64,7 +64,7 @@ gunicorn = "~=20.1.0"
 
 [tool.poetry.group.dev.dependencies]
 pre-commit = "^3.0.0"
-black = "^22.3.0"
+black = "^23.0.0"
 flake8 = "^6.0.0"
 django-debug-toolbar = "^3.2.4"
 coverage = {extras = ["toml"], version = "^7.0.0"}
@@ -80,7 +80,7 @@ flake8-bandit = "^4.0.0"
 flake8-black = "^0.3.3"
 flake8-bugbear = "^23.0.0"
 flake8-docstrings = "^1.6.0"
-safety = "^2.3.5"
+safety = "^2.3.4"
 factory-boy = "3.0.1"
 pip-check = "^2.7"
 pip-audit = "^2.4.3"

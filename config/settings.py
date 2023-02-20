@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     "allauth.socialaccount.providers.github",
     "bootstrap4",
     "crispy_forms",
+    "crispy_bootstrap4",
     # "debug_toolbar",
     "django_countries",
     "django_extensions",
@@ -145,6 +146,12 @@ AUTH_USER_MODEL = "accounts.CustomUser"
 
 # django-crispy-forms
 CRISPY_TEMPLATE_PACK = "bootstrap4"
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"
+CRISPY_CLASS_CONVERTERS = {
+    "textinput": "textinput textInput",
+    "fileinput": "fileinput fileUpload",
+    "passwordinput": "textinput textInput",
+}
 
 # django-allauth config
 LOGIN_REDIRECT_URL = "topics"

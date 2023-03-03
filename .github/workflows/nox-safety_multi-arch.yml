@@ -15,7 +15,7 @@ jobs:
           python-version: ${{ matrix.python-version }}
           architecture: x64
       - run: pip install nox==2022.11.21
-      - run: pip install poetry==1.3.2
+      - run: pip install poetry==1.4.0
       - run: |
           export SECRET_KEY=${{secrets.SECRET_KEY}}
           export EMAIL_HOST_PASSWORD=${{secrets.EMAIL_HOST_PASSWORD}}

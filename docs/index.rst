@@ -7,6 +7,8 @@ learning-log
 
    license
    package_index
+   sql_create_new_users
+   sql_create_new_topics_entries
 
 .. contents:: Table of Contents
    :local:

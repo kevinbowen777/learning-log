@@ -93,6 +93,10 @@ Docker installation
    $ docker run -it django-start-web bash`
      (CLI access to container)
 
+Pre-commit installation
+-----------------------
+   To add the hook, run the following command in the poetry shell:
+   $ pre-commit install
 
 Usage
 -----

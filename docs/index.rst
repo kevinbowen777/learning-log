@@ -15,7 +15,7 @@ learning-log
    :backlinks: top
    :depth: 2
 
-An online journal application built with the Django 4.1 web framework.
+An online journal application built with the Django 4.2.x web framework.
 
 Learning Log is an online journal system that lets you keep track of information you’ve learned about particular topics.
 

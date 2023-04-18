@@ -43,7 +43,7 @@ services:
       POSTGRES_DB:  "${POSTGRES_DB}" 
       POSTGRES_USER: "${POSTGRES_USER}"
       POSTGRES_PASSWORD: "${POSTGRES_PASSWORD}"
-    image: postgres:13.8
+    image: postgres:15.2
     profiles: ["postgres"]
     restart: "${DOCKER_RESTART_POLICY:-unless-stopped}"
     stop_grace_period: "3s"

@@ -114,9 +114,6 @@ Home Page
 Topic List
 ![Topic List](images/learning_log_topics.png)
 
-Topic Details
-![Topic List](images/learning_log_topic_details.png)
-
 Topic Entries
 ![Topic Entries](images/learning_log_topic_entries.png)
 

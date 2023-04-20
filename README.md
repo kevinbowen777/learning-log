@@ -111,14 +111,26 @@ TBD
 Home Page
 ![Home Page](images/learning_log_home.png)
 
-Profile Page
-![Profile Page](images/learning_log_profile.png)
-
 Topic List
 ![Topic List](images/learning_log_topics.png)
 
 Topic Details
 ![Topic List](images/learning_log_topic_details.png)
+
+Topic Entries
+![Topic Entries](images/learning_log_topic_entries.png)
+
+Profile Page
+![Profile Page](images/learning_log_profile.png)
+
+Email Validation
+![Email Validation](images/learning_log_email.png)
+
+Password Reset
+![Password Reset](images/learning_log_change_password.png)
+
+Lost Password Request
+![Lost Password Request](images/learning_forgot_password.png)
 
 ---
 

@@ -26,19 +26,19 @@
     {% if entries.has_other_pages %}
   <ul class="pagination">
     {% if entries.has_previous %}
-      <li><a class="btn btn-info mr-2" href="?page={{ topics.previous_page_number }}">&laquo; Previous</a></li>
+      <li><a class="btn btn-info btn-sm mr-2" href="?page={{ topics.previous_page_number }}">&laquo; Previous</a></li>
     {% else %}
-      <li class="btn btn-info disabled mr-2"><span>&laquo; Previous</span></li>
+      <li class="btn btn-info disabled btn-sm mr-2"><span>&laquo; Previous</span></li>
     {% endif %}
     {% for i in entries.paginator.page_range %}
       {% if entries.number == i %}
-        <li class="btn btn-info active"><span> {{ i }} <span class="sr-only">(current)</span></span></li>
+        <li class="btn btn-info active btn-sm mr-1"><span> {{ i }} <span class="sr-only">(current)</span></span></li>
       {% else %}
-        <li><a class="btn btn-info" href="?page={{ i }}">{{ i }}</a></li>
+        <li><a class="btn btn-info btn-sm mr-1" href="?page={{ i }}">{{ i }}</a></li>
       {% endif %}
     {% endfor %}
     {% if entries.has_next %}
-      <li><a class="btn btn-info ml-2" href="?page={{ topics.next_page_number }}">Next &raquo;</a></li>
+      <li><a class="btn btn-info btn-sm ml-2" href="?page={{ topics.next_page_number }}">Next &raquo;</a></li>
     {% else %}
       <li class="btn btn-info disabled ml-2"><span>Next &raquo;</span></li>
     {% endif %}

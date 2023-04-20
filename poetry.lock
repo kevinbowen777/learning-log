@@ -707,22 +707,6 @@ requests = "*"
 requests-oauthlib = ">=0.3.0"
 
 [[package]]
-name = "django-bootstrap4"
-version = "22.3"
-description = "Bootstrap 4 for Django"
-category = "main"
-optional = false
-python-versions = ">=3.7"
-files = [
-    {file = "django-bootstrap4-22.3.tar.gz", hash = "sha256:751a7b4196e778286cc5eaa946d1e04741ea10d0b62d2762500f941ef9075dbf"},
-    {file = "django_bootstrap4-22.3-py3-none-any.whl", hash = "sha256:c2c09d0ad93c96e85e15e5541089aa567fd51257cf80f142ea5b84bbd34dc18e"},
-]
-
-[package.dependencies]
-beautifulsoup4 = ">=4.8.0"
-Django = ">=3.2"
-
-[[package]]
 name = "django-cache-url"
 version = "3.4.4"
 description = "Use Cache URLs in your Django application."
@@ -2963,4 +2947,4 @@ brotli = ["Brotli"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "55932cf01fd39ae1866ce7ab9a22262c9e317618294d574c5b565b82f465214a"
+content-hash = "adfe46fda8028df35e54734c9092b3d8bf5e7ea3fc77be06e3e08882847665f0"

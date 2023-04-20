@@ -7,15 +7,15 @@ learning-log
 
    license
    package_index
-   sql_create_new_users
-   sql_create_new_topics_entries
+   create_new_users
+   create_new_topics
 
 .. contents:: Table of Contents
    :local:
    :backlinks: top
    :depth: 2
 
-An online journal application built with the Django 4.2.x web framework.
+An online journal built with the Django 4.2.x web application framework.
 
 Learning Log is an online journal system that lets you keep track of information you’ve learned about particular topics.
 

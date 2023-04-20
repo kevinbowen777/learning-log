@@ -111,6 +111,9 @@ TBD
 Home Page
 ![Home Page](images/learning_log_home.png)
 
+Profile Page
+![Profile Page](images/learning_log_profile.png)
+
 Topic List
 ![Topic List](images/learning_log_topics.png)
 

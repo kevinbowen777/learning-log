@@ -1,5 +1,4 @@
 {% extends "account/base.html" %}
-{% load bootstrap4 %}
 {% load crispy_forms_tags %}
 
 {% block title %}Add a new topic{% endblock title %}
@@ -10,11 +9,9 @@
   <h2>Add a new topic</h2>
   <form action="{% url 'new_topic' %}" method='post'>
     {% csrf_token %}
-    {% bootstrap_form form %}
-    {% buttons %}
-      <button name="submit" class="btn btn-primary">Add topic</button>
-      <a class="btn btn-info" href="javascript:window.history.back()">Cancel</a>
-    {% endbuttons %}
+    {{ form.as_p }}
+          <button name="submit" class="btn btn-primary">Add topic</button>
+          <a class="btn btn-info" href="javascript:window.history.back()">Cancel</a>
   </form>
   </p>
 </div>

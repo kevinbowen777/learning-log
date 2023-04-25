@@ -1,8 +1,8 @@
 # Path needed to run poetry in nox tests
 export PATH="/root/.local/bin:$PATH"
 # This should never be set to true in production but it should be enabled in dev.
-#export DEBUG=false
-export DEBUG=True
+# export DJANGO_DEBUG=false
+export DJANGO_DEBUG=True
 
 export EMAIL_HOST_PASSWORD=<email_host_password>
 
@@ -34,9 +34,13 @@ export SECRET_KEY=<secret_key>
 # ENGINE_DB=django.db.backends.sqlite3
 # DATABASE_URL=sqlite:///learning-log.sqlite3
 # export POSTGRES_DB=learning-log.sqlite3
+DATABASE_URL=postgres://django_admin:<secret_key>@localhost:5432/learning-log
 export POSTGRES_USER=django_admin
 export POSTGRES_PASSWORD=<postgres_password>
 export POSTGRES_DB=learning-log
+# Use localhost for self-hosted PostgreSQL
+# export POSTGRES_HOST=localhost
+# Use 'db' for Docker containers
 export POSTGRES_HOST=db
 export POSTGRES_PORT=5432
 

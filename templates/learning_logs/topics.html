@@ -31,9 +31,9 @@
       {% endif %}
     {% endfor %}
     {% if topics.has_next %}
-      <li><a class="btn btn-info btn-sm ml-1" href="?page={{ topics.next_page_number }}">Next &raquo;</a></li>
+      <li><a class="btn btn-info btn-sm" href="?page={{ topics.next_page_number }}">Next &raquo;</a></li>
     {% else %}
-      <li class="btn btn-info btn-sm disabled ml-1"><span>Next &raquo;</span></li>
+      <li class="btn btn-info btn-sm disabled"><span>Next &raquo;</span></li>
     {% endif %}
   </ul>
 {% endif %}

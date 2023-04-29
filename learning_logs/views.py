@@ -13,7 +13,7 @@ def topics(request):
     topics = Topic.objects.filter(owner=request.user).order_by("date_added")
     page = request.GET.get("page", 1)
 
-    paginator = Paginator(topics, 5)
+    paginator = Paginator(topics, 3)
     try:
         topics = paginator.page(page)
     except PageNotAnInteger:

@@ -941,14 +941,14 @@ doc = ["Sphinx", "sphinx-rtd-theme", "sphinxcontrib-spelling"]
 
 [[package]]
 name = "faker"
-version = "18.6.0"
+version = "18.6.1"
 description = "Faker is a Python package that generates fake data for you."
 category = "dev"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "Faker-18.6.0-py3-none-any.whl", hash = "sha256:49060d40e6659e116f53353c5771ad2f2cbcd12b15771f49e3000a3a451f13ec"},
-    {file = "Faker-18.6.0.tar.gz", hash = "sha256:ac903ba8cb5adbce2cdd15e5536118d484bbe01126f3c774dd9f6df77b61232d"},
+    {file = "Faker-18.6.1-py3-none-any.whl", hash = "sha256:6f882f5a3303c0690b3fb2dd3418839935a2dca155d38f1b2931b0079f3ce622"},
+    {file = "Faker-18.6.1.tar.gz", hash = "sha256:3aabe5b8c4ab50103a0c05c15e31a24b22045968d1ac0b7fb48d1c6244400495"},
 ]
 
 [package.dependencies]
@@ -1925,14 +1925,14 @@ testing = ["pytest", "pytest-benchmark"]
 
 [[package]]
 name = "pre-commit"
-version = "3.2.2"
+version = "3.3.1"
 description = "A framework for managing and maintaining multi-language pre-commit hooks."
 category = "dev"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "pre_commit-3.2.2-py2.py3-none-any.whl", hash = "sha256:0b4210aea813fe81144e87c5a291f09ea66f199f367fa1df41b55e1d26e1e2b4"},
-    {file = "pre_commit-3.2.2.tar.gz", hash = "sha256:5b808fcbda4afbccf6d6633a56663fed35b6c2bc08096fd3d47ce197ac351d9d"},
+    {file = "pre_commit-3.3.1-py2.py3-none-any.whl", hash = "sha256:218e9e3f7f7f3271ebc355a15598a4d3893ad9fc7b57fe446db75644543323b9"},
+    {file = "pre_commit-3.3.1.tar.gz", hash = "sha256:733f78c9a056cdd169baa6cd4272d51ecfda95346ef8a89bf93712706021b907"},
 ]
 
 [package.dependencies]
@@ -2426,14 +2426,14 @@ jupyter = ["ipywidgets (>=7.5.1,<9)"]
 
 [[package]]
 name = "ruamel-yaml"
-version = "0.17.21"
+version = "0.17.22"
 description = "ruamel.yaml is a YAML parser/emitter that supports roundtrip preservation of comments, seq/map flow style, and map key order"
 category = "dev"
 optional = false
 python-versions = ">=3"
 files = [
-    {file = "ruamel.yaml-0.17.21-py3-none-any.whl", hash = "sha256:742b35d3d665023981bd6d16b3d24248ce5df75fdb4e2924e93a05c1f8b61ca7"},
-    {file = "ruamel.yaml-0.17.21.tar.gz", hash = "sha256:8b7ce697a2f212752a35c1ac414471dc16c424c9573be4926b56ff3f5d23b7af"},
+    {file = "ruamel.yaml-0.17.22-py3-none-any.whl", hash = "sha256:b4c6e66d103d8af198aa6139580ab735169be4922eb4c515ac121bdabf6f9361"},
+    {file = "ruamel.yaml-0.17.22.tar.gz", hash = "sha256:c22ec58aaca5105f771cb8f7ac45ad631b5e8b00454ebe1822d442fb696e9e62"},
 ]
 
 [package.dependencies]

@@ -60,18 +60,13 @@ def docs(session):
 
 @nox.session(python=["3.12", "3.11", "3.10", "3.9"])
 def lint(session):
-    """Lint using flake8."""
+    """Lint using ruff."""
     args = session.posargs or locations
     install_with_constraints(
         session,
-        "flake8",
-        "flake8-bandit",
-        "flake8-black",
-        "flake8-bugbear",
-        "flake8-import-order",
-        # "flake8-docstrings",
+        "ruff",
     )
-    session.run("flake8", *args)
+    session.run("ruff", "check", *args)
 
 
 @nox.session(python=["3.12", "3.11", "3.10", "3.9"])

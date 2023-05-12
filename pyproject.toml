@@ -1,5 +1,5 @@
 [tool.black]
-line-length = 79
+line-length = 88
 # include =
 exclude = '''
 /(
@@ -7,7 +7,6 @@ exclude = '''
   | __pycache__
   | .pytest_cache
   | .venv
-  | alembic
   | staticfiles
   | build
   | dist
@@ -87,6 +86,7 @@ pip-audit = "^2.5"
 Sphinx = "^7.0.0"
 flake8-import-order = "^0.18.2"
 django-coverage-plugin = "^3.0.0"
+ruff = "^0.0.267"
 
 [tool.pytest.ini_options]
 DJANGO_SETTINGS_MODULE = "config.settings"
@@ -94,6 +94,73 @@ python_files = ["tests.py", "test_*.py", "*_tests.py"]
 filterwarnings = [
     # "ignore::django.utils.deprecation.RemovedInDjango50Warning",
 ]
+
+[tool.ruff]
+select = [
+    "B",    # flake8-bugbear
+    "C90",  # mccabe
+    "DJ",   # flake8-django
+    "E",    # pycodestyle errors
+    "F",    # pyflakes
+    "I",    # isort
+    "S",    # flake8-bandit
+    "W",    # pycodestyle warnings
+    # "RUF",  # ruff checks
+]
+ignore = [
+    "E501",    # line too long ({width} > {limit} characters)
+    # "E203",  # slice notation whitespace (not currently supported)
+    "E402",    # module level import not at top of file
+    "E722",    # do not use bare except
+    # "W503",  # (not currently supported)
+    "ERA",     # do not autoremove commented out code
+]
+
+# Allow autofix for all enabled rules (when `--fix`) is provided.
+fixable = ["A", "B", "C", "D", "E", "F", "G", "I", "N", "Q", "S", "T", "W", "ANN", "ARG", "BLE", "COM", "DJ", "DTZ", "EM", "ERA", "EXE", "FBT", "ICN", "INP", "ISC", "NPY", "PD", "PGH", "PIE", "PL", "PT", "PTH", "PYI", "RET", "RSE", "RUF", "SIM", "SLF", "TCH", "TID", "TRY", "UP", "YTT"]
+unfixable = []
+
+# Exclude a variety of commonly ignored directories.
+exclude = [
+    ".git",
+    ".mypy_cache",
+    ".nox",
+    ".pytest_cache",
+    ".ruff_cache",
+    ".venv",
+    "__pycache__",
+    "__pypackages__",
+    "htmlcov",
+    "migrations",
+    "_build",
+    "build",
+    "dist",
+    "images",
+    "media",
+    "node_modules",
+    "venv",
+]
+
+# Same as Black.
+line-length = 88
+
+# Allow unused variables when underscore-prefixed.
+dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+
+# Assume Python 3.11.
+target-version = "py311"
+
+[tool.ruff.per-file-ignores]
+# "accounts/tests/factories.py" = ["BLK100"] (Not supported)
+# "accounts/tests/*" = ["BLK100"] (Not supported)
+"accounts/tests/*" = ["S101", "S106"]
+"config/test.py" = ["S101", "S106"]
+"pages/tests/*" = ["S101", "S106"]
+"learning_logs/tests/*" = ["S101", "S106"]
+
+[tool.ruff.mccabe]
+# Unlike Flake8, default to a complexity level of 10.
+max-complexity = 10
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

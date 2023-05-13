@@ -39,21 +39,52 @@ show_missing = true
 name = "learning-log"
 version = "0.1.0"
 description = "A Django web application for creating learning lists"
-authors = ["Kevin Bowen <kevin.bowen@gmail.com>"]
+authors = [
+    "Kevin Bowen <kevin.bowen@gmail.com>",
+]
+maintainers = [
+]
 license = "MIT"
+
+readme = "README.md"
+
+homepage = ""
+repository = "https://github.com/kevinbowen777/learning-log.git"
+documentation = "file: README.rst"
+
+keywords = ["django", "web-application", "template"]
+
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Environment :: Web Environment",
+    "Framework :: Django",
+    "Framework :: Django :: 4.2",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Internet :: WWW/HTTP",
+]
 
 [tool.poetry.dependencies]
 python = "^3.10"
+Django = "4.2.1"
+
 beautifulsoup4 = "^4.10.0"
 dj-database-url = "^2.0.0"
-Django = "4.2.1"
 django-crispy-forms = "^2.0"
 django-extensions = "^3.1.5"
 django-heroku = "0.3.1"
 soupsieve = "^2.3.1"
 sqlparse = "^0.4.2"
 whitenoise = "^6.0.0"
-environs = {extras = ["django"], version = "^9.5.0"}
+environs = { version = "^9.5.0", extras = ["django"] }
 psycopg2-binary = "^2.9.5"
 django-allauth = "^0.54.0"
 django-countries = "^7.3.2"

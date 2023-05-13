@@ -10,7 +10,7 @@ exclude = '''
   | staticfiles
   | build
   | dist
-  | learning_logs/migrations/*
+  | ^.*\b(migrations)\b.*$
 )/
 '''
 
@@ -31,13 +31,19 @@ omit = [
     "*/factories.py",
     "*/tests/*",
 ]
+plugins = [
+    "django_coverage_plugin",
+]
+
+[tool.coverage.django_coverage_plugin]
+template_extensions = "html, txt, tex, email"
 
 [tool.coverage.report]
 show_missing = true
 
 [tool.poetry]
 name = "learning-log"
-version = "0.1.0"
+version = "0.2.0"
 description = "A Django web application for creating learning lists"
 authors = [
     "Kevin Bowen <kevin.bowen@gmail.com>",

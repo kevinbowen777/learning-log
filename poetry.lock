@@ -73,25 +73,6 @@ six = "*"
 test = ["astroid", "pytest"]
 
 [[package]]
-name = "attrs"
-version = "23.1.0"
-description = "Classes Without Boilerplate"
-category = "dev"
-optional = false
-python-versions = ">=3.7"
-files = [
-    {file = "attrs-23.1.0-py3-none-any.whl", hash = "sha256:1f28b4522cdc2fb4256ac1a020c78acf9cba2c6b461ccd2c126f3aa8e8335d04"},
-    {file = "attrs-23.1.0.tar.gz", hash = "sha256:6279836d581513a26f1bf235f9acd333bc9115683f14f7e8fae46c98fc50e015"},
-]
-
-[package.extras]
-cov = ["attrs[tests]", "coverage[toml] (>=5.3)"]
-dev = ["attrs[docs,tests]", "pre-commit"]
-docs = ["furo", "myst-parser", "sphinx", "sphinx-notfound-page", "sphinxcontrib-towncrier", "towncrier", "zope-interface"]
-tests = ["attrs[tests-no-zope]", "zope-interface"]
-tests-no-zope = ["cloudpickle", "hypothesis", "mypy (>=1.1.1)", "pympler", "pytest (>=4.3.0)", "pytest-mypy-plugins", "pytest-xdist[psutil]"]
-
-[[package]]
 name = "babel"
 version = "2.12.1"
 description = "Internationalization utilities"
@@ -114,30 +95,6 @@ files = [
     {file = "backcall-0.2.0-py2.py3-none-any.whl", hash = "sha256:fbbce6a29f263178a1f7915c1940bde0ec2b2a967566fe1c65c1dfb7422bd255"},
     {file = "backcall-0.2.0.tar.gz", hash = "sha256:5cbdbf27be5e7cfadb448baf0aa95508f91f2bbc6c6437cd9cd06e2a4c215e1e"},
 ]
-
-[[package]]
-name = "bandit"
-version = "1.7.5"
-description = "Security oriented static analyser for python code."
-category = "dev"
-optional = false
-python-versions = ">=3.7"
-files = [
-    {file = "bandit-1.7.5-py3-none-any.whl", hash = "sha256:75665181dc1e0096369112541a056c59d1c5f66f9bb74a8d686c3c362b83f549"},
-    {file = "bandit-1.7.5.tar.gz", hash = "sha256:bdfc739baa03b880c2d15d0431b31c658ffc348e907fe197e54e0389dd59e11e"},
-]
-
-[package.dependencies]
-colorama = {version = ">=0.3.9", markers = "platform_system == \"Windows\""}
-GitPython = ">=1.0.1"
-PyYAML = ">=5.3.1"
-rich = "*"
-stevedore = ">=1.20.0"
-
-[package.extras]
-test = ["beautifulsoup4 (>=4.8.0)", "coverage (>=4.5.4)", "fixtures (>=3.0.0)", "flake8 (>=4.0.0)", "pylint (==1.9.4)", "stestr (>=2.5.0)", "testscenarios (>=0.5.0)", "testtools (>=2.3.0)", "tomli (>=1.1.0)"]
-toml = ["tomli (>=1.1.0)"]
-yaml = ["PyYAML"]
 
 [[package]]
 name = "beautifulsoup4"
@@ -988,61 +945,6 @@ pycodestyle = ">=2.10.0,<2.11.0"
 pyflakes = ">=3.0.0,<3.1.0"
 
 [[package]]
-name = "flake8-bandit"
-version = "4.1.1"
-description = "Automated security testing with bandit and flake8."
-category = "dev"
-optional = false
-python-versions = ">=3.6"
-files = [
-    {file = "flake8_bandit-4.1.1-py3-none-any.whl", hash = "sha256:4c8a53eb48f23d4ef1e59293657181a3c989d0077c9952717e98a0eace43e06d"},
-    {file = "flake8_bandit-4.1.1.tar.gz", hash = "sha256:068e09287189cbfd7f986e92605adea2067630b75380c6b5733dab7d87f9a84e"},
-]
-
-[package.dependencies]
-bandit = ">=1.7.3"
-flake8 = ">=5.0.0"
-
-[[package]]
-name = "flake8-black"
-version = "0.3.6"
-description = "flake8 plugin to call black as a code style validator"
-category = "dev"
-optional = false
-python-versions = ">=3.7"
-files = [
-    {file = "flake8-black-0.3.6.tar.gz", hash = "sha256:0dfbca3274777792a5bcb2af887a4cad72c72d0e86c94e08e3a3de151bb41c34"},
-    {file = "flake8_black-0.3.6-py3-none-any.whl", hash = "sha256:fe8ea2eca98d8a504f22040d9117347f6b367458366952862ac3586e7d4eeaca"},
-]
-
-[package.dependencies]
-black = ">=22.1.0"
-flake8 = ">=3"
-tomli = {version = "*", markers = "python_version < \"3.11\""}
-
-[package.extras]
-develop = ["build", "twine"]
-
-[[package]]
-name = "flake8-bugbear"
-version = "23.5.9"
-description = "A plugin for flake8 finding likely bugs and design problems in your program. Contains warnings that don't belong in pyflakes and pycodestyle."
-category = "dev"
-optional = false
-python-versions = ">=3.8.1"
-files = [
-    {file = "flake8-bugbear-23.5.9.tar.gz", hash = "sha256:695c84a5d7da54eb35d79a7354dbaf3aaba80de32250608868aa1c85534b2a86"},
-    {file = "flake8_bugbear-23.5.9-py3-none-any.whl", hash = "sha256:631fa927fbc799e8ca636b849dd7dfc304812287137b6ecb3277821f028bee40"},
-]
-
-[package.dependencies]
-attrs = ">=19.2.0"
-flake8 = ">=6.0.0"
-
-[package.extras]
-dev = ["coverage", "hypothesis", "hypothesmith (>=0.2)", "pre-commit", "pytest", "tox"]
-
-[[package]]
 name = "flake8-docstrings"
 version = "1.7.0"
 description = "Extension for flake8 which uses pydocstyle to check docstrings"
@@ -1057,22 +959,6 @@ files = [
 [package.dependencies]
 flake8 = ">=3"
 pydocstyle = ">=2.1"
-
-[[package]]
-name = "flake8-import-order"
-version = "0.18.2"
-description = "Flake8 and pylama plugin that checks the ordering of import statements."
-category = "dev"
-optional = false
-python-versions = "*"
-files = [
-    {file = "flake8-import-order-0.18.2.tar.gz", hash = "sha256:e23941f892da3e0c09d711babbb0c73bc735242e9b216b726616758a920d900e"},
-    {file = "flake8_import_order-0.18.2-py2.py3-none-any.whl", hash = "sha256:82ed59f1083b629b030ee9d3928d9e06b6213eb196fe745b3a7d4af2168130df"},
-]
-
-[package.dependencies]
-pycodestyle = "*"
-setuptools = "*"
 
 [[package]]
 name = "friendly"
@@ -1126,36 +1012,6 @@ executing = ">=1.1.0"
 pure-eval = ">=0.2.1"
 six = ">=1.16"
 stack-data = ">=0.6.2"
-
-[[package]]
-name = "gitdb"
-version = "4.0.10"
-description = "Git Object Database"
-category = "dev"
-optional = false
-python-versions = ">=3.7"
-files = [
-    {file = "gitdb-4.0.10-py3-none-any.whl", hash = "sha256:c286cf298426064079ed96a9e4a9d39e7f3e9bf15ba60701e95f5492f28415c7"},
-    {file = "gitdb-4.0.10.tar.gz", hash = "sha256:6eb990b69df4e15bad899ea868dc46572c3f75339735663b81de79b06f17eb9a"},
-]
-
-[package.dependencies]
-smmap = ">=3.0.1,<6"
-
-[[package]]
-name = "gitpython"
-version = "3.1.31"
-description = "GitPython is a Python library used to interact with Git repositories"
-category = "dev"
-optional = false
-python-versions = ">=3.7"
-files = [
-    {file = "GitPython-3.1.31-py3-none-any.whl", hash = "sha256:f04893614f6aa713a60cbbe1e6a97403ef633103cdd0ef5eb6efe0deb98dbe8d"},
-    {file = "GitPython-3.1.31.tar.gz", hash = "sha256:8ce3bcf69adfdf7c7d503e78fd3b1c492af782d58893b650adb2ac8912ddd573"},
-]
-
-[package.dependencies]
-gitdb = ">=4.0.1,<5"
 
 [[package]]
 name = "gunicorn"
@@ -1678,18 +1534,6 @@ python-versions = ">=3.7"
 files = [
     {file = "pathspec-0.11.1-py3-none-any.whl", hash = "sha256:d8af70af76652554bd134c22b3e8a1cc46ed7d91edcdd721ef1a0c51a84a5293"},
     {file = "pathspec-0.11.1.tar.gz", hash = "sha256:2798de800fa92780e33acca925945e9a19a133b715067cf165b8866c15a31687"},
-]
-
-[[package]]
-name = "pbr"
-version = "5.11.1"
-description = "Python Build Reasonableness"
-category = "dev"
-optional = false
-python-versions = ">=2.6"
-files = [
-    {file = "pbr-5.11.1-py2.py3-none-any.whl", hash = "sha256:567f09558bae2b3ab53cb3c1e2e33e726ff3338e7bae3db5dc954b3a44eef12b"},
-    {file = "pbr-5.11.1.tar.gz", hash = "sha256:aefc51675b0b533d56bb5fd1c8c6c0522fe31896679882e1c4c63d5e4a0fccb3"},
 ]
 
 [[package]]
@@ -2574,18 +2418,6 @@ files = [
 ]
 
 [[package]]
-name = "smmap"
-version = "5.0.0"
-description = "A pure Python implementation of a sliding window memory map manager"
-category = "dev"
-optional = false
-python-versions = ">=3.6"
-files = [
-    {file = "smmap-5.0.0-py3-none-any.whl", hash = "sha256:2aba19d6a040e78d8b09de5c57e96207b09ed71d8e55ce0959eeee6c8e190d94"},
-    {file = "smmap-5.0.0.tar.gz", hash = "sha256:c840e62059cd3be204b0c9c9f74be2c09d5648eddd4580d9314c3ecde0b30936"},
-]
-
-[[package]]
 name = "snowballstemmer"
 version = "2.2.0"
 description = "This package provides 29 stemmers for 28 languages generated from Snowball algorithms."
@@ -2789,21 +2621,6 @@ pure-eval = "*"
 tests = ["cython", "littleutils", "pygments", "pytest", "typeguard"]
 
 [[package]]
-name = "stevedore"
-version = "5.0.0"
-description = "Manage dynamic plugins for Python applications"
-category = "dev"
-optional = false
-python-versions = ">=3.8"
-files = [
-    {file = "stevedore-5.0.0-py3-none-any.whl", hash = "sha256:bd5a71ff5e5e5f5ea983880e4a1dd1bb47f8feebbb3d95b592398e2f02194771"},
-    {file = "stevedore-5.0.0.tar.gz", hash = "sha256:2c428d2338976279e8eb2196f7a94910960d9f7ba2f41f3988511e95ca447021"},
-]
-
-[package.dependencies]
-pbr = ">=2.0.0,<2.1.0 || >2.1.0"
-
-[[package]]
 name = "termcolor"
 version = "2.3.0"
 description = "ANSI color formatting for output in terminal"
@@ -2974,4 +2791,4 @@ brotli = ["Brotli"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "eb49410a2c42e703c6220b0995a11b71770e4634ee8a85d637dcd8c4e2704b40"
+content-hash = "85f19b55e1ed8aee3fabd1301d7eb045610ebdd4c92dd51f834b164f26e09d25"

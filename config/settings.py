@@ -2,7 +2,6 @@
 from pathlib import Path
 
 # import socket  # noqa: E402 # Comment out if not using debug_toolbar
-
 from environs import Env
 
 env = Env()
@@ -204,9 +203,7 @@ MANAGERS = ADMINS
 LOGGING = {
     "version": 1,
     "disable_existing_loggers": False,
-    "filters": {
-        "require_debug_false": {"()": "django.utils.log.RequireDebugFalse"}
-    },
+    "filters": {"require_debug_false": {"()": "django.utils.log.RequireDebugFalse"}},
     "formatters": {
         "verbose": {
             "format": "%(levelname)s %(asctime)s %(module)s "

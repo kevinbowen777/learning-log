@@ -120,7 +120,7 @@ sphinx-rtd-theme = "^1.2.0"
 coverage = { version = "^7.0.0", extras = ["toml"] }
 pytest-cov = "^4.0.0"
 pytest-django = "^4.5.2"
-ruff = "^0.0.267"
+ruff = "^0.0.269"
 
 [tool.pytest.ini_options]
 DJANGO_SETTINGS_MODULE = "config.settings"

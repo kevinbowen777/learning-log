@@ -26,7 +26,7 @@ repos:
         files: (^|/)a/.+\.(py|html|sh|css|js)$
 
   - repo: https://github.com/charliermarsh/ruff-pre-commit
-    rev: 'v0.0.267'
+    rev: 'v0.0.269'
     hooks:
     - id: ruff
       args: [ --fix, --exit-non-zero-on-fix ]
@@ -39,7 +39,7 @@ repos:
       exclude: ^.*\b(migrations)\b.*$
 
   - repo: https://github.com/python-poetry/poetry
-    rev: '1.4.0'
+    rev: '1.5.0'
     hooks:
       - id: poetry-check
       - id: poetry-lock

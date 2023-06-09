@@ -80,7 +80,7 @@ classifiers = [
 
 [tool.poetry.dependencies]
 python = "^3.10"
-Django = "4.2.1"
+Django = "4.2.2"
 
 beautifulsoup4 = "^4.10.0"
 dj-database-url = "^2.0.0"
@@ -120,7 +120,7 @@ sphinx-rtd-theme = "^1.2.0"
 coverage = { version = "^7.0.0", extras = ["toml"] }
 pytest-cov = "^4.0.0"
 pytest-django = "^4.5.2"
-ruff = "^0.0.270"
+ruff = "^0.0.272"
 
 [tool.pytest.ini_options]
 DJANGO_SETTINGS_MODULE = "config.settings"

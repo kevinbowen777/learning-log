@@ -113,8 +113,6 @@ nox = "2023.4.22"
 flake8-docstrings = "^1.6.0"
 safety = "2.4.0b1"
 factory-boy = "^3.2.0"
-pip-check = "^2.7"
-pip-audit = "^2.5"
 Sphinx = "6.2.1"
 sphinx-rtd-theme = "^1.2.0"
 coverage = { version = "^7.0.0", extras = ["toml"] }

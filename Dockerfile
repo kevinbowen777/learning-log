@@ -1,5 +1,5 @@
 # `python-base` sets up all our shared environment variables
-FROM python:3.11-slim-bullseye AS python-base
+FROM python:3.11-slim-bookworm AS python-base
 LABEL maintainer="Kevin Bowen <kevin.bowen@gmail.com>"
 
 ENV DEBUG="${DEBUG}" \

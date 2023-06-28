@@ -9,6 +9,10 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# Self-signed certs for running dev server with HTTPS
+cert.crt
+cert.key
+
 # C extensions
 *.so
 

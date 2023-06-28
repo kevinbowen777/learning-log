@@ -14,7 +14,7 @@ SECRET_KEY = env.str("SECRET_KEY")
 
 DEBUG = env.bool("DJANGO_DEBUG", default=False)
 
-ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
+ALLOWED_HOSTS = ["learning-log.cool", "localhost", "127.0.0.1"]
 
 
 # Application definitions

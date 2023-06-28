@@ -119,6 +119,8 @@ coverage = { version = "^7.0.0", extras = ["toml"] }
 pytest-cov = "^4.0.0"
 pytest-django = "^4.5.2"
 ruff = "^0.0.275"
+werkzeug = "^2.3.6"
+pyopenssl = "^23.2.0"
 
 [tool.pytest.ini_options]
 DJANGO_SETTINGS_MODULE = "config.settings"

@@ -168,6 +168,18 @@ function sh+ {
   python manage.py shell_plus
 }
 
+function start {
+  # Start development web server
+  # cmd bash "${@}"
+  python manage.py runserver
+}
+
+function start+ {
+  # Start development web server with HTTPS
+  # cmd bash "${@}"
+  python manage.py runserver_plus --cert-file cert.crt
+}
+
 function up {
   # Start docker container
   docker compose up

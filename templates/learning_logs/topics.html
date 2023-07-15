@@ -1,43 +1,67 @@
 {% extends "account/base.html" %}
 {% load crispy_forms_tags %}
 
-{% block title %}Topics{% endblock title %}
+{% block title %}
+  Topics
+{% endblock title %}
 
 {% block inner %}
-<div class="container">
-  <p>
-  <h2>Topics</h2>
-  <ul>
-    {% for topic in topics %}
-      <li><h3>
-          <a class="btn btn-primary" href="{% url 'topic' topic.id %}">{{ topic  }}</a>
-      </h3></li>
-      {% empty %}
-      <li><h3 class="text-muted"><em>No topics have been added yet.</em></h3></li>
-      {% endfor %}
-  </ul>
-  {% if topics.has_other_pages %}
-  <ul class="pagination">
-    {% if topics.has_previous %}
-      <li><a class="btn btn-info btn-sm mr-1" href="?page={{ topics.previous_page_number }}">&laquo; Previous</a></li>
-    {% else %}
-      <li class="btn btn-info btn-sm disabled mr-1"><span>&laquo; Previous</span></li>
-    {% endif %}
-    {% for i in topics.paginator.page_range %}
-      {% if topics.number == i %}
-        <li class="btn btn-info btn-sm active mr-1"><span> {{ i }} <span class="sr-only">(current)</span></span></li>
-      {% else %}
-        <li><a class="btn btn-info btn-sm mr-1" href="?page={{ i }}">{{ i }}</a></li>
+  <div class="container">
+    <p>
+      <h2>Topics</h2>
+      <ul>
+        {% for topic in topics %}
+          <li>
+            <h3>
+              <a class="btn btn-primary" href="{% url 'topic' topic.id %}">{{ topic }}</a>
+            </h3>
+          </li>
+        {% empty %}
+          <li>
+            <h3 class="text-muted">
+              <em>No topics have been added yet.</em>
+            </h3>
+          </li>
+        {% endfor %}
+      </ul>
+      {% if topics.has_other_pages %}
+        <ul class="pagination">
+          {% if topics.has_previous %}
+            <li>
+              <a class="btn btn-info btn-sm mr-1"
+                 href="?page={{ topics.previous_page_number }}">« Previous</a>
+            </li>
+          {% else %}
+            <li class="btn btn-info btn-sm disabled mr-1">
+              <span>« Previous</span>
+            </li>
+          {% endif %}
+          {% for i in topics.paginator.page_range %}
+            {% if topics.number == i %}
+              <li class="btn btn-info btn-sm active mr-1">
+                <span> {{ i }} <span class="sr-only">(current)</span></span>
+              </li>
+            {% else %}
+              <li>
+                <a class="btn btn-info btn-sm mr-1" href="?page={{ i }}">{{ i }}</a>
+              </li>
+            {% endif %}
+          {% endfor %}
+          {% if topics.has_next %}
+            <li>
+              <a class="btn btn-info btn-sm"
+                 href="?page={{ topics.next_page_number }}">Next »</a>
+            </li>
+          {% else %}
+            <li class="btn btn-info btn-sm disabled">
+              <span>Next »</span>
+            </li>
+          {% endif %}
+        </ul>
       {% endif %}
-    {% endfor %}
-    {% if topics.has_next %}
-      <li><a class="btn btn-info btn-sm" href="?page={{ topics.next_page_number }}">Next &raquo;</a></li>
-    {% else %}
-      <li class="btn btn-info btn-sm disabled"><span>Next &raquo;</span></li>
-    {% endif %}
-  </ul>
-{% endif %}
-  <h3><a class="btn btn-primary btn-success" href="{% url 'new_topic' %}">Add a new topic</a></h3>
-  <p>
-</div>
+      <h3>
+        <a class="btn btn-primary btn-success" href="{% url 'new_topic' %}">Add a new topic</a>
+      </h3>
+    </p>
+  </div>
 {% endblock inner %}

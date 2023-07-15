@@ -16,3 +16,8 @@ h2 a:hover {
   height: 300px;
   width: auto;
 }
+
+.copyright {
+  color: white;
+  font-size: 70%;
+}

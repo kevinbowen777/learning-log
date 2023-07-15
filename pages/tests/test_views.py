@@ -1,3 +1,4 @@
+from django.core.mail import BadHeaderError
 from django.test import SimpleTestCase
 from django.urls import resolve, reverse
 
@@ -25,9 +26,7 @@ class HomePageTests(SimpleTestCase):
         self.assertContains(self.response, "Learning Log")
 
     def test_homepage_does_not_contain_incorrect_html(self):
-        self.assertNotContains(
-            self.response, "Hi there! I should not be on the page."
-        )
+        self.assertNotContains(self.response, "Hi there! I should not be on the page.")
 
     def test_homepage_url_resolves_homepageview(self):
         view = resolve("/")
@@ -52,9 +51,7 @@ class AboutPageTests(SimpleTestCase):
         self.assertContains(self.response, "About page")
 
     def test_aboutpage_does_not_contain_incorrect_html(self):
-        self.assertNotContains(
-            self.response, "Hi there! I should not be on the page."
-        )
+        self.assertNotContains(self.response, "Hi there! I should not be on the page.")
 
     def test_aboutpage_url_resolves_aboutpageview(self):
         view = resolve("/about/")
@@ -92,6 +89,22 @@ class ContactViewTests(SimpleTestCase):
             view.func.__name__,
             ContactView.__name__,
         )
+
+    def test_header_injection(self):
+        error_occured = True
+        try:
+            self.client.post(
+                "/contact/",
+                data={
+                    "from_email": "joe@example.com",
+                    "subject": "Subject\nInjectionTest",
+                    "message": "This is a test of a BadHeaderError",
+                },
+            )
+            error_occured = False
+        except BadHeaderError:
+            error_occured = True
+        self.assertFalse(error_occured)
 
     def test_contact_page_form_is_valid(self):
         form = ContactForm(data=self.form_data)

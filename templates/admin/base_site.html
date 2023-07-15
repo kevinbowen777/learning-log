@@ -1,9 +1,15 @@
 {% extends "admin/base.html" %}
 
-{% block title %}{% if subtitle %}{{ subtitle }} | {% endif %}{{ title }} | {{ site_title|default:_('Django site admin') }}{% endblock %}
+{% block title %}
+  {% if subtitle %}{{ subtitle }} |{% endif %}
+  {{ title }} | {{ site_title|default:_("Django site admin") }}
+{% endblock title %}
 
 {% block branding %}
-  <h1 id="site-name"><a href="{% url 'admin:index' %}">kbowen-django-learning-log site admin</a></h1>
+  <h1 id="site-name">
+    <a href="{% url 'admin:index' %}">kbowen-django-learning-log site admin</a>
+  </h1>
 {% endblock branding %}
 
-{% block nav-global %}{% endblock %}
+{% block nav-global %}
+{% endblock nav-global %}

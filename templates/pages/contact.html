@@ -1,20 +1,22 @@
 {% extends "account/base.html" %}
 {% load crispy_forms_tags %}
 
-{% block title %}Contact Us{% endblock %}
+{% block title %}
+  Contact Us
+{% endblock title %}
 
 {% block inner %}
-<div class="container">
-  <p>
-    <h2>Contact Us</h2>
+  <div class="container">
+    <p>
+      <h2>Contact Us</h2>
       <form method="post">
         {% csrf_token %}
         {{ form|crispy }}
-          <div class="form-actions">
-            <button type="submit" class="btn btn-primary">Send</button>
-            <a class="btn btn-info" href="#" onclick="window.history.back()">Cancel</a>
-          </div>
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">Send</button>
+          <a class="btn btn-info" href="#" onclick="window.history.back()">Cancel</a>
+        </div>
       </form>
-  </p>
-</div>
+    </p>
+  </div>
 {% endblock inner %}

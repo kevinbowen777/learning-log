@@ -2,18 +2,20 @@
 {% extends "account/base.html" %}
 {% load crispy_forms_tags %}
 
-{% block title %}Sign Up{% endblock title %}
+{% block title %}
+  Sign Up
+{% endblock title %}
 
 {% block inner %}
-<div class="container">
-  <p>
-  <h2>Sign Up</h2>
-  <form method="post">
-    {% csrf_token %}
-    {{ form|crispy }}
-    <button class="btn btn-success" type="submit">Sign Up</button>
-    <a class="btn btn-info" href="#" onclick="window.history.back()">Cancel</a>
-  </form>
-  </p>
-</div>
+  <div class="container">
+    <p>
+      <h2>Sign Up</h2>
+      <form method="post">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <button class="btn btn-success" type="submit">Sign Up</button>
+        <a class="btn btn-info" href="#" onclick="window.history.back()">Cancel</a>
+      </form>
+    </p>
+  </div>
 {% endblock inner %}

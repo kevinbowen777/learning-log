@@ -2,20 +2,21 @@
 {% extends "account/base.html" %}
 {% load crispy_forms_tags %}
 
-{% block title %}Log Out{% endblock title %}
+{% block title %}
+  Log Out
+{% endblock title %}
 
 {% block inner %}
-<div class="container">
-  <p>
-  <h2>Log Out</h2>
-    <p>Are you sure you want to log out?</p>
-    <form method="post" action="{% url 'account_logout' %}">
-      {% csrf_token %}
-      {{ form|crispy }}
-      <button class="btn btn-danger" type="submit">Log Out</button>
-      <a class="btn btn-info" href="#" onclick="window.history.back()">Cancel</a>
-    </form>
+  <div class="container">
+    <p>
+      <h2>Log Out</h2>
+      <p>Are you sure you want to log out?</p>
+      <form method="post" action="{% url 'account_logout' %}">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <button class="btn btn-danger" type="submit">Log Out</button>
+        <a class="btn btn-info" href="#" onclick="window.history.back()">Cancel</a>
+      </form>
     </p>
-  </p>
-</div>
+  </div>
 {% endblock inner %}

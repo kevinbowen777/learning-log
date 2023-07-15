@@ -1,18 +1,20 @@
 {% extends "account/base.html" %}
 {% load crispy_forms_tags %}
 
-{% block title %}Sign In Via GitHub{% endblock title %}
+{% block title %}
+  Sign In Via GitHub
+{% endblock title %}
 
 {% block inner %}
-<div class="container">
-  <p>
-  <h2>Sign In Via GitHub</h2>
-  <p>You are about to sign in using a third party account from GitHub.</p>
-  <form method="post">
-    {% csrf_token %}
-    <button class="btn btn-success" type="submit">Continue</button>
-    <a class="btn btn-info" href="#" onclick="window.history.back()">Cancel</a>
-  </form>
-  </p>
-</div>
+  <div class="container">
+    <p>
+      <h2>Sign In Via GitHub</h2>
+      <p>You are about to sign in using a third party account from GitHub.</p>
+      <form method="post">
+        {% csrf_token %}
+        <button class="btn btn-success" type="submit">Continue</button>
+        <a class="btn btn-info" href="#" onclick="window.history.back()">Cancel</a>
+      </form>
+    </p>
+  </div>
 {% endblock inner %}

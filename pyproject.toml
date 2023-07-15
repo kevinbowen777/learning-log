@@ -123,6 +123,12 @@ template_extensions = "html, txt, tex, email"
 [tool.coverage.report]
 show_missing = true
 
+[tool.djlint]
+exclude="htmlcov"
+files=["templates/"]
+indent=2
+preserve_blank_lines=true
+
 [tool.pytest.ini_options]
 DJANGO_SETTINGS_MODULE = "config.settings"
 python_files = ["tests.py", "test_*.py", "*_tests.py"]

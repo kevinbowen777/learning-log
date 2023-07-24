@@ -27,7 +27,7 @@ repos:
         files: (^|/)a/.+\.(py|html|sh|css|js)$
 
   - repo: https://github.com/charliermarsh/ruff-pre-commit
-    rev: v0.0.278
+    rev: v0.0.280
     hooks:
     - id: ruff
       args: [ --fix, --exit-non-zero-on-fix ]
@@ -40,7 +40,7 @@ repos:
       exclude: ^.*\b(migrations)\b.*$
 
   - repo: https://github.com/Riverside-Healthcare/djLint
-    rev: v1.31.1
+    rev: v1.32.1
     hooks:
     - id: djlint-reformat-django
       exclude: "htmlcov"

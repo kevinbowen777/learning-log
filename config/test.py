@@ -1,15 +1,14 @@
 """With these settings, tests run faster."""
 
 from .settings import *  # noqa
-from .settings import env
 
 # GENERAL
 # ------------------------------------------------------------------------------
 # https://docs.djangoproject.com/en/dev/ref/settings/#secret-key
-SECRET_KEY = env(
-    "DJANGO_SECRET_KEY",
-    default="!!!SET DJANGO_SECRET_KEY!!!",
-)
+# SECRET_KEY = env(
+#     "SECRET_KEY",
+#     default="!!!SET SECRET_KEY!!!",
+# )
 # https://docs.djangoproject.com/en/dev/ref/settings/#test-runner
 TEST_RUNNER = "django.test.runner.DiscoverRunner"
 
@@ -31,20 +30,24 @@ PASSWORD_HASHERS = ["django.contrib.auth.hashers.MD5PasswordHasher"]
 # TEMPLATES
 # ------------------------------------------------------------------------------
 # TODO: Investigate why tests fail when section enabled - 20220621
-# TEMPLATES[-1]["OPTIONS"]["loaders"] = [  # type: ignore[index] # noqa: F405
-#    (
-#        "django.template.loaders.cached.Loader",
-#        [
-#            "django.template.loaders.filesystem.Loader",
-#            "django.template.loaders.app_directories.Loader",
-#        ],
-#    )
-# ]
+# APP_DIRS needs to be set to 'False' in config/settings.py to
+# use this section - 20230729
+TEMPLATES[-1]["OPTIONS"]["loaders"] = [  # type: ignore # noqa: F405
+    (
+        "django.template.loaders.cached.Loader",
+        [
+            "django.template.loaders.filesystem.Loader",
+            "django.template.loaders.app_directories.Loader",
+        ],
+    )
+]
+# The following is being used in updated django-cookiecutter
+# TEMPLATES[0]["OPTIONS"]["debug"] = True  # noqa: F405
 
 # EMAIL
 # ------------------------------------------------------------------------------
 # https://docs.djangoproject.com/en/dev/ref/settings/#email-backend
-EMAIL_BACKEND = "django.core.mail.backends.locmem.EmailBackend"
+# EMAIL_BACKEND = "django.core.mail.backends.locmem.EmailBackend"
 
 # Your stuff...
 # ------------------------------------------------------------------------------

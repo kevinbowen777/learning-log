@@ -20,7 +20,7 @@ In the application directory, run the following command:
     $ python manage.py shell_plus
 
 Sample book list
-----------------
+^^^^^^^^^^^^^^^^
 
 .. code-block:: console
 
@@ -326,7 +326,7 @@ Sample book list
     )
 
 Miscellaneous notes
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: console
 

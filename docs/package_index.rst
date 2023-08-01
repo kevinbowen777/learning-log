@@ -1,19 +1,16 @@
 Package Index
 =============
 
-.. contents:: Table of Contents
-   :local:
-   :backlinks: top
-   :depth: 1
+The following is a list of the primary Python packages being used for
+the learning-log_ application.
+For a complete list of packages explicitly added to the project, view the
+pyproject.toml_ file. For a list of *all* of the package, see the requirements.txt_ file.
 
-The following is a list some of the major Python packages being used for
-this `repository <https://github.com/kevinbowen777/django-start/>`__.
-For a complete list of packags explicitly added to the project, view the
-``pyproject.toml`` file. For a list of *all* of the package, see the
-``requirements.txt`` file.
+Production Packages
+-------------------
 
 django-allauth
---------------
+^^^^^^^^^^^^^^
 
   * Documentation: https://django-allauth.readthedocs.io/en/latest/
   * Tutorial:
@@ -22,16 +19,26 @@ django-allauth
   * Notes:
 
 django-bootstrap4
------------------
+^^^^^^^^^^^^^^^^^
 
   * Documentation: https://django-bootstrap4.readthedocs.io/
   * Tutorial:
   * Repository: https://github.com/zostera/django-bootstrap4
   * PyPI package: https://pypi.org/project/django-bootstrap4/
-  * Notes:
+  * Notes: This package is not currently being used. Bootstrap is loaded from
+    templates/base.html
+
+django-countries
+^^^^^^^^^^^^^^^^
+
+  * Documentation:
+  * Tutorial:
+  * Repository: https://github.com/SmileyChris/django-countries
+  * PyPI package: https://pypi.python.org/pypi/django-countries
+  * Notes: Used in user profiles
 
 django-crispy-forms
--------------------
+^^^^^^^^^^^^^^^^^^^
 
   * Documentation: https://django-crispy-forms.readthedocs.io/en/latest/
   * Tutorial:
@@ -40,7 +47,7 @@ django-crispy-forms
   * Notes:
 
 django-extensions
------------------
+^^^^^^^^^^^^^^^^^
 
   * Documentation: https://django-extensions.readthedocs.io/
   * Tutorial:
@@ -48,194 +55,182 @@ django-extensions
   * PyPI package: https://pypi.python.org/pypi/django-extensions/
   * Notes:
 
-django-countries
-----------------
-
- * Documentation:
- * Tutorial:
- * Repository: https://github.com/SmileyChris/django-countries
- * PyPI package: https://pypi.python.org/pypi/django-countries 
- * Notes:
-
-local management of environment variables with
-
 environs - environs[django]
----------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-* Documentation:
-* Tutorial:
-* Repository: https://github.com/sloria/environs
-* PyPI package: https://pypi.org/project/environs/
-* Notes:
+  * Documentation:
+  * Tutorial:
+  * Repository: https://github.com/sloria/environs
+  * PyPI package: https://pypi.org/project/environs/
+  * Notes: Allows for local management of environment variables
 
-Use of Poetry for dependency management
-
-Poetry
-------
-
-* Documentation: https://python-poetry.org/
-* Tutorial:
-* Repository: https://github.com/python-poetry/poetry
-* PyPI package:
-* Notes:
-
-pyenv
------
-* Documentation: https://github.com/pyenv/pyenv
-* Tutorial: https://realpython.com/intro-to-pyenv/
-* Repository: https://github.com/pyenv/pyenv
-* PyPI package: https://pypi.org/project/pyenv/ (placeholder only)
-* Notes:
-
-coverage
---------
-
-* Documentation: https://coverage.readthedocs.io/
-* Tutorial:
-* Repository: https://github.com/nedbat/coveragepy
-* PyPI package: https://pypi.org/project/coverage/
-* Notes:
-
-django-debug-toolbar
+Development Packages
 --------------------
 
-* Documentation: https://django-debug-toolbar.readthedocs.io/
-* Tutorial:
-* Repository: https://github.com/jazzband/django-debug-toolbar
-* PyPI package: https://pypi.org/project/django-debug-toolbar/
-* Notes:
+Poetry
+^^^^^^
 
-pytest
-------
+  * Documentation: https://python-poetry.org/
+  * Tutorial:
+  * Repository: https://github.com/python-poetry/poetry
+  * PyPI package:
+  * Notes: Installed system-wide for project dependency management.
 
-* Documentation: https://docs.pytest.org/en/latest/
-* Tutorial:
-* Repository: https://github.com/pytest-dev/pytest
-* PyPI package: https://pypi.org/project/pytest/
-* Notes:
+pyenv
+^^^^^
 
-pytest-cov
-----------
-
-* Documentation: https://pytest-cov.readthedocs.io/
-* Tutorial:
-* Repository: https://github.com/pytest-dev/pytest-cov
-* PyPI package: https://pypi.org/project/pytest-cov/
-* Notes:
-
-pytest-django
--------------
-
-* Documentation: https://pytest-django.readthedocs.io/
-* Tutorial: https://pytest-django.readthedocs.io/en/latest/tutorial.html
-* Repository: https://github.com/pytest-dev/pytest-django
-* PyPI package: https://pypi.org/project/pytest-django/
-* Notes:
-
-factory-boy
------------
-
-* Documentation: https://factoryboy.readthedocs.io/
-* Tutorial:
-* Repository: https://github.com/FactoryBoy/factory_boy
-* PyPI package: https://pypi.org/project/factory-boy/
-* Notes:
+  * Documentation: https://github.com/pyenv/pyenv
+  * Tutorial: https://realpython.com/intro-to-pyenv/
+  * Repository: https://github.com/pyenv/pyenv
+  * PyPI package: https://pypi.org/project/pyenv/ (placeholder only)
+  * Notes: Installed system-wide for multiple Python versions.
 
 black
------
+^^^^^
 
-* Documentation: https://black.readthedocs.io/en/stable
-* Tutorial:
-* Repository: https://github.com/psf/black
-* PyPI package: https://pypi.org/project/black/
-* Notes:
+  * Documentation: https://black.readthedocs.io/en/stable
+  * Tutorial:
+  * Repository: https://github.com/psf/black
+  * PyPI package: https://pypi.org/project/black/
+  * Notes:
 
-Sphinx
-------
+coverage
+^^^^^^^^
 
-* Documentation: https://www.sphinx-doc.org/en/master/index.html
-* Tutorial: https://www.sphinx-doc.org/en/master/tutorial/index.html
-* Repository: https://github.com/sphinx-doc/sphinx
-* PyPI package: https://pypi.org/project/Sphinx/
-* Notes:
+  * Documentation: https://coverage.readthedocs.io/
+  * Tutorial:
+  * Repository: https://github.com/nedbat/coveragepy
+  * PyPI package: https://pypi.org/project/coverage/
+  * Notes:
+
+djlint
+^^^^^^
+
+  * Documentation: https://www.djlint.com/
+  * Tutorial:
+  * Repository: https://github.com/Riverside-Healthcare/djlint
+  * PyPI package: https://pypi.org/project/djlint/
+  * Notes:
+
+django-debug-toolbar
+^^^^^^^^^^^^^^^^^^^^
+
+  * Documentation: https://django-debug-toolbar.readthedocs.io/
+  * Tutorial:
+  * Repository: https://github.com/jazzband/django-debug-toolbar
+  * PyPI package: https://pypi.org/project/django-debug-toolbar/
+  * Notes: See config/settings.py for instructions to enable
+
+django-types
+^^^^^^^^^^^^
+
+  * Documentation: https://github.com/sbdchd/django-types#readme
+  * Tutorial:
+  * Repository: https://github.com/sbdchd/django-types
+  * PyPI package: https://pypi.org/project/django-types
+  * Notes: Type stubs for Django
+
+factory-boy
+^^^^^^^^^^^
+
+  * Documentation: https://factoryboy.readthedocs.io/
+  * Tutorial:
+  * Repository: https://github.com/FactoryBoy/factory_boy
+  * PyPI package: https://pypi.org/project/factory-boy/
+  * Notes:
 
 nox
----
+^^^
 
-* Documentation: https://nox.thea.codes/en/stable/index.html
-* Tutorial: https://nox.thea.codes/en/stable/tutorial.html
-* Repository: https://github.com/wntrblm/nox
-* PyPI package: https://pypi.org/project/nox/
-* Notes:
+  * Documentation: https://nox.thea.codes/en/stable/index.html
+  * Tutorial: https://nox.thea.codes/en/stable/tutorial.html
+  * Repository: https://github.com/wntrblm/nox
+  * PyPI package: https://pypi.org/project/nox/
+  * Notes:
 
-flake8
-------
+pytest
+^^^^^^
 
-* Documentation: https://flake8.pycqa.org/en/latest/
-* Tutorial:
-* Repository: https://github.com/pycqa/flake8
-* PyPI package: https://pypi.org/project/flake8/
-* Notes:
+  * Documentation: https://docs.pytest.org/en/latest/
+  * Tutorial:
+  * Repository: https://github.com/pytest-dev/pytest
+  * PyPI package: https://pypi.org/project/pytest/
+  * Notes:
 
-flake8-bandit
--------------
+pytest-cov
+^^^^^^^^^^
 
-* Documentation:
-* Tutorial:
-* Repository: https://github.com/tylerwince/flake8-bandit
-* PyPI package: https://pypi.org/project/flake8-bandit/
-* Notes:
+  * Documentation: https://pytest-cov.readthedocs.io/
+  * Tutorial:
+  * Repository: https://github.com/pytest-dev/pytest-cov
+  * PyPI package: https://pypi.org/project/pytest-cov/
+  * Notes:
 
-flake8-bugbear
---------------
+pytest-django
+^^^^^^^^^^^^^
 
-* Documentation: 
-* Tutorial:
-* Repository: https://github.com/PyCQA/flake8-bugbear
-* PyPI package: https://pypi.org/project/flake8-bugbear/
-* Notes:
+  * Documentation: https://pytest-django.readthedocs.io/
+  * Tutorial: https://pytest-django.readthedocs.io/en/latest/tutorial.html
+  * Repository: https://github.com/pytest-dev/pytest-django
+  * PyPI package: https://pypi.org/project/pytest-django/
+  * Notes:
 
-flake8-import-order
--------------------
+ruff
+^^^^
 
-* Documentation:
-* Tutorial:
-* Repository: https://github.com/PyCQA/flake8-import-order
-* PyPI package: https://pypi.org/project/flake8-import-order/
-* Notes: currently in maintenance mode/not being developed. See: https://github.com/PyCQA/flake8-import-order/issues/163
+  * Documentation: https://beta.ruff.rs/docs/
+  * Tutorial:: https://beta.ruff.rs/docs/tutorial/
+  * Repository: https://github.com/astral-sh/ruff
+  * PyPI package: https://pypi.org/project/ruff/
+  * Notes:
+
+Sphinx
+^^^^^^
+
+  * Documentation: https://www.sphinx-doc.org/en/master/index.html
+  * Tutorial: https://www.sphinx-doc.org/en/master/tutorial/index.html
+  * Repository: https://github.com/sphinx-doc/sphinx
+  * PyPI package: https://pypi.org/project/Sphinx/
+  * Notes:
 
 safety
-------
+^^^^^^
 
-* Documentation: https://docs.pyup.io/docs/getting-started-with-safety-cli
-* Tutorial:
-* Repository: https://github.com/pyupio/safety
-* PyPI package: https://pypi.org/project/safety/
-* Notes:
+  * Documentation: https://docs.pyup.io/docs/getting-started-with-safety-cli
+  * Tutorial:
+  * Repository: https://github.com/pyupio/safety
+  * PyPI package: https://pypi.org/project/safety/
+  * Notes:
 
 ipython
--------
+^^^^^^^
 
-* Documentation: https://ipython.readthedocs.io/
-* Tutorial:
-* Repository: https://github.com/ipython/ipython
-* PyPI package: https://pypi.org/project/ipython/
-* Notes:
+  * Documentation: https://ipython.readthedocs.io/
+  * Tutorial:
+  * Repository: https://github.com/ipython/ipython
+  * PyPI package: https://pypi.org/project/ipython/
+  * Notes: for use with django-extensions shell_plus
 
 rich
-----
+^^^^
 
-* Documentation: https://rich.readthedocs.io/en/latest/
-* Tutorial:
-* Repository: https://github.com/willmcgugan/rich
-* PyPI package: https://pypi.org/project/rich/
-* Notes: for local dev shell_plus
+  * Documentation: https://rich.readthedocs.io/en/latest/
+  * Tutorial:
+  * Repository: https://github.com/willmcgugan/rich
+  * PyPI package: https://pypi.org/project/rich/
+  * Notes: for use with django-extensions shell_plus
 
 friendly
---------
+^^^^^^^^
 
-* Documentation: https://friendly-traceback.github.io/docs/index.html
-* Tutorial:
-* Repository: https://github.com/friendly-traceback/friendly
-* PyPI package: https://pypi.org/project/friendly/
-* Notes: for local dev shell_plus
+  * Documentation: https://friendly-traceback.github.io/docs/index.html
+  * Tutorial:
+  * Repository: https://github.com/friendly-traceback/friendly
+  * PyPI package: https://pypi.org/project/friendly/
+  * Notes: for use with django-extensions shell_plus
+
+TODO: Add link to local coverage reports
+
+ .. _learning-log: https://github.com/kevinbowen777/learning-log/
+ .. _pyproject.toml: https://github.com/kevinbowen777/learning-log/blob/master/pyproject.toml  
+ .. _requirements.txt: https://github.com/kevinbowen777/learning-log/blob/master/requirements.txt

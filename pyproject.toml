@@ -37,7 +37,7 @@ classifiers = [
 
 [tool.poetry.dependencies]
 python = "^3.10"
-Django = "4.2.3"
+Django = "4.2.4"
 
 beautifulsoup4 = "^4.10.0"
 dj-database-url = "^2.0.0"
@@ -95,18 +95,17 @@ exclude = '''
 )/
 '''
 
-[tool.coverage.paths]
-source = ["accounts", "config", "learning_logs", "pages"]
-
 [tool.coverage.run]
 branch = true
-source = ["config"]
+source = ["accounts", "config", "learning_logs", "pages"]
 omit = [
-    "*conftest.py",
-    "*manage.py",
-    "*settings*.py",
+    "conftest.py",
+    "manage.py",
+    "settings.py",
     "*test.py",
-    "*wsgi.py",
+    "asgi.py",
+    "gunicorn.py",
+    "wsgi.py",
     "*/__init__.py",
     "*/migrations/*",
     "*/factories.py",
@@ -168,6 +167,7 @@ DJANGO_SETTINGS_MODULE = "config.settings"
 python_files = ["tests.py", "test_*.py", "*_tests.py"]
 filterwarnings = [
     # "ignore::django.utils.deprecation.RemovedInDjango50Warning",
+    # "ignore::django.utils.deprecation.RemovedInDjango51Warning",
 ]
 
 [tool.ruff]

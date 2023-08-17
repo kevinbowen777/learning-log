@@ -361,9 +361,6 @@ django-extensions==3.2.3 ; python_version >= "3.10" and python_version < "4.0" \
 django-heroku==0.3.1 ; python_version >= "3.10" and python_version < "4.0" \
     --hash=sha256:2bc690aab89eedbe01311752320a9a12e7548e3b0ed102681acc5736a41a4762 \
     --hash=sha256:6af4bc3ae4a9b55eaad6dbe5164918982d2762661aebc9f83d9fa49f6009514e
-django-test-plus==2.2.3 ; python_version >= "3.10" and python_version < "4.0" \
-    --hash=sha256:5a8e26c9bf8eab092012c2cce9c605e0dba5a15879771feeb992c424504a18fe \
-    --hash=sha256:72e1ca5dcaaf4ad73c9c796ad6e0dc165db39f706c3ad822074d961f72eed743
 django-types==0.17.0 ; python_version >= "3.10" and python_version < "4.0" \
     --hash=sha256:43d4931159524c1a08b25c1b9a4db2512b7c1234b64b1d4db4aff78881d6afd0 \
     --hash=sha256:c1c42ab78876c57c728342d5ab060725ab371fc8dc83bb85bae0be06846aad70

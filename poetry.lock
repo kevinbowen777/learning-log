@@ -708,20 +708,6 @@ psycopg2 = "*"
 whitenoise = "*"
 
 [[package]]
-name = "django-test-plus"
-version = "2.2.3"
-description = "\"django-test-plus provides useful additions to Django's default TestCase\""
-optional = false
-python-versions = ">=3.6"
-files = [
-    {file = "django-test-plus-2.2.3.tar.gz", hash = "sha256:72e1ca5dcaaf4ad73c9c796ad6e0dc165db39f706c3ad822074d961f72eed743"},
-    {file = "django_test_plus-2.2.3-py3-none-any.whl", hash = "sha256:5a8e26c9bf8eab092012c2cce9c605e0dba5a15879771feeb992c424504a18fe"},
-]
-
-[package.extras]
-test = ["factory-boy", "flake8", "pyflakes", "pytest", "pytest-cov", "pytest-django", "pytest-pythonpath"]
-
-[[package]]
 name = "django-types"
 version = "0.17.0"
 description = "Type stubs for Django"
@@ -2556,4 +2542,4 @@ brotli = ["Brotli"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "cd076cfccc977305c154f4cee2b83c3d0f619731207d3119acee76619c83691e"
+content-hash = "45da005e9b0b4533dc54f2dff3319893ca5ab1bac7ede016394b1b7acefbf9e8"

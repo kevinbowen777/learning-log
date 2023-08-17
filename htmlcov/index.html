@@ -11,7 +11,7 @@
 <header>
     <div class="content">
         <h1>Coverage report:
-            <span class="pc_cov">89%</span>
+            <span class="pc_cov">85%</span>
         </h1>
         <aside id="help_panel_wrapper">
             <input id="help_panel_state" type="checkbox">
@@ -26,6 +26,8 @@
                         <kbd>s</kbd>
                         <kbd>m</kbd>
                         <kbd>x</kbd>
+                        <kbd>b</kbd>
+                        <kbd>p</kbd>
                         <kbd>c</kbd>
                         &nbsp; change column sorting
                     </p>
@@ -44,8 +46,8 @@
             <input id="filter" type="text" value="" placeholder="filter..." />
         </form>
         <p class="text">
-            <a class="nav" href="https://coverage.readthedocs.io/en/7.2.7">coverage.py v7.2.7</a>,
-            created at 2023-07-14 20:22 -0700
+            <a class="nav" href="https://coverage.readthedocs.io/en/7.3.0">coverage.py v7.3.0</a>,
+            created at 2023-08-16 17:55 -0700
         </p>
     </div>
 </header>
@@ -57,6 +59,8 @@
                 <th aria-sort="none" data-default-sort-order="descending" data-shortcut="s">statements</th>
                 <th aria-sort="none" data-default-sort-order="descending" data-shortcut="m">missing</th>
                 <th aria-sort="none" data-default-sort-order="descending" data-shortcut="x">excluded</th>
+                <th aria-sort="none" data-default-sort-order="descending" data-shortcut="b">branches</th>
+                <th aria-sort="none" data-default-sort-order="descending" data-shortcut="p">partial</th>
                 <th class="right" aria-sort="none" data-shortcut="c">coverage</th>
             </tr>
         </thead>
@@ -66,11 +70,15 @@
                 <td>13</td>
                 <td>0</td>
                 <td>0</td>
+                <td>0</td>
+                <td>0</td>
                 <td class="right" data-ratio="13 13">100%</td>
             </tr>
             <tr class="file">
                 <td class="name left"><a href="d_509fd8af0f7a1b49_apps_py.html">accounts/apps.py</a></td>
                 <td>4</td>
+                <td>0</td>
+                <td>0</td>
                 <td>0</td>
                 <td>0</td>
                 <td class="right" data-ratio="4 4">100%</td>
@@ -80,11 +88,15 @@
                 <td>20</td>
                 <td>0</td>
                 <td>0</td>
+                <td>0</td>
+                <td>0</td>
                 <td class="right" data-ratio="20 20">100%</td>
             </tr>
             <tr class="file">
                 <td class="name left"><a href="d_509fd8af0f7a1b49_models_py.html">accounts/models.py</a></td>
                 <td>14</td>
+                <td>0</td>
+                <td>0</td>
                 <td>0</td>
                 <td>0</td>
                 <td class="right" data-ratio="14 14">100%</td>
@@ -94,11 +106,15 @@
                 <td>3</td>
                 <td>0</td>
                 <td>0</td>
+                <td>0</td>
+                <td>0</td>
                 <td class="right" data-ratio="3 3">100%</td>
             </tr>
             <tr class="file">
                 <td class="name left"><a href="d_509fd8af0f7a1b49_views_py.html">accounts/views.py</a></td>
                 <td>29</td>
+                <td>0</td>
+                <td>0</td>
                 <td>0</td>
                 <td>0</td>
                 <td class="right" data-ratio="29 29">100%</td>
@@ -108,11 +124,15 @@
                 <td>6</td>
                 <td>0</td>
                 <td>0</td>
+                <td>0</td>
+                <td>0</td>
                 <td class="right" data-ratio="6 6">100%</td>
             </tr>
             <tr class="file">
                 <td class="name left"><a href="d_a726d9b99c603bd2_admin_py.html">learning_logs/admin.py</a></td>
                 <td>4</td>
+                <td>0</td>
+                <td>0</td>
                 <td>0</td>
                 <td>0</td>
                 <td class="right" data-ratio="4 4">100%</td>
@@ -122,11 +142,15 @@
                 <td>4</td>
                 <td>0</td>
                 <td>0</td>
+                <td>0</td>
+                <td>0</td>
                 <td class="right" data-ratio="4 4">100%</td>
             </tr>
             <tr class="file">
                 <td class="name left"><a href="d_a726d9b99c603bd2_forms_py.html">learning_logs/forms.py</a></td>
                 <td>13</td>
+                <td>0</td>
+                <td>0</td>
                 <td>0</td>
                 <td>0</td>
                 <td class="right" data-ratio="13 13">100%</td>
@@ -136,11 +160,15 @@
                 <td>21</td>
                 <td>0</td>
                 <td>0</td>
-                <td class="right" data-ratio="21 21">100%</td>
+                <td>2</td>
+                <td>0</td>
+                <td class="right" data-ratio="23 23">100%</td>
             </tr>
             <tr class="file">
                 <td class="name left"><a href="d_a726d9b99c603bd2_urls_py.html">learning_logs/urls.py</a></td>
                 <td>3</td>
+                <td>0</td>
+                <td>0</td>
                 <td>0</td>
                 <td>0</td>
                 <td class="right" data-ratio="3 3">100%</td>
@@ -150,11 +178,15 @@
                 <td>74</td>
                 <td>27</td>
                 <td>0</td>
-                <td class="right" data-ratio="47 74">64%</td>
+                <td>30</td>
+                <td>5</td>
+                <td class="right" data-ratio="62 104">60%</td>
             </tr>
             <tr class="file">
                 <td class="name left"><a href="d_9df13ddeb1e47e46_admin_py.html">pages/admin.py</a></td>
                 <td>1</td>
+                <td>0</td>
+                <td>0</td>
                 <td>0</td>
                 <td>0</td>
                 <td class="right" data-ratio="1 1">100%</td>
@@ -164,11 +196,15 @@
                 <td>4</td>
                 <td>0</td>
                 <td>0</td>
+                <td>0</td>
+                <td>0</td>
                 <td class="right" data-ratio="4 4">100%</td>
             </tr>
             <tr class="file">
                 <td class="name left"><a href="d_9df13ddeb1e47e46_forms_py.html">pages/forms.py</a></td>
                 <td>5</td>
+                <td>0</td>
+                <td>0</td>
                 <td>0</td>
                 <td>0</td>
                 <td class="right" data-ratio="5 5">100%</td>
@@ -178,11 +214,15 @@
                 <td>1</td>
                 <td>0</td>
                 <td>0</td>
+                <td>0</td>
+                <td>0</td>
                 <td class="right" data-ratio="1 1">100%</td>
             </tr>
             <tr class="file">
                 <td class="name left"><a href="d_9df13ddeb1e47e46_urls_py.html">pages/urls.py</a></td>
                 <td>3</td>
+                <td>0</td>
+                <td>0</td>
                 <td>0</td>
                 <td>0</td>
                 <td class="right" data-ratio="3 3">100%</td>
@@ -192,7 +232,9 @@
                 <td>25</td>
                 <td>0</td>
                 <td>0</td>
-                <td class="right" data-ratio="25 25">100%</td>
+                <td>4</td>
+                <td>0</td>
+                <td class="right" data-ratio="29 29">100%</td>
             </tr>
         </tbody>
         <tfoot>
@@ -201,7 +243,9 @@
                 <td>247</td>
                 <td>27</td>
                 <td>0</td>
-                <td class="right" data-ratio="220 247">89%</td>
+                <td>36</td>
+                <td>5</td>
+                <td class="right" data-ratio="241 283">85%</td>
             </tr>
         </tfoot>
     </table>
@@ -212,8 +256,8 @@
 <footer>
     <div class="content">
         <p>
-            <a class="nav" href="https://coverage.readthedocs.io/en/7.2.7">coverage.py v7.2.7</a>,
-            created at 2023-07-14 20:22 -0700
+            <a class="nav" href="https://coverage.readthedocs.io/en/7.3.0">coverage.py v7.3.0</a>,
+            created at 2023-08-16 17:55 -0700
         </p>
     </div>
     <aside class="hidden">

@@ -1,7 +1,7 @@
 """Settings for the learning_log project."""
 from pathlib import Path
 
-# import socket  # noqa: E402 # Comment out if not using debug_toolbar
+# import socket  # Comment out if not using debug_toolbar
 from environs import Env
 
 env = Env()

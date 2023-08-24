@@ -3,9 +3,9 @@ from django.contrib.messages.middleware import MessageMiddleware
 from django.contrib.sessions.middleware import SessionMiddleware
 from django.http import HttpRequest
 from django.test import RequestFactory
-from django.urls import reverse  # noqa:F401
+from django.urls import reverse
 
-from ..forms import CustomUserChangeForm  # noqa:F401
+from ..forms import CustomUserChangeForm
 from ..models import CustomUser
 from ..views import UserRedirectView, UserUpdateView
 

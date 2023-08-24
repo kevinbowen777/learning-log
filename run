@@ -43,10 +43,16 @@ function cmd {
   _dc web "${@}"
 }
 
-function cov:pytest {
+function cov:test {
   # Run pytest
   # cmd coverage run -m pytest "${@}"
   coverage run -m pytest "${@}"
+}
+
+function cov:test-slow {
+  # Run pytest & show 10 slowest tests
+  # cmd coverage run -m pytest "${@}" --durations 10
+  coverage run -m pytest "${@}" --durations 10
 }
 
 function cov:report {
@@ -115,9 +121,10 @@ function nox:all {
   # cmd nox -s lint-3.11 "${@}"
   # cmd nox -s safety-3.11 "${@}"
   # cmd nox -s tests-3.11 "${@}"
-  nox -s lint-3.11 "${@}"
-  nox -s safety-3.11 "${@}"
-  nox -s tests-3.11 "${@}"
+  # nox -s lint-3.11 "${@}"
+  # nox -s safety-3.11 "${@}"
+  # nox -s tests-3.11 "${@}"
+  nox
 }
 
 function poe:old {
@@ -147,6 +154,16 @@ function reqs:all {
   # Export production package requirements
   poetry export --output requirements.txt
   poetry export --with=dev --output requirements-dev.txt
+}
+
+function ruff:check {
+  # check for linting errors. Do not fix.
+  ruff check .
+}
+
+function ruff:fix {
+  # check for linting errors and apply fixes.
+  ruff check --fix .
 }
 
 function secret {

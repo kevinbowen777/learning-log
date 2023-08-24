@@ -49,6 +49,4 @@ class TopicModelTest(TestCase):
         if len(self.long_entry.text[:]) < 50:
             self.assertEqual(str(self.long_entry), self.long_entry.text)
         else:
-            self.assertEqual(
-                str(self.long_entry), f"{self.long_entry.text[:50]}..."
-            )
+            self.assertEqual(str(self.long_entry), f"{self.long_entry.text[:50]}...")

@@ -22,9 +22,7 @@ class CustomUserTests(TestCase):
         assert str(self.user) == self.user.username
 
     def test_user_get_absolute_url(self):
-        assert (
-            self.user.get_absolute_url() == f"/accounts/{self.user.username}/"
-        )
+        assert self.user.get_absolute_url() == f"/accounts/{self.user.username}/"
 
     def test_create_user(self):
         self.assertEqual(self.user.username, "kevin")

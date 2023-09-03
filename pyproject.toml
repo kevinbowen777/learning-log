@@ -76,6 +76,7 @@ ruff = ">= 0.0.275, < 0.0.299"
 werkzeug = "^2.3.6"
 pyopenssl = "^23.2.0"
 djlint = "^1.31.1"
+sphinx = ">= 7.2.5, < 7.3.0"
 furo = "^2023.7.26"
 
 [tool.black]

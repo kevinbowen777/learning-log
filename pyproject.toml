@@ -54,7 +54,7 @@ django-countries = "^7.3.2"
 Pillow = "^10.0"
 gunicorn = "^21.0"
 crispy-bootstrap4 = "^2022.1"
-django-types = "^0.17.0"
+django-types = "^0.18.0"
 
 [tool.poetry.group.dev.dependencies]
 django-debug-toolbar = "^4.0.0"

@@ -6,6 +6,10 @@ export DJANGO_DEBUG=True
 
 export EMAIL_HOST_PASSWORD=<email_host_password>
 
+# django-allauth SOCIALACCOUNT_PROVIDER client credentials
+GITHUB_SOCIALACCOUNT_APP_CLIENT_ID="<client_id_credential>"
+GITHUB_SOCIALACCOUNT_APP_SECRET="<app_secret>"
+
 # Enable BuildKit by default:
 #   https://docs.docker.com/develop/develop-images/build_enhancements
 export DOCKER_BUILDKIT=1

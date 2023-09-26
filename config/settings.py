@@ -55,6 +55,7 @@ MIDDLEWARE = [
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
+    "allauth.account.middleware.AccountMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "django.contrib.admindocs.middleware.XViewMiddleware",
     # "debug_toolbar.middleware.DebugToolbarMiddleware",
@@ -167,6 +168,22 @@ ACCOUNT_EMAIL_REQUIRED = False
 ACCOUNT_EMAIL_VERIFICATION = "optional"
 ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE = True
 ACCOUNT_UNIQUE_EMAIL = True
+
+SOCIALACCOUNT_PROVIDERS = {
+    "github": {
+        # For each OAuth based provider, either add a ``SocialApp``
+        # (``socialaccount`` app) containing the required client
+        # credentials, or list them here:
+        # "VERIFIED_EMAIL": True
+        "APP": {
+            "client_id": env.str("GITHUB_SOCIALACCOUNT_APP_CLIENT_ID"),
+            # "client_id": "9a771ac329a2b300db1b",
+            "secret": env.str("GITHUB_SOCIALACCOUNT_APP_SECRET"),
+            # "secret": "1a6adcdd9df62ca28545947a44c0816908dbe6de",
+            "key": "",
+        },
+    }
+}
 
 # third-party email relay configuration
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"

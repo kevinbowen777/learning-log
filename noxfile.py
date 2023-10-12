@@ -3,6 +3,8 @@ import tempfile
 
 import nox
 
+PYTHON_VERSIONS = ["3.12", "3.11", "3.10", "3.9"]
+
 nox.options.sessions = "lint", "safety", "tests"
 locations = (
     "accounts",
@@ -43,7 +45,7 @@ def install_with_constraints(session, *args, **kwargs):
         session.install(f"--requirement={requirements.name}", *args, **kwargs)
 
 
-@nox.session(python=["3.12", "3.11", "3.10", "3.9"])
+@nox.session(python=PYTHON_VERSIONS)
 def black(session):
     """Run black code formatter."""
     args = session.posargs or locations
@@ -51,14 +53,14 @@ def black(session):
     session.run("black", *args)
 
 
-@nox.session(python=["3.12", "3.11", "3.10", "3.9"])
+@nox.session(python=PYTHON_VERSIONS)
 def docs(session):
     """Build the documentation."""
     install_with_constraints(session, "sphinx")
     session.run("sphinx-build", "docs", "docs/_build")
 
 
-@nox.session(python=["3.12", "3.11", "3.10", "3.9"])
+@nox.session(python=PYTHON_VERSIONS)
 def lint(session):
     """Lint using ruff."""
     args = session.posargs or locations
@@ -69,7 +71,13 @@ def lint(session):
     session.run("ruff", "check", *args)
 
 
-@nox.session(python=["3.12", "3.11", "3.10", "3.9"])
+@nox.session(python=PYTHON_VERSIONS)
+def pyright(session):
+    """Run pyright type checker."""
+    session.run("pyright", external=True)
+
+
+@nox.session(python=PYTHON_VERSIONS)
 def safety(session):
     """Scan dependencies for insecure packages."""
     with tempfile.NamedTemporaryFile() as requirements:

@@ -398,6 +398,6 @@ tzdata==2023.3 ; python_version >= "3.10" and python_version < "4.0" and sys_pla
 urllib3==2.0.6 ; python_version >= "3.10" and python_version < "4.0" \
     --hash=sha256:7a7c7003b000adf9e7ca2a377c9688bbc54ed41b985789ed576570342a375cd2 \
     --hash=sha256:b19e1a85d206b56d7df1d5e683df4a7725252a964e3993648dd0fb5a1c157564
-whitenoise==6.5.0 ; python_version >= "3.10" and python_version < "4.0" \
-    --hash=sha256:15fe60546ac975b58e357ccaeb165a4ca2d0ab697e48450b8f0307ca368195a8 \
-    --hash=sha256:16468e9ad2189f09f4a8c635a9031cc9bb2cdbc8e5e53365407acf99f7ade9ec
+whitenoise==6.6.0 ; python_version >= "3.10" and python_version < "4.0" \
+    --hash=sha256:8998f7370973447fac1e8ef6e8ded2c5209a7b1f67c1012866dbcd09681c3251 \
+    --hash=sha256:b1f9db9bf67dc183484d760b99f4080185633136a273a03f6436034a41064146

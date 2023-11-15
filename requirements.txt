@@ -225,9 +225,9 @@ marshmallow==3.20.1 ; python_version >= "3.10" and python_version < "4.0" \
 oauthlib==3.2.2 ; python_version >= "3.10" and python_version < "4.0" \
     --hash=sha256:8139f29aac13e25d502680e9e19963e83f16838d48a0d71c287fe40e7067fbca \
     --hash=sha256:9859c40929662bec5d64f34d01c99e093149682a3f38915dc0655d5a633dd918
-packaging==23.0 ; python_version >= "3.10" and python_version < "4.0" \
-    --hash=sha256:714ac14496c3e68c99c29b00845f7a2b85f3bb6f1078fd9f72fd20f0570002b2 \
-    --hash=sha256:b6ad297f8907de0fa2fe1ccbd26fdaf387f5f47c7275fedf8cce89f99446cf97
+packaging==23.2 ; python_version >= "3.10" and python_version < "4.0" \
+    --hash=sha256:048fb0e9405036518eaaf48a55953c750c11e1a1b68e0dd1a9d62ed0c092cfc5 \
+    --hash=sha256:8c491190033a9af7e1d931d0b5dacc2ef47509b34dd0de67ed209b5203fc88c7
 pillow==10.1.0 ; python_version >= "3.10" and python_version < "4.0" \
     --hash=sha256:00f438bb841382b15d7deb9a05cc946ee0f2c352653c7aa659e75e592f6fa17d \
     --hash=sha256:0248f86b3ea061e67817c47ecbe82c23f9dd5d5226200eb9090b3873d3ca32de \

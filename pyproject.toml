@@ -11,9 +11,9 @@ license = "MIT"
 
 readme = "README.md"
 
-homepage = ""
+homepage = "https://github.com/kevinbowen777/learning-log.git"
 repository = "https://github.com/kevinbowen777/learning-log.git"
-documentation = "file: README.rst"
+documentation = "file:///docs/index.rst"
 
 keywords = ["diary", "django", "web-application", "learning-log"]
 
@@ -28,7 +28,6 @@ classifiers = [
     "Programming Language :: Python",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3 :: Only",
-    "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",

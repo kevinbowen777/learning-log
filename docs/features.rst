@@ -19,7 +19,7 @@ Features
    * Examples of using factories_ & pytest_ fixtures in account app testing.
    * shell_plus_ with IPython_ via the django-extensions_ package.
    * pre-commit_
-   * nox_ testing sessions for latest Python 3.9, 3.10, and 3.11, 3.12.
+   * nox_ testing sessions for latest Python 3.10, and 3.11, 3.12.
 
      * black_
      * Sphinx_ documentation generation

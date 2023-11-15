@@ -66,7 +66,7 @@ friendly = "^0.7.0"
 colorama = "^0.4.4"
 django-coverage-plugin = "^3.0.0"
 nox = "2023.4.22"
-safety = "2.4.0b1"
+safety = "2.4.0b2"
 factory-boy = "^3.2.0"
 coverage = { version = "^7.0.0", extras = ["toml"] }
 pytest-cov = "^4.0.0"

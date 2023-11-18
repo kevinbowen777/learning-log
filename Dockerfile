@@ -30,7 +30,7 @@ RUN chmod 0755 /code/poetry-install
 
 WORKDIR /code
 
-RUN curl -sSL https://install.python-poetry.org | python3 - --version 1.7.0 \
+RUN curl -sSL https://install.python-poetry.org | python3 - --version 1.7.1 \
     && poetry config virtualenvs.create false \
     && /code/poetry-install
     # && poetry install --no-interaction --no-ansi

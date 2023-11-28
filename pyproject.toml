@@ -71,7 +71,7 @@ factory-boy = "^3.2.0"
 coverage = { version = "^7.0.0", extras = ["toml"] }
 pytest-cov = "^4.0.0"
 pytest-django = "^4.5.2"
-ruff = ">= 0.0.275, < 0.0.299"
+ruff = "^0.1.0"
 werkzeug = "^3.0"
 pyopenssl = "^23.2.0"
 djlint = "^1.31.1"
@@ -174,6 +174,8 @@ filterwarnings = [
 ]
 
 [tool.ruff]
+preview = true
+unsafe-fixes = false
 select = [
     "B",    # flake8-bugbear
     "C90",  # mccabe

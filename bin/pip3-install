@@ -1,8 +1,8 @@
-#/usr/bin/env bash
+#!/usr/bin/env bash
 
 set -e
 
-if [ ${ENV} = "PROD" ]; then
+if [ "${ENV}" = "PROD" ]; then
     pip3 install --no-warn-script-location --no-cache-dir --user -r requirements.txt
 else
     pip3 install --no-warn-script-location --no-cache-dir --user -r requirements-dev.txt

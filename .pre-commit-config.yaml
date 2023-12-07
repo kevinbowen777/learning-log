@@ -22,12 +22,13 @@ repos:
       - id: detect-private-key
       - id: end-of-file-fixer
       - id: fix-byte-order-marker
+      - id: no-commit-to-branch
       - id: requirements-txt-fixer
       - id: trailing-whitespace
         files: (^|/)a/.+\.(py|html|sh|css|js)$
 
   - repo: https://github.com/charliermarsh/ruff-pre-commit
-    rev: v0.1.6
+    rev: v0.1.7
     hooks:
     - id: ruff
       args: [ --fix, --exit-non-zero-on-fix ]

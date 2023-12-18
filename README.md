@@ -8,7 +8,7 @@
 
 </div>
 
-Learning Log is an online journal system that lets you keep track of information you’ve learned about particular topics. Learning log is built using the Django 4.2.x web framework.
+Learning Log is an online journal system that lets you keep track of information you’ve learned about particular topics. Learning log is built using the Django 5.0.x web framework.
 <p>
 It allows users to log the topics they’re interested in and to make journal entries as
 they learn about each topic. Once logged in, a user can create new topics, add new entries, and read and edit existing entries.</p>

@@ -23,14 +23,14 @@ Starting the server
   - Running locally over http:
 
     - ``python manage.py runserver``
-      
+
   - Running locally over https:
 
     - ``python manage.py runserver_plus``
   - Running a Docker container:
 
     - The default is to run over plain http:
-      
+
       - ``docker compose up --build``
       - ``docker run``
 

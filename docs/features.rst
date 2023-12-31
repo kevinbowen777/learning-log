@@ -40,7 +40,7 @@ If you get tired of typing ``./run`` you can always create a shell alias with ``
  .. _Bootstrap4: https://pypi.org/project/django-bootstrap4/
  .. _crispy-forms: https://pypi.org/project/django-crispy-forms/
  .. _country flags: https://pypi.python.org/pypi/django-countries
- .. _coverage: https://pypi.org/project/coverage/ 
+ .. _coverage: https://pypi.org/project/coverage/
  .. _htmlcov:
  .. _django-debug-toolbar: https://pypi.org/project/django-debug-toolbar/
  .. _config/settings.py:
@@ -53,7 +53,7 @@ If you get tired of typing ``./run`` you can always create a shell alias with ``
  .. _nox: https://pypi.org/project/nox/
  .. _black: https://pypi.org/project/black/
  .. _Sphinx: https://pypi.org/project/Sphinx/
- .. _ruff: https://beta.ruff.rs/docs/ 
+ .. _ruff: https://beta.ruff.rs/docs/
  .. _safety: https://pypi.org/project/safety/
  .. _pytest-cov: https://pypi.org/project/pytest-cov/
  .. _pytest-django: https://pypi.org/project/pytest-django/

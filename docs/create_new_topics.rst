@@ -340,4 +340,3 @@ Miscellaneous notes
     In [39]: for topic in Topics.objects.all():
         ...:     print(topic, topic.owner)
         ...:
-

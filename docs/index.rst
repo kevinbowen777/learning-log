@@ -1,7 +1,7 @@
 learning-log
 ============
 
-The learning-log_ project is an online journal system that lets one keep track of information learned about a particular topic(s). 
+The learning-log_ project is an online journal system that lets one keep track of information learned about a particular topic(s).
 
 This application allows users to log the topics they’re interested in and to make journal entries as they learn about each topic. Once logged in, a user can create new topics, add new entries, and read and edit existing entries.
 

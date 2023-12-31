@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "learning-log"
-version = "0.2.0"
+version = "0.3.0"
 description = "A Django web application for creating learning lists"
 authors = [
     "Kevin Bowen <kevin.bowen@gmail.com>",
@@ -18,7 +18,7 @@ documentation = "file:///docs/index.rst"
 keywords = ["diary", "django", "web-application", "learning-log"]
 
 classifiers = [
-    "Development Status :: 2 - Pre-Alpha",
+    "Development Status :: 4 - Beta",
     "Environment :: Web Environment",
     "Framework :: Django",
     "Framework :: Django :: 5.0",
@@ -40,7 +40,7 @@ Django = "5.0"
 
 django-crispy-forms = "^2.0"
 django-allauth = ">=0.54.0, < 0.60.0"
-environs = { version = "^9.5.0", extras = ["django"] }
+environs = { version = "^10.0", extras = ["django"] }
 django-extensions = "^3.1.5"
 dj-database-url = "^2.0.0"
 django-heroku = "0.3.1"

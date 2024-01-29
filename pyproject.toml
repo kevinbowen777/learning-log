@@ -39,8 +39,8 @@ python = "^3.10"
 Django = "5.0.1"
 
 django-crispy-forms = "^2.0"
-django-allauth = ">=0.54.0, < 0.60.0"
-environs = { version = "^10.0", extras = ["django"] }
+django-allauth = ">=0.60, < 0.61"
+environs = { version = "^10", extras = ["django"] }
 django-extensions = "^3.1.5"
 dj-database-url = "^2.0.0"
 django-heroku = "0.3.1"
@@ -58,7 +58,7 @@ django-types = "^0.19.0"
 [tool.poetry.group.dev.dependencies]
 django-debug-toolbar = "^4.0.0"
 pre-commit = "^3.0.0"
-black = "^23.0.0"
+black = "^24.0.0"
 pytest = "^7.2.0"
 pytest-sugar = "^0.9.4"
 ipython = "^8.4.0"
@@ -66,7 +66,7 @@ friendly = "^0.7.0"
 colorama = "^0.4.4"
 django-coverage-plugin = "^3.0.0"
 nox = "2023.4.22"
-safety = "2.4.0b2"
+safety = "^3.0"
 factory-boy = "^3.2.0"
 coverage = { version = "^7.0.0", extras = ["toml"] }
 pytest-cov = "^4.0.0"

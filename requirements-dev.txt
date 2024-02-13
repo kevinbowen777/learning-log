@@ -360,11 +360,11 @@ dj-database-url==2.1.0 ; python_version >= "3.10" and python_version < "4.0" \
 dj-email-url==1.0.6 ; python_version >= "3.10" and python_version < "4.0" \
     --hash=sha256:55ffe3329e48f54f8a75aa36ece08f365e09d61f8a209773ef09a1d4760e699a \
     --hash=sha256:cbd08327fbb08b104eac160fb4703f375532e4c0243eb230f5b960daee7a96db
-django==5.0.1 ; python_version >= "3.10" and python_version < "4.0" \
-    --hash=sha256:8c8659665bc6e3a44fefe1ab0a291e5a3fb3979f9a8230be29de975e57e8f854 \
-    --hash=sha256:f47a37a90b9bbe2c8ec360235192c7fddfdc832206fcf618bb849b39256affc1
-django-allauth==0.60.1 ; python_version >= "3.10" and python_version < "4.0" \
-    --hash=sha256:97b0f9a1807ca812d84204328cd55c273ce4ec1835f822d8fd1a28178708f192
+django==5.0.2 ; python_version >= "3.10" and python_version < "4.0" \
+    --hash=sha256:56ab63a105e8bb06ee67381d7b65fe6774f057e41a8bab06c8020c8882d8ecd4 \
+    --hash=sha256:b5bb1d11b2518a5f91372a282f24662f58f66749666b0a286ab057029f728080
+django-allauth==0.61.1 ; python_version >= "3.10" and python_version < "4.0" \
+    --hash=sha256:5b4ae515ea74f54f0041210692eee10c309ad15ddbbd03d3620693c75e3f7945
 django-cache-url==3.4.5 ; python_version >= "3.10" and python_version < "4.0" \
     --hash=sha256:5f350759978483ab85dc0e3e17b3d53eed3394a28148f6bf0f53d11d0feb5b3c \
     --hash=sha256:eb9fb194717524348c95cad9905b70b647452741c1d9e481fac6d2125f0ad917

@@ -92,6 +92,12 @@ function nox:black {
   nox -s black-3.12 "${@}"
 }
 
+function nox:cov {
+  # Check code for test coverage
+  # cmd nox -s coverage-3.12 "${@}"
+  nox -s coverage-3.12 "${@}"
+}
+
 function nox:docs {
   # Create Sphinx documentation in ./docs/_build directory
   # cmd nox -s docs-3.12 "${@}"
@@ -126,10 +132,12 @@ function nox:all {
   # Perform all nox code quality tests together(except black)
   # cmd nox -s black-3.12 "${@}"
   # cmd nox -s lint-3.12 "${@}"
+  # cmd nox -s coverage-3.12 "${@}"
   # cmd nox -s pyright-3.12 "${@}"
   # cmd nox -s safety-3.12 "${@}"
   # cmd nox -s tests-3.12 "${@}"
   # nox -s lint-3.12 "${@}"
+  # nox -s coverage-3.12 "${@}"
   # nox -s pyright-3.12 "${@}"
   # nox -s safety-3.12 "${@}"
   # nox -s tests-3.12 "${@}"
@@ -138,15 +146,17 @@ function nox:all {
 
 function nox:re-all {
   # Perform all nox code quality tests together(except black)
-  # cmd nox -s black-3.12 "${@}"
-  # cmd nox -s lint-3.12 "${@}"
-  # cmd nox -s pyright-3.12 "${@}"
-  # cmd nox -s safety-3.12 "${@}"
-  # cmd nox -s tests-3.12 "${@}"
-  # nox -s lint-3.12 "${@}"
-  # nox -s pyright-3.12 "${@}"
-  # nox -s safety-3.12 "${@}"
-  # nox -s tests-3.12 "${@}"
+  # cmd nox -rs black-3.12 "${@}"
+  # cmd nox -rs lint-3.12 "${@}"
+  # cmd nox -rs coverage-3.12 "${@}"
+  # cmd nox -rs pyright-3.12 "${@}"
+  # cmd nox -rs safety-3.12 "${@}"
+  # cmd nox -rs tests-3.12 "${@}"
+  # nox -rs lint-3.12 "${@}"
+  # nox -rs coverage-3.12 "${@}"
+  # nox -rs pyright-3.12 "${@}"
+  # nox -rs safety-3.12 "${@}"
+  # nox -rs tests-3.12 "${@}"
   nox -rs
 }
 

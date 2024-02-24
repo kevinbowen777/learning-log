@@ -11,11 +11,13 @@ class TestUserCreationForm:
         user = UserFactory.build()
 
         form = CustomUserCreationForm(
+            # fmt: off
             {
                 "username": user.username,
                 "password1": user._password,
                 "password2": user._password,
             }
+            # fmt: on
         )
 
         assert form.is_valid()
@@ -27,11 +29,13 @@ class TestUserCreationForm:
         # The user with proto_user params already exists,
         # hence cannot be created.
         form = CustomUserCreationForm(
+            # fmt: off
             {
                 "username": user.username,
                 "password1": user._password,
                 "password2": user._password,
             }
+            # fmt: on
         )
 
         assert not form.is_valid()

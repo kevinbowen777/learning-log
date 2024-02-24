@@ -1,4 +1,5 @@
 """Sphinx configuration."""
+
 project = "learning-log"
 author = "Kevin Bowen"
 copyright = f"2023, {author}"

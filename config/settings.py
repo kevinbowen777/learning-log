@@ -1,4 +1,5 @@
 """Settings for the learning_log project."""
+
 from pathlib import Path
 
 # import socket  # Comment out if not using debug_toolbar

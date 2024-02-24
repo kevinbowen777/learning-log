@@ -1,9 +1,7 @@
-# updated 20220904
+# updated 20240223
 # from: https://github.com/github/gitignore
-LOCAL_APP_NOTES
 
 docker-compose-prod.yml
-
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

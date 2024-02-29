@@ -85,15 +85,6 @@ pyenv
   * PyPI package: https://pypi.org/project/pyenv/ (placeholder only)
   * Notes: Installed system-wide for multiple Python versions.
 
-black
-^^^^^
-
-  * Documentation: https://black.readthedocs.io/en/stable
-  * Tutorial:
-  * Repository: https://github.com/psf/black
-  * PyPI package: https://pypi.org/project/black/
-  * Notes:
-
 coverage
 ^^^^^^^^
 

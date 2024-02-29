@@ -21,7 +21,6 @@ Features
    * pre-commit_
    * nox_ testing sessions for latest Python 3.10, and 3.11, 3.12.
 
-     * black_
      * Sphinx_ documentation generation
      * linting
 
@@ -40,7 +39,7 @@ If you get tired of typing ``./run`` you can always create a shell alias with ``
  .. _Bootstrap4: https://pypi.org/project/django-bootstrap4/
  .. _crispy-forms: https://pypi.org/project/django-crispy-forms/
  .. _country flags: https://pypi.python.org/pypi/django-countries
- .. _coverage: https://pypi.org/project/coverage/
+ .. _coverage: https://kevinbowen777.github.io/learning-log
  .. _htmlcov:
  .. _django-debug-toolbar: https://pypi.org/project/django-debug-toolbar/
  .. _config/settings.py:
@@ -51,7 +50,6 @@ If you get tired of typing ``./run`` you can always create a shell alias with ``
  .. _django-extensions: https://pypi.python.org/pypi/django-extensions/
  .. _pre-commit: https://github.com/pre-commit/pre-commit
  .. _nox: https://pypi.org/project/nox/
- .. _black: https://pypi.org/project/black/
  .. _Sphinx: https://pypi.org/project/Sphinx/
  .. _ruff: https://beta.ruff.rs/docs/
  .. _safety: https://pypi.org/project/safety/

@@ -86,12 +86,6 @@ function manage {
   python3 manage.py "${@}"
 }
 
-function nox:black {
-  # Check code for formatting violations
-  # cmd nox -s black-3.12 "${@}"
-  nox -s black-3.12 "${@}"
-}
-
 function nox:cov {
   # Check code for test coverage
   # cmd nox -s coverage-3.12 "${@}"
@@ -129,8 +123,7 @@ function nox:test {
 }
 
 function nox:all {
-  # Perform all nox code quality tests together(except black)
-  # cmd nox -s black-3.12 "${@}"
+  # Perform all nox code quality tests together
   # cmd nox -s lint-3.12 "${@}"
   # cmd nox -s coverage-3.12 "${@}"
   # cmd nox -s pyright-3.12 "${@}"
@@ -145,8 +138,7 @@ function nox:all {
 }
 
 function nox:re-all {
-  # Perform all nox code quality tests together(except black)
-  # cmd nox -rs black-3.12 "${@}"
+  # Perform all nox code quality tests together
   # cmd nox -rs lint-3.12 "${@}"
   # cmd nox -rs coverage-3.12 "${@}"
   # cmd nox -rs pyright-3.12 "${@}"

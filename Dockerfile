@@ -26,7 +26,7 @@ ENV DEBUG="${DEBUG}" \
   POETRY_HOME="/opt/poetry" \
   # No interactive questions
   POETRY_NO_INTERACTION=true \
-  POETRY_VERSION="1.7.1" \
+  POETRY_VERSION="1.8.2" \
   # Use a manually prepared venv
   POETRY_VIRTUALENVS_IN_PROJECT=true \
   # Suppress messages about installing plugins in future releases

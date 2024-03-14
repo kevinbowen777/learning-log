@@ -15,7 +15,12 @@ homepage = "https://github.com/kevinbowen777/learning-log.git"
 repository = "https://github.com/kevinbowen777/learning-log.git"
 documentation = "file:///docs/index.rst"
 
-keywords = ["diary", "django", "web-application", "learning-log"]
+keywords = [
+    "diary",
+    "django",
+    "web-application",
+    "learning-log",
+]
 
 classifiers = [
     "Development Status :: 4 - Beta",
@@ -36,10 +41,10 @@ classifiers = [
 
 [tool.poetry.dependencies]
 python = "^3.10"
-Django = "5.0.2"
+Django = "5.0.3"
 
 django-allauth = ">=0.60.0, < 0.70"
-environs = { version = "^10", extras = ["django"] }
+environs = { version = "^11", extras = ["django"] }
 django-extensions = "^3.2"
 whitenoise = "^6.1.0"
 psycopg2-binary = "^2.9.5"
@@ -57,7 +62,7 @@ beautifulsoup4 = "^4.10.0"
 django-debug-toolbar = "^4.0.0"
 pre-commit = "^3.0.0"
 ruff = ">=0.1.0, <=0.3.9"
-nox = "2023.4.22"
+nox = "2024.3.2"
 pytest = "^8.0"
 pytest-cov = "^4.0.0"
 pytest-django = "^4.5.2"
@@ -80,19 +85,22 @@ django-types = "^0.19.0"
 [tool.coverage.run]
 branch = true
 dynamic_context = "test_function"
-source = ["accounts", "config", "learning_logs", "pages"]
+source = [
+    "accounts",
+    "config",
+    "learning_logs",
+    "pages",
+]
 omit = [
     "conftest.py",
     "manage.py",
     "settings.py",
-    "*test.py",
     "asgi.py",
     "gunicorn.py",
     "wsgi.py",
     "*/__init__.py",
     "*/migrations/*",
     "*/factories.py",
-    "*/tests/*",
 ]
 plugins = [
     "django_coverage_plugin",
@@ -118,7 +126,12 @@ preserve_blank_lines = true
 
 [tool.pyright]
 # See: https://github.com/microsoft/pyright/blob/main/docs/configuration.md
-include = ["config", "accounts", "pages", "learning_logs",]
+include = [
+    "config",
+    "accounts",
+    "pages",
+    "learning_logs",
+]
 exclude = [
     "**/tests",
     "**/__pycache__",

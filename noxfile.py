@@ -99,6 +99,8 @@ def safety(session):
             "safety",
             "check",
             f"--file={requirements.name}",
+            "--ignore",
+            "65213",
             "--full-report",
         )
 

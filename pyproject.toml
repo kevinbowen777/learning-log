@@ -39,6 +39,8 @@ classifiers = [
     "Topic :: Internet :: WWW/HTTP",
 ]
 
+package-mode = false
+
 [tool.poetry.dependencies]
 python = "^3.10"
 Django = "5.0.3"

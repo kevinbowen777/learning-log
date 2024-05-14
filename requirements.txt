@@ -16,8 +16,8 @@ dj-email-url==1.0.6 ; python_version >= "3.10" and python_version < "4.0" \
 django==5.0.4 ; python_version >= "3.10" and python_version < "4.0" \
     --hash=sha256:4bd01a8c830bb77a8a3b0e7d8b25b887e536ad17a81ba2dce5476135c73312bd \
     --hash=sha256:916423499d75d62da7aa038d19aef23d23498d8df229775eb0a6309ee1013775
-django-allauth==0.62.1 ; python_version >= "3.10" and python_version < "4.0" \
-    --hash=sha256:6f33e86e42fb78ec2885ee905f337b87c46465ae7fe162c4959dcac81d47e2ad
+django-allauth==0.63.0 ; python_version >= "3.10" and python_version < "4.0" \
+    --hash=sha256:fbe0148c6258eac44e701a8f36e0950b5d0b1c60bde3e178683a4239f49311fc
 django-cache-url==3.4.5 ; python_version >= "3.10" and python_version < "4.0" \
     --hash=sha256:5f350759978483ab85dc0e3e17b3d53eed3394a28148f6bf0f53d11d0feb5b3c \
     --hash=sha256:eb9fb194717524348c95cad9905b70b647452741c1d9e481fac6d2125f0ad917
@@ -36,9 +36,9 @@ environs[django]==11.0.0 ; python_version >= "3.10" and python_version < "4.0" \
 gunicorn==22.0.0 ; python_version >= "3.10" and python_version < "4.0" \
     --hash=sha256:350679f91b24062c86e386e198a15438d53a7a8207235a78ba1b53df4c4378d9 \
     --hash=sha256:4a0b436239ff76fb33f11c07a16482c521a7e09c1ce3cc293c2330afe01bec63
-marshmallow==3.21.1 ; python_version >= "3.10" and python_version < "4.0" \
-    --hash=sha256:4e65e9e0d80fc9e609574b9983cf32579f305c718afb30d7233ab818571768c3 \
-    --hash=sha256:f085493f79efb0644f270a9bf2892843142d80d7174bbbd2f3713f2a589dc633
+marshmallow==3.21.2 ; python_version >= "3.10" and python_version < "4.0" \
+    --hash=sha256:70b54a6282f4704d12c0a41599682c5c5450e843b9ec406308653b47c59648a1 \
+    --hash=sha256:82408deadd8b33d56338d2182d455db632c6313aa2af61916672146bb32edc56
 packaging==24.0 ; python_version >= "3.10" and python_version < "4.0" \
     --hash=sha256:2ddfb553fdf02fb784c234c7ba6ccc288296ceabec964ad2eae3777778130bc5 \
     --hash=sha256:eb82c5e3e56209074766e6885bb04b8c38a0c015d0a30036ebe7ece34c9989e9

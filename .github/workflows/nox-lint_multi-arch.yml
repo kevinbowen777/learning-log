@@ -8,15 +8,15 @@ jobs:
         python-version: ["3.10", "3.11", "3.12"]
     name: Python ${{ matrix.python-version }} django_start
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python-version }}
           allow-prereleases: true
           architecture: x64
       - run: pip install nox==2024.4.15
-      - run: pip install poetry==1.8.2
+      - run: pip install poetry==1.8.3
       - run: |
           export SECRET_KEY=${{secrets.SECRET_KEY}}
           export EMAIL_HOST_PASSWORD=${{secrets.EMAIL_HOST_PASSWORD}}

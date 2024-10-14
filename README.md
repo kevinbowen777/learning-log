@@ -9,7 +9,7 @@
 
 </div>
 
-Learning Log is an online journal system that lets you keep track of information you’ve learned about particular topics. Learning log is built using the Django 5.0.x web framework.
+Learning Log is an online journal system that lets you keep track of information you’ve learned about particular topics. Learning log is built using the Django 5.1.x web framework.
 <p>
 It allows users to log the topics they’re interested in and to make journal entries as
 they learn about each topic. Once logged in, a user can create new topics, add new entries, and read and edit existing entries.</p>
@@ -38,7 +38,7 @@ they learn about each topic. Once logged in, a user can create new topics, add n
      - [Debug-toolbar](https://pypi.org/project/django-debug-toolbar/) available. See notes in `config/settings.py` for enabling.
      - Examples of using [Factories](https://pypi.org/project/factory-boy/) & [pytest](https://pypi.org/project/pytest/) fixtures in account app testing
      - [shell_plus](https://django-extensions.readthedocs.io/en/latest/shell_plus.html) with [IPython](https://pypi.org/project/ipython/) via [django-extensions](https://pypi.python.org/pypi/django-extensions/) package
-     - [Nox](https://pypi.org/project/nox/) testing sessions for latest Python 3.10, 3.11, and 3.12
+     - [Nox](https://pypi.org/project/nox/) testing sessions for latest Python 3.10, 3.11, 3.12, 3.13
          - [coverage](https://pypi.org/project/coverage/) (`nox -s coverage`)
          - [Sphinx](https://pypi.org/project/Sphinx/) documentaion generation (`nox -s lint`)
          - linting (`nox -s lint`)
@@ -89,13 +89,13 @@ able to run `run` instead of `./run`.*
  - `docker compose exec web python manage.py test`
  - `coverage run -m pytest`
  - Nox (includes sessions for black, lint, typing, safety, tests)
-     - testing supported for Python 3.10, 3.11, 3.12
-     - e.g. `nox`, `nox -rs lint-3.11`, `nox -s tests`
+     - testing supported for Python 3.10, 3.11, 3.12, 3.13
+     - e.g. `nox`, `nox -rs lint-3.13`, `nox -s tests`
        - `nox`
        - `nox -s coverage-3.12`
-       - `nox -s docs-3.11`
+       - `nox -s docs-3.13`
        - `nox -rs lint-3.10` (Use the 'r' flag to reuse existing session)
-       - `nox -s pyright-3.11`
+       - `nox -s pyright-3.13`
        - `nox -s safety` (will run tests against all Python versions)
        - `nox -s tests`
 

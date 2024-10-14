@@ -88,67 +88,67 @@ function manage {
 
 function nox:cov {
   # Check code for test coverage
-  # cmd nox -s coverage-3.12 "${@}"
-  nox -s coverage-3.12 "${@}"
+  # cmd nox -s coverage-3.13 "${@}"
+  nox -s coverage-3.13 "${@}"
 }
 
 function nox:docs {
   # Create Sphinx documentation in ./docs/_build directory
-  # cmd nox -s docs-3.12 "${@}"
-  nox -s docs-3.12 "${@}"
+  # cmd nox -s docs-3.13 "${@}"
+  nox -s docs-3.13 "${@}"
 }
 
 function nox:lint {
   # Run a number of ruff linting tests
-  # cmd nox -s lint-3.12 "${@}"
-  nox -s lint-3.12 "${@}"
+  # cmd nox -s lint-3.13 "${@}"
+  nox -s lint-3.13 "${@}"
 }
 
 function nox:pyright {
   # Run pyright typing checks
-  # cmd nox -s pyright-3.12 "${@}"
-  nox -s pyright-3.12 "${@}"
+  # cmd nox -s pyright-3.13 "${@}"
+  nox -s pyright-3.13 "${@}"
 }
 
 function nox:safety {
   # Check code/packages for vulnerabilites against Safety db
-  # cmd nox -s safety-3.12 "${@}"
-  nox -s safety-3.12 "${@}"
+  # cmd nox -s safety-3.13 "${@}"
+  nox -s safety-3.13 "${@}"
 }
 
 function nox:test {
   # Run several pytest and coverage checks
-  # cmd nox -s tests-3.12 "${@}"
-  nox -s tests-3.12 "${@}"
+  # cmd nox -s tests-3.13 "${@}"
+  nox -s tests-3.13 "${@}"
 }
 
 function nox:all {
   # Perform all nox code quality tests together
-  # cmd nox -s lint-3.12 "${@}"
-  # cmd nox -s coverage-3.12 "${@}"
-  # cmd nox -s pyright-3.12 "${@}"
-  # cmd nox -s safety-3.12 "${@}"
-  # cmd nox -s tests-3.12 "${@}"
-  # nox -s lint-3.12 "${@}"
-  # nox -s coverage-3.12 "${@}"
-  # nox -s pyright-3.12 "${@}"
-  # nox -s safety-3.12 "${@}"
-  # nox -s tests-3.12 "${@}"
+  # cmd nox -s lint-3.13 "${@}"
+  # cmd nox -s coverage-3.13 "${@}"
+  # cmd nox -s pyright-3.13 "${@}"
+  # cmd nox -s safety-3.13 "${@}"
+  # cmd nox -s tests-3.13 "${@}"
+  # nox -s lint-3.13 "${@}"
+  # nox -s coverage-3.13 "${@}"
+  # nox -s pyright-3.13 "${@}"
+  # nox -s safety-3.13 "${@}"
+  # nox -s tests-3.13 "${@}"
   nox
 }
 
 function nox:re-all {
   # Perform all nox code quality tests together
-  # cmd nox -rs lint-3.12 "${@}"
-  # cmd nox -rs coverage-3.12 "${@}"
-  # cmd nox -rs pyright-3.12 "${@}"
-  # cmd nox -rs safety-3.12 "${@}"
-  # cmd nox -rs tests-3.12 "${@}"
-  # nox -rs lint-3.12 "${@}"
-  # nox -rs coverage-3.12 "${@}"
-  # nox -rs pyright-3.12 "${@}"
-  # nox -rs safety-3.12 "${@}"
-  # nox -rs tests-3.12 "${@}"
+  # cmd nox -rs lint-3.13 "${@}"
+  # cmd nox -rs coverage-3.13 "${@}"
+  # cmd nox -rs pyright-3.13 "${@}"
+  # cmd nox -rs safety-3.13 "${@}"
+  # cmd nox -rs tests-3.13 "${@}"
+  # nox -rs lint-3.13 "${@}"
+  # nox -rs coverage-3.13 "${@}"
+  # nox -rs pyright-3.13 "${@}"
+  # nox -rs safety-3.13 "${@}"
+  # nox -rs tests-3.13 "${@}"
   nox -rs
 }
 

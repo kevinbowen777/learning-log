@@ -16,7 +16,7 @@ jobs:
           allow-prereleases: true
           architecture: x64
       - run: pip install nox==2024.10.09
-      - run: pip install poetry==1.8.3
+      - run: pip install poetry==1.8.4
       - run: |
           export SECRET_KEY=${{secrets.SECRET_KEY}}
           export EMAIL_HOST_PASSWORD=${{secrets.EMAIL_HOST_PASSWORD}}

@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+# run - Set of commands to run against Django projects running on the 
+#           local machine. Make sure the the alias `alias run='./run' is 
+#           included in your .bashrc
+
 set -o errexit
 set -o pipefail
 
@@ -64,7 +68,6 @@ function cov:report {
 function cov:html {
   # Output coverage report to ./htmlcov
   # cmd coverage html "${@}"
-  # cmd coverage html "${@}"
   coverage html "${@}"
 }
 
@@ -87,7 +90,7 @@ function manage {
 }
 
 function nox:cov {
-  # Check code for test coverage
+  # Check code for formatting violations
   # cmd nox -s coverage-3.13 "${@}"
   nox -s coverage-3.13 "${@}"
 }
@@ -122,33 +125,31 @@ function nox:test {
   nox -s tests-3.13 "${@}"
 }
 
+function nox:current {
+  # Run code quality tests only for latest supported Python version
+  nox -s lint-3.13 "${@}"
+  nox -s coverage-3.13 "${@}"
+  nox -s safety-3.13 "${@}"
+  nox -s tests-3.13 "${@}"
+}
+
+function nox:re-current {
+  # Run tests only for latest supported Python version
+  # DO NOT REBUILD VENVS
+  nox -rs lint-3.13 "${@}"
+  nox -rs coverage-3.13 "${@}"
+  nox -rs safety-3.13 "${@}"
+  nox -rs tests-3.13 "${@}"
+}
+
 function nox:all {
   # Perform all nox code quality tests together
-  # cmd nox -s lint-3.13 "${@}"
-  # cmd nox -s coverage-3.13 "${@}"
-  # cmd nox -s pyright-3.13 "${@}"
-  # cmd nox -s safety-3.13 "${@}"
-  # cmd nox -s tests-3.13 "${@}"
-  # nox -s lint-3.13 "${@}"
-  # nox -s coverage-3.13 "${@}"
-  # nox -s pyright-3.13 "${@}"
-  # nox -s safety-3.13 "${@}"
-  # nox -s tests-3.13 "${@}"
   nox
 }
 
 function nox:re-all {
   # Perform all nox code quality tests together
-  # cmd nox -rs lint-3.13 "${@}"
-  # cmd nox -rs coverage-3.13 "${@}"
-  # cmd nox -rs pyright-3.13 "${@}"
-  # cmd nox -rs safety-3.13 "${@}"
-  # cmd nox -rs tests-3.13 "${@}"
-  # nox -rs lint-3.13 "${@}"
-  # nox -rs coverage-3.13 "${@}"
-  # nox -rs pyright-3.13 "${@}"
-  # nox -rs safety-3.13 "${@}"
-  # nox -rs tests-3.13 "${@}"
+  # DO NOT REBUILD VENVS
   nox -rs
 }
 
@@ -167,16 +168,20 @@ function poe:up {
 
 function reqs:dev {
   # Export all package requirements
+  # poetry export -f requirements.txt --with=dev --without-hashes -o requirements-dev.txt
   poetry export --with=dev --output requirements-dev.txt
 }
 
 function reqs:prod {
   # Export production package requirements
+  # poetry export -f requirements.txt --without-hashes -o requirements.txt
   poetry export --output requirements.txt
 }
 
 function reqs:all {
   # Export production package requirements
+  # poetry export -f requirements.txt --with=dev --without-hashes -o requirements-dev.txt
+  # poetry export -f requirements.txt --without-hashes -o requirements.txt
   poetry export --output requirements.txt
   poetry export --with=dev --output requirements-dev.txt
 }
@@ -204,7 +209,7 @@ function sh {
 }
 
 function sh+ {
-  # Start a shell_plus IPython session in the web container
+  # Start a shell_plus session in the web container
   # auto-import all models, and the datetime module
   # cmd python manage.py shell_plus "${@}"
   python manage.py shell_plus

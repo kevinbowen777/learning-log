@@ -127,19 +127,13 @@ function nox:test {
 
 function nox:current {
   # Run code quality tests only for latest supported Python version
-  nox -s lint-3.13 "${@}"
-  nox -s coverage-3.13 "${@}"
-  nox -s safety-3.13 "${@}"
-  nox -s tests-3.13 "${@}"
+  nox -s lint-3.13 coverage-3.13 safety-3.13 tests-3.13 "${@}"
 }
 
 function nox:re-current {
   # Run tests only for latest supported Python version
   # DO NOT REBUILD VENVS
-  nox -rs lint-3.13 "${@}"
-  nox -rs coverage-3.13 "${@}"
-  nox -rs safety-3.13 "${@}"
-  nox -rs tests-3.13 "${@}"
+  nox -s lint-3.13 coverage-3.13 safety-3.13 tests-3.13 "${@}"
 }
 
 function nox:all {

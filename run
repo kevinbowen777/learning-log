@@ -125,6 +125,16 @@ function nox:test {
   nox -s tests-3.13 "${@}"
 }
 
+function nox:tests {
+  # Run tests for all currently supported Python versions
+  nox -s tests-3.10 tests-3.11 tests-3.12 tests-3.13 "${@}"
+}
+
+function nox:re-tests {
+  # Run tests for all currently supported Python versions
+  nox -rs tests-3.10 tests-3.11 tests-3.12 tests-3.13 "${@}"
+}
+
 function nox:current {
   # Run code quality tests only for latest supported Python version
   nox -s lint-3.13 coverage-3.13 safety-3.13 tests-3.13 "${@}"

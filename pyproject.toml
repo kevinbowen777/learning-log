@@ -1,26 +1,34 @@
-[tool.poetry]
+[project]
 name = "learning-log"
-version = "0.3.1"
+version = "0.3.2"
 description = "A Django web application for creating learning lists"
+requires-python = ">=3.10.0, <3.14.0"
+dependencies = [
+    "Django (==5.1.4)",
+    "django-allauth (>=65.0, <66.0.0)",
+    "environs[django] (>=11.0, <15.0)",
+    "django-extensions (>=3.2.0, <3.3.0)",
+    "whitenoise (>=6.8.0, <6.9.0)",
+    "psycopg[binary] (==3.2.3)",
+    "Pillow (>=11.0, <12.0)",
+    "gunicorn (>=23.0.0, <24.0.0)",
+    # crispy-bootstrap4 uses calver, so version is unclamped
+    "crispy-bootstrap4 (>=2024.10)",
+    "django-crispy-forms (>=2.0, <2.4)",
+    "django-countries (>=7.3.2, <7.7.0)",
+    "dj-database-url (==2.3.0)",
+    "soupsieve (==2.6)",
+    "sqlparse (==0.5.3)",
+    "beautifulsoup4 (==4.12.3)",
+]
 authors = [
-    "Kevin Bowen <kevin.bowen@gmail.com>",
+    { name = "Kevin Bowen", email = "kevin.bowen@gmail.com" },
 ]
 maintainers = [
 ]
-license = "MIT"
-
+license = { text = "MIT" }
 readme = "README.md"
-
-homepage = "https://github.com/kevinbowen777/learning-log.git"
-repository = "https://github.com/kevinbowen777/learning-log.git"
-documentation = "file:///docs/index.rst"
-
-keywords = [
-    "diary",
-    "django",
-    "web-application",
-    "learning-log",
-]
+keywords = ["diary","django","web-application","learning-log",]
 
 classifiers = [
     "Development Status :: 4 - Beta",
@@ -42,45 +50,35 @@ classifiers = [
 
 package-mode = false
 
-[tool.poetry.dependencies]
-python = "^3.10"
-Django = "5.1.4"
-
-django-allauth = ">=65.0, <66.0.0"
-environs = { version = "^11", extras = ["django"] }
-django-extensions = "^3.2"
-whitenoise = "^6.1.0"
-psycopg = { version = "3.2.3", extras = ["binary"] } 
-Pillow = ">=11.0, <12.0"
-gunicorn = "^23.0"
-crispy-bootstrap4 = "^2024.0"
-django-crispy-forms = "^2.0"
-django-countries = "^7.3.2"
-dj-database-url = "^2.0.0"
-soupsieve = "^2.3.1"
-sqlparse = "^0.5"
-beautifulsoup4 = "^4.10.0"
+[project.urls]
+Homepage = "https://github.com/kevinbowen777/learning-log.git"
+Changelog = "https://github.com/kevinbowen777/learning-log/NEWS"
+Repository = "https://github.com/kevinbowen777/learning-log.git"
+Documentation = "file:///docs/_build/index.html"
 
 [tool.poetry.group.dev.dependencies]
-django-debug-toolbar = "^4.0.0"
+django-debug-toolbar = ">=4.0.0, <5.0.0"
 pre-commit = ">=4.0, <5.0"
 ruff = ">=0.8, <1.0"
 nox = "2024.10.09"
-pytest = "^8.0"
+pytest = ">=8.0, <8.4"
 pytest-cov = ">=6.0.0, <7.0"
-pytest-django = "^4.5.2"
-pytest-sugar = "^1.0"
-coverage = { version = "^7.0.0", extras = ["toml"] }
-django-coverage-plugin = "^3.0.0"
-djlint = "^1.31.0"
+pytest-django = ">=4.5.2, <5.0.0"
+pytest-sugar = "1.0.0"
+coverage = { version = ">=7.0.0, <8.0.0", extras = ["toml"] }
+django-coverage-plugin = ">=3.0.0, <3.2.0"
 sphinx = ">= 8.0, <9.0"
+djlint = ">=1.31.0, <1.40.0"
 sphinx-lint = "1.0"
 safety = "3.2.3"
-factory-boy = "^3.2.0"
+factory-boy = "3.3.1"
 werkzeug = ">=3.1, <4.0"
-pyopenssl = ">=24.0, <25.0"
-furo = "^2024.0"
+pyopenssl = ">=24.0, <26.0"
+furo = ">=2024.0, <2025.0"
 django-types = ">=0.20.0, <0.21.0"
+
+[tool.poetry.requires-plugins]
+poetry-plugin-export = ">=1.8"
 
 [tool.coverage.run]
 branch = true
@@ -178,7 +176,7 @@ DJANGO_SETTINGS_MODULE = "config.test"
 addopts = "--reuse-db -p no:warnings"
 python_files = ["test_*.py"]
 filterwarnings = [
-    "ignore::django.utils.deprecation.RemovedInDjango51Warning",
+    # "ignore::django.utils.deprecation.RemovedInDjango51Warning",
 ]
 
 [tool.ruff]
@@ -276,5 +274,5 @@ docstring-code-format = false
 docstring-code-line-length = "dynamic"
 
 [build-system]
-requires = ["poetry-core>=1.0.0"]
+requires = ["poetry-core>=2.0.0"]
 build-backend = "poetry.core.masonry.api"

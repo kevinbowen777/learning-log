@@ -4,11 +4,11 @@ version = "0.3.2"
 description = "A Django web application for creating learning lists"
 requires-python = ">=3.10.0, <3.14.0"
 dependencies = [
-    "Django (==5.1.5)",
+    "Django (==5.1.6)",
     "django-allauth (>=65.0, <66.0.0)",
     "environs[django] (>=11.0, <15.0)",
     "django-extensions (>=3.2.0, <3.3.0)",
-    "whitenoise (>=6.8.0, <6.9.0)",
+    "whitenoise (>=6.9.0, <7.0.0)",
     "psycopg[binary] (==3.2.4)",
     "Pillow (>=11.0, <12.0)",
     "gunicorn (>=23.0.0, <24.0.0)",
@@ -19,7 +19,7 @@ dependencies = [
     "dj-database-url (==2.3.0)",
     "soupsieve (==2.6)",
     "sqlparse (==0.5.3)",
-    "beautifulsoup4 (==4.12.3)",
+    "beautifulsoup4 (==4.13.3)",
 ]
 authors = [
     { name = "Kevin Bowen", email = "kevin.bowen@gmail.com" },
@@ -71,7 +71,7 @@ sphinx = ">= 8.0, <9.0"
 djlint = ">=1.31.0, <1.40.0"
 sphinx-lint = "1.0"
 safety = "3.2.3"
-factory-boy = "3.3.1"
+factory-boy = "3.3.3"
 werkzeug = ">=3.1, <4.0"
 pyopenssl = ">=24.0, <26.0"
 furo = ">=2024.0, <2025.0"

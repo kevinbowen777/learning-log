@@ -17,11 +17,9 @@ DEBUG = env.bool("DJANGO_DEBUG", default=False)
 
 ALLOWED_HOSTS = ["learning-log.cool", "localhost", "127.0.0.1"]
 
-
-# Application definitions
-
+# Application definition
 INSTALLED_APPS = [
-    # Default Django apps.
+    # Default Django applications
     "django.contrib.admin",
     "django.contrib.admindocs",
     "django.contrib.auth",
@@ -31,7 +29,7 @@ INSTALLED_APPS = [
     "whitenoise.runserver_nostatic",
     "django.contrib.staticfiles",
     "django.contrib.sites",
-    # Third party apps.
+    # Third-party applications
     "allauth",
     "allauth.account",
     "allauth.socialaccount",
@@ -41,7 +39,7 @@ INSTALLED_APPS = [
     # "debug_toolbar",
     "django_countries",
     "django_extensions",
-    # Local apps
+    # Local Applications
     "learning_logs",
     "accounts",
     "pages",
@@ -93,7 +91,7 @@ DATABASES = {
             "DATABASE_URL", default="postgres://postgres@db/postgres"
         ),
         "NAME": env.str("POSTGRES_DB", "postgres"),
-        "USER": env.str("POSTGRES_USER", "fakeuser"),
+        "USER": env.str("POSTGRES_USER", default="fakeuser"),
         "PASSWORD": env.str("POSTGRES_PASSWORD", "password"),
         "HOST": env.str("POSTGRES_HOST", "db"),
         "PORT": env.int("POSTGRES_PORT", "5432"),
@@ -115,7 +113,6 @@ AUTH_PASSWORD_VALIDATORS = [
         "NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",  # noqa:#E501,B950
     },
 ]
-
 
 # Internationalization
 LANGUAGE_CODE = "en-us"
@@ -163,7 +160,7 @@ AUTHENTICATION_BACKENDS = (
     "allauth.account.auth_backends.AuthenticationBackend",
 )
 ACCOUNT_USERNAME_REQUIRED = True
-ACCOUNT_AUTHENTICATION_METHOD = "username_email"
+ACCOUNT_LOGIN_METHODS = {"username", "email"}
 ACCOUNT_EMAIL_CONFIRMATION_EXPIRE_DAYS = 3
 ACCOUNT_EMAIL_REQUIRED = False
 ACCOUNT_EMAIL_VERIFICATION = "optional"
@@ -178,9 +175,7 @@ SOCIALACCOUNT_PROVIDERS = {
         # "VERIFIED_EMAIL": True
         "APP": {
             "client_id": env.str("GITHUB_SOCIALACCOUNT_APP_CLIENT_ID"),
-            # "client_id": "9a771ac329a2b300db1b",
             "secret": env.str("GITHUB_SOCIALACCOUNT_APP_SECRET"),
-            # "secret": "1a6adcdd9df62ca28545947a44c0816908dbe6de",
             "key": "",
         },
     }

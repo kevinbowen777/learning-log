@@ -48,13 +48,14 @@ classifiers = [
     "Topic :: Internet :: WWW/HTTP",
 ]
 
-package-mode = false
-
 [project.urls]
 Homepage = "https://github.com/kevinbowen777/learning-log.git"
 Changelog = "https://github.com/kevinbowen777/learning-log/NEWS"
 Repository = "https://github.com/kevinbowen777/learning-log.git"
 Documentation = "file:///docs/_build/index.html"
+
+[tool.poetry]
+package-mode = false
 
 [tool.poetry.group.dev.dependencies]
 django-debug-toolbar = ">=5.0.0, <6.0.0"

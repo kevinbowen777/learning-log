@@ -9,7 +9,7 @@ dependencies = [
     "environs[django] (>=11.0, <15.0)",
     "django-extensions (>=3.2.0, <3.3.0)",
     "whitenoise (>=6.9.0, <7.0.0)",
-    "psycopg[binary] (==3.2.4)",
+    "psycopg[binary] (==3.2.5)",
     "Pillow (>=11.0, <12.0)",
     "gunicorn (>=23.0.0, <24.0.0)",
     # crispy-bootstrap4 uses calver, so version is unclamped

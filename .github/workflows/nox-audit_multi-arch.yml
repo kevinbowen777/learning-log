@@ -1,4 +1,4 @@
-name: nox-safety_multi-arch
+name: nox-audit_multi-arch
 on: push
 jobs:
   tests:
@@ -24,4 +24,4 @@ jobs:
           export SECRET_KEY=${{secrets.SECRET_KEY}}
           export EMAIL_HOST_PASSWORD=${{secrets.EMAIL_HOST_PASSWORD}}
           export DATABASE_URL=${{secrets.DATABASE_URL}}
-          nox -s safety-${{ matrix.python-version }}
+          nox -s audit-${{ matrix.python-version }}

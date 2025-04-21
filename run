@@ -113,10 +113,10 @@ function nox:pyright {
   nox -s pyright-3.13 "${@}"
 }
 
-function nox:safety {
+function nox:audit {
   # Check code/packages for vulnerabilites against Safety db
-  # cmd nox -s safety-3.13 "${@}"
-  nox -s safety-3.13 "${@}"
+  # cmd nox -s audit-3.13 "${@}"
+  nox -s audit-3.13 "${@}"
 }
 
 function nox:test {
@@ -137,13 +137,13 @@ function nox:re-tests {
 
 function nox:current {
   # Run code quality tests only for latest supported Python version
-  nox -s lint-3.13 coverage-3.13 safety-3.13 tests-3.13 "${@}"
+  nox -s lint-3.13 coverage-3.13 audit-3.13 tests-3.13 "${@}"
 }
 
 function nox:re-current {
   # Run tests only for latest supported Python version
   # DO NOT REBUILD VENVS
-  nox -s lint-3.13 coverage-3.13 safety-3.13 tests-3.13 "${@}"
+  nox -s lint-3.13 coverage-3.13 audit-3.13 tests-3.13 "${@}"
 }
 
 function nox:all {

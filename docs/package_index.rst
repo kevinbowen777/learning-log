@@ -139,6 +139,15 @@ nox
   * PyPI package: https://pypi.org/project/nox/
   * Notes:
 
+pip-audit
+^^^^^^^^^
+
+  * Documentation: https://pypi.org/project/pip-audit/
+  * Tutorial:
+  * Repository: https://github.com/pypa/pip-audit
+  * PyPI package: https://pypi.org/project/pip-audit/
+  * Notes:
+
 pytest
 ^^^^^^
 
@@ -182,15 +191,6 @@ Sphinx
   * Tutorial: https://www.sphinx-doc.org/en/master/tutorial/index.html
   * Repository: https://github.com/sphinx-doc/sphinx
   * PyPI package: https://pypi.org/project/Sphinx/
-  * Notes:
-
-safety
-^^^^^^
-
-  * Documentation: https://docs.pyup.io/docs/getting-started-with-safety-cli
-  * Tutorial:
-  * Repository: https://github.com/pyupio/safety
-  * PyPI package: https://pypi.org/project/safety/
   * Notes:
 
 ipython

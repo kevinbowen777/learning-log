@@ -107,9 +107,9 @@ function nox:pyright {
   cmd nox -s pyright-3.13 "${@}"
 }
 
-function nox:safety {
+function nox:audit {
   # Check code/packages for vulnerabilites against Safety db
-  cmd nox -s safety-3.13 "${@}"
+  cmd nox -s audit-3.13 "${@}"
 }
 
 function nox:test {
@@ -119,12 +119,12 @@ function nox:test {
 
 function nox:all {
   # Perform all nox code quality tests together
-  cmd nox -s lint-3.13 coverage-3.13 safety-3.13 tests-3.13 "${@}"
+  cmd nox -s lint-3.13 coverage-3.13 audit-3.13 tests-3.13 "${@}"
 }
 
 function nox:re-all {
   # Perform all nox code quality tests together
-  cmd nox -rs lint-3.13 coverage-3.13 safety-3.13 tests-3.13 "${@}"
+  cmd nox -rs lint-3.13 coverage-3.13 audit-3.13 tests-3.13 "${@}"
 }
 
 function poe:old {

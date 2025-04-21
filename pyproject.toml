@@ -71,12 +71,12 @@ django-coverage-plugin = ">=3.0.0, <3.2.0"
 sphinx = ">= 8.0, <9.0"
 djlint = ">=1.31.0, <1.40.0"
 sphinx-lint = "1.0"
-safety = "3.2.3"
 factory-boy = "3.3.3"
 werkzeug = ">=3.1, <4.0"
 pyopenssl = ">=24.0, <26.0"
 furo = ">=2024.0, <2025.0"
 django-types = ">=0.20.0, <0.21.0"
+pip-audit = "^2.9.0"
 
 [tool.poetry.requires-plugins]
 poetry-plugin-export = ">=1.8"

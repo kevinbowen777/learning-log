@@ -25,7 +25,7 @@ Features
      * linting
 
        * ruff_
-     * safety_ (python package vulnerability testing)
+     * pip-audit_ (python package vulnerability testing)
      * pytest_ sessions with pytest-cov_ & pytest-django_
  * ``run`` command menu
 
@@ -52,7 +52,7 @@ If you get tired of typing ``./run`` you can always create a shell alias with ``
  .. _nox: https://pypi.org/project/nox/
  .. _Sphinx: https://pypi.org/project/Sphinx/
  .. _ruff: https://beta.ruff.rs/docs/
- .. _safety: https://pypi.org/project/safety/
+ .. _pip-audit: https://pypi.org/project/pip-audit/
  .. _pytest-cov: https://pypi.org/project/pytest-cov/
  .. _pytest-django: https://pypi.org/project/pytest-django/
  .. _docker-django-example: https://github.com/nickjj/docker-django-example/

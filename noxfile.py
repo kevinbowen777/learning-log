@@ -5,7 +5,7 @@ import tempfile
 import nox
 
 PYTHON_VERSIONS = ["3.13", "3.12", "3.11", "3.10"]
-nox.options.sessions = "lint", "coverage", "safety", "tests"
+nox.options.sessions = "audit", "lint", "coverage", "tests"
 locations = (
     "accounts",
     "config",
@@ -81,28 +81,16 @@ def pyright(session):
 
 
 @nox.session(python=PYTHON_VERSIONS)
-def safety(session):
+def audit(session):
     """Scan dependencies for insecure packages."""
-    with tempfile.NamedTemporaryFile() as requirements:
-        session.run(
-            "poetry",
-            "export",
-            "--with",
-            "dev",
-            "--format=requirements.txt",
-            "--without-hashes",
-            f"--output={requirements.name}",
-            external=True,
-        )
-        install_with_constraints(session, "safety")
-        session.run(
-            "safety",
-            "check",
-            f"--file={requirements.name}",
-            "--ignore",
-            "70612",
-            "--full-report",
-        )
+    install_with_constraints(session, "pip-audit")
+    session.run(
+        "pip-audit",
+        "--desc",
+        "--aliases",
+        "--ignore-vuln",
+        "PYSEC-2025-14",
+    )
 
 
 @nox.session(python=PYTHON_VERSIONS)

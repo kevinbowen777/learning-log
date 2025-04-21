@@ -4,22 +4,22 @@ version = "0.3.2"
 description = "A Django web application for creating learning lists"
 requires-python = ">=3.10.0, <3.14.0"
 dependencies = [
-    "Django (==5.1.7)",
+    "Django (==5.2)",
     "django-allauth (>=65.0, <66.0.0)",
     "environs[django] (>=11.0, <15.0)",
-    "django-extensions (>=3.2.0, <3.3.0)",
+    "django-extensions (>=4.1.0, <4.2.0)",
     "whitenoise (>=6.9.0, <7.0.0)",
-    "psycopg[binary] (==3.2.5)",
+    "psycopg[binary] (==3.2.6)",
     "Pillow (>=11.0, <12.0)",
     "gunicorn (>=23.0.0, <24.0.0)",
     # crispy-bootstrap4 uses calver, so version is unclamped
     "crispy-bootstrap4 (>=2024.10)",
-    "django-crispy-forms (>=2.0, <2.4)",
+    "django-crispy-forms (>=2.4, <2.5)",
     "django-countries (>=7.3.2, <7.7.0)",
     "dj-database-url (==2.3.0)",
-    "soupsieve (==2.6)",
+    "soupsieve (==2.7)",
     "sqlparse (==0.5.3)",
-    "beautifulsoup4 (==4.13.3)",
+    "beautifulsoup4 (==4.13.4)",
 ]
 authors = [
     { name = "Kevin Bowen", email = "kevin.bowen@gmail.com" },
@@ -34,7 +34,7 @@ classifiers = [
     "Development Status :: 4 - Beta",
     "Environment :: Web Environment",
     "Framework :: Django",
-    "Framework :: Django :: 5.1",
+    "Framework :: Django :: 5.2",
     "Intended Audience :: Developers",
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",

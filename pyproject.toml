@@ -2,7 +2,7 @@
 name = "learning-log"
 version = "0.3.2"
 description = "A Django web application for creating learning lists"
-requires-python = ">=3.10.0, <3.14.0"
+requires-python = ">=3.11.0, <3.14.0"
 dependencies = [
     "Django (==5.2)",
     "django-allauth (>=65.0, <66.0.0)",
@@ -41,7 +41,6 @@ classifiers = [
     "Programming Language :: Python",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3 :: Only",
-    "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
     "Programming Language :: Python :: 3.13",

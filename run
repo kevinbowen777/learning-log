@@ -127,12 +127,12 @@ function nox:test {
 
 function nox:tests {
   # Run tests for all currently supported Python versions
-  nox -s tests-3.10 tests-3.11 tests-3.12 tests-3.13 "${@}"
+  nox -s tests-3.11 tests-3.12 tests-3.13 "${@}"
 }
 
 function nox:re-tests {
   # Run tests for all currently supported Python versions
-  nox -rs tests-3.10 tests-3.11 tests-3.12 tests-3.13 "${@}"
+  nox -rs tests-3.11 tests-3.12 tests-3.13 "${@}"
 }
 
 function nox:current {

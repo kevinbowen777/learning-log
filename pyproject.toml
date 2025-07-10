@@ -4,7 +4,7 @@ version = "0.3.3"
 description = "A Django web application for creating learning lists"
 requires-python = ">=3.11.0, <3.14.0"
 dependencies = [
-    "Django (==5.2.3)",
+    "Django (==5.2.4)",
     "django-allauth (>=65.0, <66.0.0)",
     "environs[django] (>=11.0, <15.0)",
     "django-extensions (>=4.1.0, <4.2.0)",
@@ -16,7 +16,7 @@ dependencies = [
     "crispy-bootstrap4 (>=2024.10)",
     "django-crispy-forms (>=2.4, <2.5)",
     "django-countries (>=7.3.2, <7.7.0)",
-    "dj-database-url (==3.0.0)",
+    "dj-database-url (==3.0.1)",
     "soupsieve (==2.7)",
     "sqlparse (==0.5.3)",
     "beautifulsoup4 (==4.13.4)",

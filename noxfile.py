@@ -89,7 +89,14 @@ def audit(session):
         "--desc",
         "--aliases",
         "--ignore-vuln",
-        "PYSEC-2025-49",
+        # Django 5.2.6
+        "GHSA-hpr9-3m2g-3j9p",
+        "--ignore-vuln",
+        # Django 5.2.6
+        "GHSA-q95w-c7qg-hrff",
+        "--ignore-vuln",
+        # pip
+        "GHSA-4xh5-x5gv-qwph",
     )
 
 

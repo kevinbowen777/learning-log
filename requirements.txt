@@ -13,9 +13,9 @@ dj-database-url==3.0.1 ; python_full_version >= "3.11.0" and python_full_version
 dj-email-url==1.0.6 ; python_full_version >= "3.11.0" and python_full_version < "3.14.0" \
     --hash=sha256:55ffe3329e48f54f8a75aa36ece08f365e09d61f8a209773ef09a1d4760e699a \
     --hash=sha256:cbd08327fbb08b104eac160fb4703f375532e4c0243eb230f5b960daee7a96db
-django==5.2.6 ; python_version >= "3.11" and python_full_version < "3.14.0" \
-    --hash=sha256:60549579b1174a304b77e24a93d8d9fafe6b6c03ac16311f3e25918ea5a20058 \
-    --hash=sha256:da5e00372763193d73cecbf71084a3848458cecf4cee36b9a1e8d318d114a87b
+django==5.2.7 ; python_version >= "3.11" and python_full_version < "3.14.0" \
+    --hash=sha256:59a13a6515f787dec9d97a0438cd2efac78c8aca1c80025244b0fe507fe0754b \
+    --hash=sha256:e0f6f12e2551b1716a95a63a1366ca91bbcd7be059862c1b18f989b1da356cdd
 django-allauth==65.12.0 ; python_version >= "3.11" and python_full_version < "3.14.0" \
     --hash=sha256:a76ec55935354a1455753601a0a814a4ded368242e8969323480a2810b349183
 django-cache-url==3.4.5 ; python_full_version >= "3.11.0" and python_full_version < "3.14.0" \

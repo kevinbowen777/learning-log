@@ -4,7 +4,7 @@ import tempfile
 
 import nox
 
-PYTHON_VERSIONS = ["3.13", "3.12", "3.11"]
+PYTHON_VERSIONS = ["3.11", "3.12", "3.13", "3.14"]
 nox.options.sessions = "audit", "lint", "coverage", "tests"
 locations = (
     "accounts",

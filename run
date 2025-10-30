@@ -91,59 +91,59 @@ function manage {
 
 function nox:cov {
   # Check code for formatting violations
-  # cmd nox -s coverage-3.13 "${@}"
-  nox -s coverage-3.13 "${@}"
+  # cmd nox -s coverage-3.14 "${@}"
+  nox -s coverage-3.14 "${@}"
 }
 
 function nox:docs {
   # Create Sphinx documentation in ./docs/_build directory
-  # cmd nox -s docs-3.13 "${@}"
-  nox -s docs-3.13 "${@}"
+  # cmd nox -s docs-3.14 "${@}"
+  nox -s docs-3.14 "${@}"
 }
 
 function nox:lint {
   # Run a number of ruff linting tests
-  # cmd nox -s lint-3.13 "${@}"
-  nox -s lint-3.13 "${@}"
+  # cmd nox -s lint-3.14 "${@}"
+  nox -s lint-3.14 "${@}"
 }
 
 function nox:pyright {
   # Run pyright typing checks
-  # cmd nox -s pyright-3.13 "${@}"
-  nox -s pyright-3.13 "${@}"
+  # cmd nox -s pyright-3.14 "${@}"
+  nox -s pyright-3.14 "${@}"
 }
 
 function nox:audit {
   # Check code/packages for vulnerabilites against Safety db
-  # cmd nox -s audit-3.13 "${@}"
-  nox -s audit-3.13 "${@}"
+  # cmd nox -s audit-3.14 "${@}"
+  nox -s audit-3.14 "${@}"
 }
 
 function nox:test {
   # Run several pytest and coverage checks
-  # cmd nox -s tests-3.13 "${@}"
-  nox -s tests-3.13 "${@}"
+  # cmd nox -s tests-3.14 "${@}"
+  nox -s tests-3.14 "${@}"
 }
 
 function nox:tests {
   # Run tests for all currently supported Python versions
-  nox -s tests-3.11 tests-3.12 tests-3.13 "${@}"
+  nox -s tests-3.11 tests-3.12 tests-3.13 tests-3.14 "${@}"
 }
 
 function nox:re-tests {
   # Run tests for all currently supported Python versions
-  nox -rs tests-3.11 tests-3.12 tests-3.13 "${@}"
+  nox -rs tests-3.11 tests-3.12 tests-3.13 tests-3.14 "${@}"
 }
 
 function nox:current {
   # Run code quality tests only for latest supported Python version
-  nox -s lint-3.13 coverage-3.13 audit-3.13 tests-3.13 "${@}"
+  nox -s lint-3.14 coverage-3.14 audit-3.14 tests-3.14 "${@}"
 }
 
 function nox:re-current {
   # Run tests only for latest supported Python version
   # DO NOT REBUILD VENVS
-  nox -s lint-3.13 coverage-3.13 audit-3.13 tests-3.13 "${@}"
+  nox -s lint-3.14 coverage-3.14 audit-3.14 tests-3.14 "${@}"
 }
 
 function nox:all {

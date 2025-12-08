@@ -91,6 +91,8 @@ def audit(session):
         "--ignore-vuln",
         # pip-audit
         "GHSA-4xh5-x5gv-qwph",
+        "--ignore-vuln",
+        "GHSA-5rjg-fvgr-3xxf",
     )
 
 

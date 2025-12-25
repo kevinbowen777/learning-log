@@ -17,8 +17,8 @@ dependencies = [
     "django-crispy-forms (>=2.5, <2.6)",
     "django-countries (>=8.2, <8.3)",
     "dj-database-url (==3.0.1)",
-    "soupsieve (==2.8)",
-    "sqlparse (==0.5.4)",
+    "soupsieve (==2.8.1)",
+    "sqlparse (==0.5.5)",
     "beautifulsoup4 (==4.14.3)",
 ]
 authors = [
@@ -73,7 +73,7 @@ coverage = { version = ">=7.0.0, <8.0.0", extras = ["toml"] }
 django-coverage-plugin = ">=3.2.0, <3.3.0"
 sphinx = ">= 8.0, <9.0"
 djlint = ">=1.31.0, <1.40.0"
-sphinx-lint = "1.0"
+sphinx-lint = "1.0.2"
 factory-boy = "3.3.3"
 werkzeug = ">=3.1, <4.0"
 pyopenssl = ">=24.0, <26.0"

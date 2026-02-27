@@ -9,8 +9,8 @@ services:
           cpus: "${DOCKER_WEB_CPUS:-0}"
           memory: "${DOCKER_WEB_MEMORY:-0}"
     build: .
-    # command: python /code/manage.py runserver 0.0.0.0:8000
-    command: gunicorn config.wsgi -b 0.0.0.0:8000
+    command: python /code/manage.py runserver 0.0.0.0:8000
+    # command: gunicorn config.wsgi -b 0.0.0.0:8000
     healthcheck:
       test: "${DOCKER_WEB_HEALTHCHECK_TEST:-curl localhost:8000/healthcheck}"
       interval: "60s"
@@ -32,18 +32,16 @@ services:
     # variable subsitution.
     # python -c 'import secrets; print(secrets.token_urlsafe(38))'
       - "SECRET_KEY=<insert_your_generated_key_here>"
-    env_file:
-      - ".env"
     restart: "${DOCKER_RESTART_POLICY:-unless-stopped}"
     stop_grace_period: "3s"
     profiles: ["web"]
   db:
     container_name: learning_log-db
     environment:
-      POSTGRES_DB:  "${POSTGRES_DB}" 
+      POSTGRES_DB:  "${POSTGRES_DB}"
       POSTGRES_USER: "${POSTGRES_USER}"
       POSTGRES_PASSWORD: "${POSTGRES_PASSWORD}"
-    image: postgres:15.11
+    image: postgres:15.17
     profiles: ["postgres"]
     restart: "${DOCKER_RESTART_POLICY:-unless-stopped}"
     stop_grace_period: "3s"

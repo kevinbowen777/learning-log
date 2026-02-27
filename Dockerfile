@@ -3,7 +3,7 @@
 # https://docs.docker.com/build/dockerfile/frontend/
 
 # `python-base` sets up all our shared environment variables
-FROM python:3.13-slim-bookworm AS python-base
+FROM python:3.14-slim-trixie AS python-base
 LABEL maintainer="Kevin Bowen <kevin.bowen@gmail.com>"
 
 ARG UID=1001
@@ -26,7 +26,7 @@ ENV DEBUG="${DEBUG}" \
   POETRY_HOME="/opt/poetry" \
   # No interactive questions
   POETRY_NO_INTERACTION=true \
-  POETRY_VERSION="2.1.1" \
+  POETRY_VERSION="2.3.2" \
   # Use a manually prepared venv
   POETRY_VIRTUALENVS_IN_PROJECT=true \
   # Suppress messages about installing plugins in future releases

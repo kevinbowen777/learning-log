@@ -88,6 +88,9 @@ def audit(session):
         "pip-audit",
         "--desc",
         "--aliases",
+        # pytest - CVE-2025-71176
+        "--ignore-vuln",
+        "GHSA-6w46-j5rx-g56g",
         # Python 3.11 - setuptools - CVE-2025-47273
         "--ignore-vuln",
         "GHSA-5rjg-fvgr-3xxf",

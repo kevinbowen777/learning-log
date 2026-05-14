@@ -4,14 +4,14 @@ version = "0.3.3"
 description = "A Django web application for creating learning lists"
 requires-python = ">=3.11.0"
 dependencies = [
-    "Django (==5.2.13)",
+    "Django (==5.2.14)",
     "django-allauth (>=65.0, <66.0.0)",
     "environs[django] (==15.0.1)",
     "django-extensions (>=4.1.0, <4.2.0)",
     "whitenoise (>=6.9.0, <7.0.0)",
     "psycopg[binary] (==3.3.4)",
     "Pillow (==12.2.0)",
-    "gunicorn (>=25.1.0, <26.0.0)",
+    "gunicorn (==26.0.0)",
     # crispy-bootstrap4 uses calver, so version is unclamped
     "crispy-bootstrap4 (>=2024.10)",
     "django-crispy-forms (>=2.6, <2.7)",
@@ -65,7 +65,7 @@ django-debug-toolbar = ">=5.0.0, <6.0.0"
 pre-commit = ">=4.0, <5.0"
 ruff = ">=0.8, <1.0"
 nox = "2026.4.10"
-pytest = ">=8.4.0, <8.5.0"
+pytest = ">=9.0, <10.0"
 pytest-cov = ">=7.0.0, <8.0"
 pytest-django = ">=4.5.2, <5.0.0"
 pytest-sugar = "1.1.1"

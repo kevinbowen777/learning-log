@@ -1,9 +1,9 @@
 asgiref==3.11.1 ; python_version >= "3.12" and python_full_version < "3.15.0" \
     --hash=sha256:5f184dc43b7e763efe848065441eac62229c9f7b0475f41f80e207a114eda4ce \
     --hash=sha256:e8667a091e69529631969fd45dc268fa79b99c92c5fcdda727757e52146ec133
-beautifulsoup4==4.14.3 ; python_full_version >= "3.12.0" and python_full_version < "3.15.0" \
-    --hash=sha256:0918bfe44902e6ad8d57732ba310582e98da931428d231a5ecb9e7c703a735bb \
-    --hash=sha256:6292b1c5186d356bba669ef9f7f051757099565ad9ada5dd630bd9de5fa7fb86
+beautifulsoup4==4.15.0 ; python_full_version >= "3.12.0" and python_full_version < "3.15.0" \
+    --hash=sha256:288e3ca7d54b06f2ac191970bc275c1939cb46d450b255bf6718b04aa37ab4f7 \
+    --hash=sha256:d6f88de62e1d4e38ecb1077eb9724cd0eff29d2a08ca16a401e9b9e93f117cf9
 crispy-bootstrap4==2026.2 ; python_version >= "3.12" and python_full_version < "3.15.0" \
     --hash=sha256:4b2b99dfe3e3cacb548702159462110901bd38792b650b770e50c62284ac2227 \
     --hash=sha256:66f8f14bf9c2c16ed94243236ed253a94e5a625afa1ee64022ce29db98c6cd85
@@ -22,9 +22,9 @@ django-allauth==65.18.0 ; python_version >= "3.12" and python_full_version < "3.
 django-cache-url==3.4.6 ; python_full_version >= "3.12.0" and python_full_version < "3.15.0" \
     --hash=sha256:af524c2f47d753d3324a6a38a03ab8f6147b045c81cbb5ec2bfc8ecb9c95ed3c \
     --hash=sha256:d030bd0c379310377772d513e6861a7a9dcc1e683049f27a9976ba5de3b5d1b9
-django-countries==8.2.0 ; python_version >= "3.12" and python_full_version < "3.15.0" \
-    --hash=sha256:2b2617bec7c15dc735bdec38ae89f0058e38fddfffdb19a7f6b75ef1e3d5380f \
-    --hash=sha256:6df3883180599052c7dfa9a8be0601792441cfb248935dc229ad1ac92e9e39e3
+django-countries==9.0.0 ; python_version >= "3.12" and python_full_version < "3.15.0" \
+    --hash=sha256:21fce461733c856355c487d1f24b71338599482505004a0c2e521fd574a59fb1 \
+    --hash=sha256:a993416af08a8a4e6e866d56b71c7ce92351c81a2543da213cd7899917567a42
 django-crispy-forms==2.6 ; python_version >= "3.12" and python_full_version < "3.15.0" \
     --hash=sha256:4921a1087c6cd4f9fa3c139654c1de1c1c385f8bd6729aaee530bc0121ab4b93 \
     --hash=sha256:8ee0ae28b6b0ac41ff48a65944480c049fe8d1b0047086874fd7efabf4ec1374

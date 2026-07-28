@@ -1,10 +1,10 @@
 [project]
 name = "learning-log"
-version = "0.3.3"
+version = "0.3.4"
 description = "A Django web application for creating learning lists"
 requires-python = ">=3.12.0"
 dependencies = [
-    "Django (==5.2.15)",
+    "Django (==6.0.7)",
     "django-allauth (==65.18.0)",
     "environs[django] (==15.0.1)",
     "django-extensions (==4.1.0)",
@@ -16,7 +16,7 @@ dependencies = [
     "django-crispy-forms (==2.6)",
     "django-countries (==9.0.0)",
     "dj-database-url (==3.1.2)",
-    "soupsieve (==2.8.4)",
+    "soupsieve (==2.9.1)",
     "sqlparse (==0.5.5)",
     "beautifulsoup4 (==4.15.0)",
 ]
@@ -33,7 +33,7 @@ classifiers = [
     "Development Status :: 4 - Beta",
     "Environment :: Web Environment",
     "Framework :: Django",
-    "Framework :: Django :: 5.2",
+    "Framework :: Django :: 6.0",
     "Intended Audience :: Developers",
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
@@ -59,10 +59,10 @@ package-mode = false
 python = ">=3.12.0, <3.15.0"
 
 [tool.poetry.group.dev.dependencies]
-django-debug-toolbar = ">=5.0.0, <6.0.0"
+django-debug-toolbar = ">=7.0, <8.0"
 pre-commit = ">=4.0, <5.0"
 ruff = ">=0.8, <1.0"
-nox = "2026.4.10"
+nox = "2026.7.11"
 pytest = ">=9.0, <10.0"
 pytest-cov = ">=7.0.0, <8.0"
 pytest-django = ">=4.5.2, <5.0.0"
@@ -70,7 +70,7 @@ pytest-sugar = "1.1.1"
 coverage = { version = ">=7.0.0, <8.0.0", extras = ["toml"] }
 django-coverage-plugin = ">=3.2.0, <3.3.0"
 sphinx = "9.1.0"
-djlint = "1.40.3"
+djlint = ">=1.40.0, <1.49.0"
 sphinx-lint = "1.0.2"
 factory-boy = "3.3.3"
 werkzeug = ">=3.1, <4.0"
@@ -80,7 +80,7 @@ django-types = ">=0.24.0, <0.25.0"
 pip-audit = "^2.9.0"
 
 [tool.poetry.requires-plugins]
-poetry-plugin-export = ">=1.8"
+poetry-plugin-export = ">=1.10.0"
 
 [tool.coverage.run]
 branch = true

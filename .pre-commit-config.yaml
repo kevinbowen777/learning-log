@@ -28,7 +28,7 @@ repos:
         files: (^|/)a/.+\.(py|html|sh|css|js)$
 
   - repo: https://github.com/charliermarsh/ruff-pre-commit
-    rev: v0.15.20
+    rev: v0.16.0
     hooks:
       # Run the linter
       - id: ruff
@@ -37,7 +37,7 @@ repos:
       - id: ruff-format
 
   - repo: https://github.com/Riverside-Healthcare/djLint
-    rev: v1.40.3
+    rev: v1.43.0
     hooks:
       - id: djlint-reformat-django
         exclude: "htmlcov"
@@ -62,3 +62,9 @@ repos:
         args: ["-f", "requirements.txt"]
       # - id: poetry-export
       #   args: ["--with", "dev", "-o", "requirements-dev.txt"]
+
+  - repo: https://github.com/adamchainz/django-upgrade
+    rev: 1.31.1
+    hooks:
+      - id: django-upgrade
+        args: [--target-version, "6.0"]

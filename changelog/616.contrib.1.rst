@@ -1,0 +1,1 @@
+Update django-allauth to 65.19.1

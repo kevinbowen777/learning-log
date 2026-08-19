@@ -1,0 +1,1 @@
+Initial zizmor remediation. Pin GitHub actions to hashes.

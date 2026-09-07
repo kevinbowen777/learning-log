@@ -27,6 +27,42 @@ with advance notice in the **Deprecations** section of releases.
 
 .. towncrier release notes start
 
+learning-log 0.3.6 (2026-09-06)
+===============================
+
+Contributor-facing changes
+--------------------------
+
+-  (`#614 <https://github.com/kevinbowen777/learning-log/614>`_): Initial zizmor remediation. Pin GitHub actions to hashes.
+
+-  (`#616 <https://github.com/kevinbowen777/learning-log/616>`_): Update gunicorn to 26.1.0
+
+-  (`#616 <https://github.com/kevinbowen777/learning-log/616>`_): Update django-allauth to 65.19.1
+
+-  (`#616 <https://github.com/kevinbowen777/learning-log/616>`_): Update sqlparse to 0.6.0
+
+-  (`#616 <https://github.com/kevinbowen777/learning-log/616>`_),  (`#621 <https://github.com/kevinbowen777/learning-log/621>`_): Update nox to 2026.8.17
+
+-  (`#621 <https://github.com/kevinbowen777/learning-log/621>`_): Update towncrier to 26.9.0
+
+-  (`#621 <https://github.com/kevinbowen777/learning-log/621>`_): Update django-debug-toolbar to 8.0.0
+
+-  (`#621 <https://github.com/kevinbowen777/learning-log/621>`_): Update django-allauth to 65.19.2
+
+-  (`#621 <https://github.com/kevinbowen777/learning-log/621>`_): Update djlint to 1.45.2
+
+-  (`#621 <https://github.com/kevinbowen777/learning-log/621>`_): Upgrade gunicorn to 26.2.0
+
+-  (`#621 <https://github.com/kevinbowen777/learning-log/621>`_): Update psycopg to 3.3.5
+
+-  (`#621 <https://github.com/kevinbowen777/learning-log/621>`_): Upgrade environs to 15.2.0
+
+
+New features
+------------
+
+-  (`#621 <https://github.com/kevinbowen777/learning-log/621>`_): Upgrade Django to 6.1.1
+
 learning-log 0.3.5 (2026-08-14)
 ===============================
 

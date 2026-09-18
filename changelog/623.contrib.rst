@@ -1,0 +1,1 @@
+Replace master with main in static gh action

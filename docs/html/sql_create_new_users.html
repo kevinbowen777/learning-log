@@ -1,0 +1,178 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Create new users &#8212; learning_log  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Add topics/entries" href="sql_create_new_topics_entries.html" />
+    <link rel="prev" title="Package Index" href="package_index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="create-new-users">
+<h1>Create new users<a class="headerlink" href="#create-new-users" title="Permalink to this heading">¶</a></h1>
+<section id="instructions">
+<h2>Instructions<a class="headerlink" href="#instructions" title="Permalink to this heading">¶</a></h2>
+<p>In the application directory, run the following command:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python<span class="w"> </span>manage.py<span class="w"> </span>shell_plus
+</pre></div>
+</div>
+</section>
+<section id="sample-user-list">
+<h2>Sample user list<a class="headerlink" href="#sample-user-list" title="Permalink to this heading">¶</a></h2>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">User = get_user_model()</span>
+<span class="go">User.objects.create_user(</span>
+<span class="go">    username = &quot;john&quot;,</span>
+<span class="go">    name = &quot;John Doe&quot;,</span>
+<span class="go">    first_name = &quot;John&quot;,</span>
+<span class="go">    last_name = &quot;Doe&quot;,</span>
+<span class="go">    email = &quot;john@example.com&quot;,</span>
+<span class="go">    age = &quot;69&quot;,</span>
+<span class="go">    password=&quot;P@s5WoRd!&quot;,</span>
+<span class="go">)</span>
+<span class="go">User.objects.create_user(</span>
+<span class="go">    username = &quot;susan&quot;,</span>
+<span class="go">    name = &quot;Susan Sontag&quot;,</span>
+<span class="go">    first_name = &quot;Susan&quot;,</span>
+<span class="go">    last_name = &quot;Sontag&quot;,</span>
+<span class="go">    email = &quot;susan@example.com&quot;,</span>
+<span class="go">    age = &quot;71&quot;,</span>
+<span class="go">    password=&quot;P@s5WoRd!&quot;,</span>
+<span class="go">)</span>
+<span class="go">User.objects.create_user(</span>
+<span class="go">    username = &quot;mary&quot;,</span>
+<span class="go">    name = &quot;Mary Shelley&quot;,</span>
+<span class="go">    first_name = &quot;Mary&quot;,</span>
+<span class="go">    last_name = &quot;Shelley&quot;,</span>
+<span class="go">    email = &quot;mary@example.com&quot;,</span>
+<span class="go">    age = &quot;53&quot;,</span>
+<span class="go">    password=&quot;P@s5WoRd!&quot;,</span>
+<span class="go">)</span>
+<span class="go">User.objects.create_user(</span>
+<span class="go">    username = &quot;david&quot;,</span>
+<span class="go">    name = &quot;David Hockney&quot;,</span>
+<span class="go">    first_name = &quot;David&quot;,</span>
+<span class="go">    last_name = &quot;Hockney&quot;,</span>
+<span class="go">    email = &quot;david@example.com&quot;,</span>
+<span class="go">    age = &quot;84&quot;,</span>
+<span class="go">    password=&quot;P@s5WoRd!&quot;,</span>
+<span class="go">)</span>
+<span class="go">User.objects.create_user(</span>
+<span class="go">    username = &quot;alice&quot;,</span>
+<span class="go">    name = &quot;Alice Coltrane&quot;,</span>
+<span class="go">    first_name = &quot;Alice&quot;,</span>
+<span class="go">    last_name = &quot;Coltrane&quot;,</span>
+<span class="go">    email = &quot;alice@example.com&quot;,</span>
+<span class="go">    age = &quot;69&quot;,</span>
+<span class="go">    password=&quot;P@s5WoRd!&quot;,</span>
+<span class="go">)</span>
+<span class="go">User.objects.create_user(</span>
+<span class="go">    username = &quot;testuser&quot;,</span>
+<span class="go">    name = &quot;Test User&quot;,</span>
+<span class="go">    first_name = &quot;Test&quot;,</span>
+<span class="go">    last_name = &quot;User&quot;,</span>
+<span class="go">    email = &quot;testuser@example.com&quot;,</span>
+<span class="go">    age = &quot;23&quot;,</span>
+<span class="go">    password=&quot;P@s5WoRd!&quot;,</span>
+<span class="go">    is_staff=True,</span>
+<span class="go">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">learning_log</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="package_index.html">Package Index</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Create new users</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sql_create_new_topics_entries.html">Add topics/entries</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="package_index.html" title="previous chapter">Package Index</a></li>
+      <li>Next: <a href="sql_create_new_topics_entries.html" title="next chapter">Add topics/entries</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2022, Kevin Bowen.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 6.1.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.13</a>
+      
+      |
+      <a href="_sources/sql_create_new_users.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

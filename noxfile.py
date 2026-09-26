@@ -12,7 +12,7 @@ locations = (
     "learning_logs",
     "pages",
     "./noxfile.py",
-    "docs/conf.py",
+    "docs/source/conf.py",
 )
 
 
@@ -47,9 +47,9 @@ def install_with_constraints(session, *args, **kwargs):
 
 @nox.session(python=PYTHON_VERSIONS)
 def coverage(session):
-    """Build JSON coverage report."""
+    """Build HTML & JSON coverage reports."""
     install_with_constraints(session, "coverage")
-    session.run("coverage", "run", "-p", "-m", "pytest")
+    session.run("coverage", "run", "--context=CONTEXT", "-p", "-m", "pytest")
     session.run("coverage", "combine")
     session.run("coverage", "report", "-m", "--skip-covered")
     session.run("coverage", "json", "-o", "htmlcov/coverage.json")
@@ -60,7 +60,7 @@ def coverage(session):
 def docs(session):
     """Build the documentation."""
     install_with_constraints(session, "sphinx")
-    session.run("sphinx-build", "docs", "docs/_build")
+    session.run("sphinx-build", "docs/source", "docs/html")
 
 
 @nox.session(python=PYTHON_VERSIONS)
@@ -109,7 +109,6 @@ def tests(session):
             external=True,
         )
         session.install("-r", f"{requirements.name}")
-    # session.run("poetry", "install", "--no-dev", external=True)
     install_with_constraints(
         session,
         "coverage[toml]",
@@ -126,5 +125,6 @@ def tests(session):
         "-Im",
         "pytest",
         *args,
+        "--cov-context=test",
         "--capture=no",
     )

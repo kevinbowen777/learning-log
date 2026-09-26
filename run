@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-# run - Set of commands to run against Django projects running on the 
-#           local machine. Make sure the the alias `alias run='./run' is 
+# run - Set of commands to run against Django projects running on the
+#           local machine. Make sure the the alias `alias run='./run' is
 #           included in your .bashrc
 
 set -o errexit
@@ -188,6 +188,14 @@ function reqs:all {
   # poetry export -f requirements.txt --without-hashes -o requirements.txt
   poetry export --output requirements.txt
   poetry export --with=dev --output requirements-dev.txt
+}
+
+function reqs:pre {
+  # Export production package requirements
+  # Run pre-commit updates
+  poetry export --output requirements.txt
+  poetry export --with=dev --output requirements-dev.txt
+  poetry run pre-commit autoupdate
 }
 
 function ruff:check {

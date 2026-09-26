@@ -1,6 +1,6 @@
 [project]
 name = "learning-log"
-version = "0.3.6"
+version = "0.3.7"
 description = "A Django web application for creating learning lists"
 requires-python = ">=3.12.0"
 dependencies = [
@@ -9,14 +9,14 @@ dependencies = [
     "environs[django] (==15.2.0)",
     "django-extensions (==4.1.0)",
     "whitenoise (==6.12.0)",
-    "psycopg[binary] (==3.3.5)",
+    "psycopg[binary] (==3.3.6)",
     "Pillow (==12.3.0)",
     "gunicorn (==26.2.0)",
     "crispy-bootstrap4 (==2026.2)",
     "django-crispy-forms (==2.7)",
     "django-countries (==9.1.0)",
     "dj-database-url (==3.1.2)",
-    "soupsieve (==2.9.2)",
+    "soupsieve (==2.10)",
     "sqlparse (==0.6.0)",
     "beautifulsoup4 (==4.15.0)",
 ]
@@ -48,9 +48,9 @@ classifiers = [
 
 [project.urls]
 Homepage = "https://github.com/kevinbowen777/learning-log.git"
-Changelog = "https://github.com/kevinbowen777/learning-log/NEWS"
+Changelog = "https://github.com/kevinbowen777/learning-log/docs/source/CHANGELOG.rst"
 Repository = "https://github.com/kevinbowen777/learning-log.git"
-Documentation = "file:///docs/_build/index.html"
+Documentation = "file:///docs/html/index.html"
 
 [tool.poetry]
 package-mode = false
@@ -79,9 +79,10 @@ furo = "2025.12.19"
 django-types = ">=0.24.0, <0.25.0"
 pip-audit = "^2.9.0"
 towncrier = "26.9.0"
+myst-parser = "5.1.0"
 
 [tool.poetry.requires-plugins]
-poetry-plugin-export = ">=1.10.0"
+poetry-plugin-export = ">=1.10.1"
 
 [tool.coverage.run]
 branch = true
@@ -119,7 +120,7 @@ show_contexts = true
 title = "learning-log coverage report"
 
 [tool.djlint]
-exclude = ["htmlcov", "staticfiles"]
+exclude = ["htmlcov", "staticfiles", "docs/html"]
 files = ["templates/"]
 indent = 2
 max_line_length = 120
@@ -138,7 +139,7 @@ exclude = [
     "**/__pycache__",
     "**/migrations",
 ]
-ignore = ["docs/_build"]
+ignore = ["docs/source"]
 defineConstant = { DEBUG = true }
 stubPath = ""
 # The following may need to be modified when collaborating with others
@@ -207,28 +208,18 @@ exclude = [
     "migrations",
     "images",
     "media",
+    "docs/html",
 ]
 
 [tool.ruff.lint]
-select = [
-    "A",    # flake8-builtins
-    "B",    # flake8-bugbear
-    "C90",  # mccabe
-    "DJ",   # flake8-django
-    "E",    # pycodestyle errors
-    "F",    # pyflakes
-    "I",    # isort
-    "S",    # flake8-bandit
-    "W",    # pycodestyle warnings
-    # "RUF",  # ruff checks
-]
+select = []
+
 ignore = [
-    "E501",    # line too long ({width} > {limit} characters)
-    # "E203",  # slice notation whitespace (not currently supported)
-    "E402",    # module level import not at top of file
-    "E722",    # do not use bare except
-    # "W503",  # (not currently supported)
-    "ERA",     # do not autoremove commented out code
+    "line-too-long",    # line too long ({width} > {limit} characters) [E501]
+    "module-import-not-at-top-of-file",    # module level import not at top of file [E402]
+    "bare-except",    # do not use bare except [E722]
+    "ERA",     # do not autoremove commented out code [ERA]
+    "non-empty-init-module",
 ]
 
 # Allow autofix for all enabled rules (when `--fix`) is provided.
@@ -245,7 +236,7 @@ dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
 "config/test.py" = ["S101", "S106"]
 "pages/tests/*" = ["S101", "S106"]
 "learning_logs/tests/*" = ["S101", "S106"]
-"docs/conf.py" = ["A001"]
+"docs/source/conf.py" = ["A001"]
 
 [tool.ruff.lint.mccabe]
 # Unlike Flake8, default to a complexity level of 10.
@@ -280,36 +271,16 @@ docstring-code-line-length = "dynamic"
 
 [tool.towncrier]
 directory = "changelog/"
-filename = "CHANGELOG.rst"
+filename = "docs/source/changelog.rst"
 
 title_format = "learning-log {version} ({project_date})"
 issue_format = "`#{issue} <https://github.com/kevinbowen777/learning-log/{issue}>`_"
 template = "changelog/_template.rst"
 
 [[tool.towncrier.type]]
-# Something we deemed an improper undesired behavior that got corrected
-# in the release to match pre-agreed expectations.
-directory = "bugfix"
-name = "Bug fixes"
-showcontent = true
-
-[[tool.towncrier.type]]
-# Changes that affects the contributor experience. e.g. running tests,
-# building the docs, setting up the development environment.
-directory = "contrib"
-name = "Contributor-facing changes"
-showcontent = true
-
-[[tool.towncrier.type]]
 # Declarations of future API removals and breaking changes in behavior.
 directory = "deprecation"
 name = "Deprecations (removal in next major release)"
-showcontent = true
-
-[[tool.towncrier.type]]
-# Notable updates to the documentation structure or build process.
-directory = "doc"
-name = "Improved documentation"
 showcontent = true
 
 [[tool.towncrier.type]]
@@ -319,9 +290,23 @@ name = "New features"
 showcontent = true
 
 [[tool.towncrier.type]]
-# Changes that are hard to assign to any of the above categories.
-directory = "misc"
-name = "Miscellaneous internal changes"
+# Something we deemed an improper undesired behavior that got corrected
+# in the release to match pre-agreed expectations.
+directory = "bugfix"
+name = "Bug fixes"
+showcontent = true
+
+[[tool.towncrier.type]]
+# Notable updates to the documentation structure or build process.
+directory = "doc"
+name = "Improved documentation"
+showcontent = true
+
+[[tool.towncrier.type]]
+# Changes that affects the contributor experience. e.g. running tests,
+# building the docs, setting up the development environment.
+directory = "contrib"
+name = "Contributor-facing changes"
 showcontent = true
 
 [[tool.towncrier.type]]
@@ -334,6 +319,12 @@ showcontent = true
 # Updates regarding bundling dependencies
 directory = "vendor"
 name = "Vendored libraries"
+showcontent = true
+
+[[tool.towncrier.type]]
+# Changes that are hard to assign to any of the above categories.
+directory = "misc"
+name = "Miscellaneous internal changes"
 showcontent = true
 
 [build-system]

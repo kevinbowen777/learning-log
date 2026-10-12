@@ -1,11 +1,11 @@
 [project]
 name = "learning-log"
-version = "0.3.7"
+version = "0.3.8"
 description = "A Django web application for creating learning lists"
 requires-python = ">=3.12.0"
 dependencies = [
-    "Django (==6.1.1)",
-    "django-allauth (==65.19.4)",
+    "Django (==6.1.2)",
+    "django-allauth (==65.19.7)",
     "environs[django] (==15.2.0)",
     "django-extensions (==4.1.0)",
     "whitenoise (==6.12.0)",
@@ -16,7 +16,7 @@ dependencies = [
     "django-crispy-forms (==2.7)",
     "django-countries (==9.1.0)",
     "dj-database-url (==3.1.2)",
-    "soupsieve (==2.10)",
+    "soupsieve (==3.0.3)",
     "sqlparse (==0.6.0)",
     "beautifulsoup4 (==4.15.0)",
 ]
@@ -48,7 +48,7 @@ classifiers = [
 
 [project.urls]
 Homepage = "https://github.com/kevinbowen777/learning-log.git"
-Changelog = "https://github.com/kevinbowen777/learning-log/docs/source/CHANGELOG.rst"
+Changelog = "https://github.com/kevinbowen777/learning-log/CHANGELOG.rst"
 Repository = "https://github.com/kevinbowen777/learning-log.git"
 Documentation = "file:///docs/html/index.html"
 
@@ -86,7 +86,7 @@ poetry-plugin-export = ">=1.10.1"
 
 [tool.coverage.run]
 branch = true
-dynamic_context = "test_function"
+core = "ctrace"
 source = [
     "accounts",
     "config",
@@ -297,6 +297,12 @@ name = "Bug fixes"
 showcontent = true
 
 [[tool.towncrier.type]]
+# Stuff that affects security. e.g. updating packages,
+directory = "security"
+name = "Security updated"
+showcontent = true
+
+[[tool.towncrier.type]]
 # Notable updates to the documentation structure or build process.
 directory = "doc"
 name = "Improved documentation"
@@ -307,12 +313,6 @@ showcontent = true
 # building the docs, setting up the development environment.
 directory = "contrib"
 name = "Contributor-facing changes"
-showcontent = true
-
-[[tool.towncrier.type]]
-# Stuff that affects security. e.g. updating packages,
-directory = "security"
-name = "Security updated"
 showcontent = true
 
 [[tool.towncrier.type]]

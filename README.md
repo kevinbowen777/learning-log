@@ -21,6 +21,7 @@ they learn about each topic. Once logged in, a user can create new topics, add n
 - [Testing](#testing)
 - [Application Demo](#application-demo)
 - [Screenshots](#screenshots)
+- [Contributions](#contributions)
 - [Reporting Bugs](#reporting-bugs)
 
 ---
@@ -151,6 +152,13 @@ Password Reset
 
 Lost Password Request
 ![Lost Password Request](images/learning_log_forgot_password.png)
+
+---
+
+### Contributions
+
+You are free to fork this repository and modify as you see fit. See
+[CONTRIBUTING](https://github.com/kevinbowen777/learning-log/CONTRIBUTING.md) for details on reporting issues, etc.
 
 ---
 

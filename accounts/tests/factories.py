@@ -1,5 +1,6 @@
 from django.contrib.auth import get_user_model
-from factory import Faker, PostGenerationMethodCall
+from factory.declarations import PostGenerationMethodCall
+from factory.faker import Faker
 from factory.django import DjangoModelFactory
 
 
@@ -12,3 +13,4 @@ class UserFactory(DjangoModelFactory):
     class Meta:
         model = get_user_model()
         django_get_or_create = ["username"]
+        skip_postgeneration_save = True

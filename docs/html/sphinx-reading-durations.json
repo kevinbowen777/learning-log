@@ -1,3 +1,21 @@
 {
-    "changelog": 0.157
+    "changelog": 0.227,
+    "configuration/env_setup": 0.012,
+    "configuration/index": 0.022,
+    "configuration/server_startup": 0.018,
+    "contributing": 0.03,
+    "features/application_features": 0.014,
+    "features/dev_test_features": 0.028,
+    "features/django_debug_toolbar": 0.026,
+    "features/index": 0.016,
+    "features/package_index": 0.13,
+    "features/run_command_features": 0.045,
+    "index": 0.023,
+    "installation/docker_installation": 0.012,
+    "installation/index": 0.01,
+    "installation/local_installation": 0.012,
+    "license": 0.013,
+    "testing/create_new_topics": 0.01,
+    "testing/create_new_users": 0.009,
+    "testing/index": 0.02
 }

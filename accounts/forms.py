@@ -15,9 +15,9 @@ class CustomUserChangeForm(UserChangeForm):
 
 
 class CustomUserCreationForm(UserCreationForm):
-    error_message = UserCreationForm.error_messages.update(
-        {"duplicate_username": "This username has already been taken."}  # fmt: skip
-    )
+    error_message = UserCreationForm.error_messages.update({
+        "duplicate_username": "This username has already been taken."
+    })
 
     class Meta:
         model = User

@@ -18,7 +18,6 @@ class CustomUserTests(TestCase):
         )
 
     def test___str__(self):
-        assert self.user.__str__() == self.user.username
         assert str(self.user) == self.user.username
 
     def test_user_get_absolute_url(self):

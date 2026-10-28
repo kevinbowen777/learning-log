@@ -2,8 +2,7 @@ from django.contrib.auth import get_user_model
 from django.test import TestCase
 from django.urls import reverse
 
-from ..models import Entry, Topic  # noqa:F401
-from ..views import topic, topics  # noqa:F401
+from ..models import Topic
 
 
 class TopicPageViewTest(TestCase):
@@ -31,7 +30,6 @@ class TopicPageViewTest(TestCase):
         self.assertEqual(f"{self.topic.owner}", "kevin")
 
     def test___str__(self):
-        assert self.topic.__str__() == self.topic.text
         assert str(self.topic) == self.topic.text
 
     def test_topic_create_view(self):

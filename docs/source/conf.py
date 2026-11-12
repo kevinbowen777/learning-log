@@ -4,7 +4,7 @@
 project = "learning-log"
 author = "Kevin Bowen"
 copyright = f"%Y, {author}"
-release = "0.3.9"
+release = "0.3.10"
 
 # -- General configuration --------------------------------------------
 extensions = [

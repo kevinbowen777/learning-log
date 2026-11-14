@@ -1,9 +1,15 @@
-name: nox-lint_multi-arch
+name: nox-audit
 on: push
 permissions: {}
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
 jobs:
   tests:
     runs-on: ubuntu-latest
+    environment: github-pages
     strategy:
       matrix:
         python-version: ["3.12", "3.13", "3.14"]
@@ -13,7 +19,7 @@ jobs:
         with:
           persist-credentials: false
       - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
         with:
           python-version: ${{ matrix.python-version }}
           allow-prereleases: true
@@ -21,8 +27,8 @@ jobs:
       - run: pip install nox==2026.10.20
       - run: pip install poetry==2.5.1
       - run: pip install poetry-plugin-export==1.10.1
-      - run: |
-          export SECRET_KEY=${{secrets.SECRET_KEY}}
-          export EMAIL_HOST_PASSWORD=${{secrets.EMAIL_HOST_PASSWORD}}
-          export DATABASE_URL=${{secrets.DATABASE_URL}}
-          nox -s lint-${{ matrix.python-version }}
+      - run: nox -s audit-${{ matrix.python-version }} # zizmor: ignore[template-injection]
+        env:
+          SECRET_KEY: ${{ secrets.SECRET_KEY }}
+          EMAIL_HOST_PASSWORD: ${{ secrets.EMAIL_HOST_PASSWORD }}
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
